@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  clear: both;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.inner {
+  background: #1d212d;
+  border-radius: 4px;
+  padding: 4rem 8rem 2rem;
+}
+
+.rows {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  color: #fff;
+}
+
+.links ul {
+  list-style-type: none;
+}
+.links h4 {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.contact p:not(.title),
+.contact a {
+  font-weight: 300;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.contact a:hover {
+  opacity: 1;
+}

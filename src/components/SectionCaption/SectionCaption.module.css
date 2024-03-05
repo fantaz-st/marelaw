@@ -1,0 +1,17 @@
+.container p {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #203165;
+  margin-bottom: 4.8rem;
+  font-weight: 400;
+}
+.container p:before {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 1.5em;
+  background: currentColor;
+  content: "";
+}

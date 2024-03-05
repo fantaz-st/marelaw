@@ -1,0 +1,31 @@
+.container {
+  padding: 6rem 4rem;
+}
+.inner .title {
+  font-weight: 300;
+  max-width: 60vw;
+}
+.inner .text {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 30px;
+  float: right;
+  width: 44vw;
+  padding-right: 7rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .inner .title {
+    max-width: 100%;
+  }
+  .inner .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner .text {
+    padding-right: 0;
+  }
+}

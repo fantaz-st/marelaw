@@ -1,0 +1,71 @@
+.button {
+  background: rgba(255, 255, 255, 0.16);
+  display: inline-block;
+  position: relative;
+  height: 3.42em;
+  padding-left: 1.71em;
+  border-radius: 70px;
+  font-size: 1rem;
+  align-self: start;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  color: #203165;
+  background: #efefef;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  align-self: start;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+.content .text {
+  margin-right: 1.71em;
+}
+.content .icon {
+  padding-right: 0.64em;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 3.42em;
+  border-radius: 50%;
+}
+
+.content .icon svg {
+  width: 1.28em;
+}
+.content .icon svg path {
+  transition: stroke 0.4s ease-in-out;
+}
+
+.button:hover .content .icon svg path {
+  stroke: #203165;
+}
+
+.button:hover .content .icon svg {
+  animation: MoveRightInitial 0.2s forwards, MoveRightEnd 0.4s forwards 0.2s;
+}
+
+@keyframes MoveRightInitial {
+  to {
+    transform: translate3d(250%, 0, 0);
+  }
+}
+@keyframes MoveRightEnd {
+  from {
+    transform: translate3d(-150%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

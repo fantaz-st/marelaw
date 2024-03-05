@@ -1,0 +1,16 @@
+.container {
+  clear: both;
+  padding: 6rem 4rem;
+  display: grid;
+  grid-template-columns: 44% 56%;
+}
+
+.title h3 {
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: block;
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+  padding: 0 4rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  height: 80px;
+}
+
+.menu {
+  padding: 2rem 0;
+  height: 100%;
+  border-bottom: 2px solid rgba(29, 33, 45, 0.2);
+}
+.menu li {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.menu li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.menu li:hover {
+  color: #203165;
+}
