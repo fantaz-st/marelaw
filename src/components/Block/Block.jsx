@@ -21,8 +21,8 @@ const Block = ({ block, size }) => {
       return <HeadingBlock {...attributes} />;
     case "core/paragraph":
       return <ParagraphBlock {...attributes} />;
-    case "core/file":
-      return <FilesBlock {...attributes} />;
+    /* case "core/file":
+      return <FilesBlock {...attributes} />; */
     case "core/list":
       return <ListBlock {...attributes} innerBlocks={innerBlocks} />;
     case "core/list-item":

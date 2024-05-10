@@ -51,7 +51,7 @@ const AboutSection = () => {
               </ListItem>
               <ListItem sx={{ color: "#84b4d3" }}>
                 <Typography variant='body'>
-                  <strong>Digital Transition:</strong> Adapting to the digital preferences of modern students, the project prioritizes the digitalization of teaching materials, aligning with the Digital Europe Programme’s goals.
+                  <strong>Digital Transition:</strong> Adapting to the digital preferences of modern students, the project prioritizes the digitalization of teaching materials, aligning with the Digital Europe Programme&apos;s goals.
                 </Typography>
               </ListItem>
             </List>
