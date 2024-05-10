@@ -15,7 +15,7 @@ const AboutSection = () => {
       <SectionCaption>About the project</SectionCaption>
       <Box className={classes.header}>
         <Typography variant='h3' component='h3' className={classes.title}>
-          Ensuring a uniform level of seafarers' qualifications
+          Ensuring a uniform level of seafarers&apos; qualifications
         </Typography>
         <NextLink href='/about-the-project'>
           <Button>Read more</Button>
