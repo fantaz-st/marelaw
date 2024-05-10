@@ -1,31 +1,36 @@
 .container {
-  padding: 6rem 4rem;
+  padding: 6rem 1rem;
 }
-.inner .title {
-  font-weight: 300;
-  max-width: 60vw;
-}
-.inner .text {
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 30px;
-  float: right;
-  width: 44vw;
-  padding-right: 7rem;
-  margin-top: 2.5rem;
+.inner {
+  margin: 4rem 0 0;
 }
 
-@media (max-width: 1024px) {
-  .inner .title {
-    max-width: 100%;
+.right {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 4rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    padding: 4rem;
   }
-  .inner .text {
-    width: 100%;
+  .right {
+    padding: 0 3rem;
+    margin-bottom: 0;
   }
 }
 
-@media (max-width: 768px) {
-  .inner .text {
-    padding-right: 0;
+@media only screen and (max-width: 1440px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 50px;
   }
 }

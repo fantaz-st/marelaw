@@ -1,0 +1,70 @@
+.imageWrapper {
+  margin: 1rem 0;
+  display: block;
+  position: relative;
+  min-width: 100%;
+  min-height: 400px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.fullWidthImageWrapper {
+  margin: 1rem 0;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* .lightbox {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity ease 0.4s;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.show_image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+.animated {
+  animation: mover 0.6s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+ */

@@ -1,24 +1,36 @@
 .container {
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100vw;
   padding: 0 4rem;
   display: flex;
   align-items: flex-end;
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .text {
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
   max-width: 40vw;
+  /*  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);*/
+  z-index: 2;
+}
+
+.imageWrapper {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+}
+.mask {
+  mask-image: none;
 }
 
 .image {
-  position: absolute;
-  right: 0%;
-  top: 0%;
+  position: relative;
+  height: calc(100vh - 80px);
+  width: 100%;
+  aspect-ratio: 9/7;
 }
 
 .scrollDown {
@@ -38,4 +50,40 @@
 .scrollDown svg {
   display: inline-block;
   width: 20%;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    height: 70vh;
+  }
+  .scrollDown {
+    display: none;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .imageWrapper {
+    top: 12%;
+    right: 0%;
+  }
+  .image {
+    width: 100vw;
+    height: auto;
+  }
+
+  .text {
+    max-width: 100%;
+    top: 80%;
+  }
+
+  .mask {
+    mask-image: url("../../../public/mask.png");
+    mask-size: contain;
+    mask-position: top left;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("../../../public/mask.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-position: top left;
+    -webkit-mask-repeat: no-repeat;
+  }
 }

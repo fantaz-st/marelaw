@@ -1,10 +1,13 @@
+import { Box, Typography } from "@mui/material";
 import classes from "./SectionCaption.module.css";
 
 const SectionCaption = ({ children }) => {
   return (
-    <div className={classes.container}>
-      <p>{children}</p>
-    </div>
+    <Box className={classes.container}>
+      <Typography variant='body' component='p'>
+        {children}
+      </Typography>
+    </Box>
   );
 };
 

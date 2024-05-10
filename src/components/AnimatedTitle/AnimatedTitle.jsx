@@ -2,7 +2,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const AnimatedTitle = ({ text = "daj text", variant = "h4", fontWeight = 400, onScroll = false }) => {
+import classes from "./AnimatedTitle.module.css";
+import { Typography } from "@mui/material";
+
+const AnimatedTitle = ({ text = "daj text", variant = "h4", fontWeight = 300, onScroll = false }) => {
   const containerVariants = {
     animate: {
       transition: {
@@ -32,39 +35,45 @@ const AnimatedTitle = ({ text = "daj text", variant = "h4", fontWeight = 400, on
     switch (variant) {
       case "h1":
         return (
-          <motion.h1 {...props} ref={scrollRef} style={{ fontWeight: fontWeight }}>
+          <Typography component={motion.h1} variant='h1' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
             {children}
-          </motion.h1>
+          </Typography>
+        );
+      case "h1_serif":
+        return (
+          <Typography component={motion.h1} variant='h1_serif' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
+            {children}
+          </Typography>
         );
       case "h2":
         return (
-          <motion.h2 {...props} ref={scrollRef} style={{ fontWeight: fontWeight }}>
+          <Typography component={motion.h2} variant='h2' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
             {children}
-          </motion.h2>
+          </Typography>
         );
       case "h3":
         return (
-          <motion.h3 {...props} ref={scrollRef} style={{ fontWeight: fontWeight }}>
+          <Typography component={motion.h3} variant='h3' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
             {children}
-          </motion.h3>
+          </Typography>
         );
       case "h4":
         return (
-          <motion.h4 {...props} ref={scrollRef} style={{ fontWeight: fontWeight }}>
+          <Typography component={motion.h4} variant='h4' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
             {children}
-          </motion.h4>
+          </Typography>
         );
       case "h5":
         return (
-          <motion.h5 {...props} ref={scrollRef} style={{ fontWeight: fontWeight }}>
+          <Typography component={motion.h5} variant='h6' {...props} ref={scrollRef} sx={{ fontWeight: fontWeight }} className={classes.title}>
             {children}
-          </motion.h5>
+          </Typography>
         );
       default:
         return (
-          <motion.h4 {...props} ref={scrollRef}>
+          <Typography component={motion.h6} variant='h6' {...props} ref={scrollRef} className={classes.title}>
             {children}
-          </motion.h4>
+          </Typography>
         );
     }
   };
@@ -73,9 +82,8 @@ const AnimatedTitle = ({ text = "daj text", variant = "h4", fontWeight = 400, on
 
   const isInView = useInView(scrollRef, { amount: 0.7, once: true });
 
-  console.log(onScroll);
   return (
-    <HeadingTag variants={containerVariants} key='heading' initial='initial' animate={isInView ? "animate" : "initial"}>
+    <HeadingTag key={text} variants={containerVariants} /* key='heading' */ initial='initial' animate={isInView ? "animate" : "initial"}>
       {text.split(" ").map((word, i) => (
         <span key={i}>
           <motion.span key={i + "word"} style={{ display: "inline-block" }} variants={textVariants}>

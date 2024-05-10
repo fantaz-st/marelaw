@@ -1,0 +1,17 @@
+.container {
+  padding: 6rem 1rem;
+  background-color: #0e202a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    padding: 10rem 10rem;
+  }
+}

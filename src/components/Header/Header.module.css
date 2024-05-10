@@ -1,5 +1,4 @@
 .container {
-  padding: 0 4rem;
   width: 100%;
 
   display: flex;
@@ -11,15 +10,45 @@
   height: 80px;
 }
 
+.hamburger span {
+  display: block;
+  content: "";
+  background-color: #000;
+  height: 2px;
+  width: 20px;
+}
+
+.hamburger span:not(:last-of-type) {
+  margin-bottom: 4px;
+}
+
 .menu {
-  padding: 2rem 0;
   height: 100%;
   border-bottom: 2px solid rgba(29, 33, 45, 0.2);
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 .menu li {
-  display: inline;
+  position: relative;
   font-size: 1rem;
   font-weight: 400;
+  height: 100%;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.menu li a span {
+  display: inline-block;
+  height: auto;
 }
 .menu li:not(:last-child) {
   margin-right: 2rem;
@@ -28,3 +57,74 @@
 .menu li:hover {
   color: #203165;
 }
+
+.subMenuInner {
+  position: absolute;
+  z-index: 3;
+  right: 0%;
+  top: calc(100% + 2px);
+  width: 300px;
+  padding: 0 10px 10px;
+  transition: all 0.2s ease-out;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.subMenu {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subMenuInner {
+  clip-path: inset(0% 0% 100% 0%);
+}
+.subMenu li {
+  display: block;
+}
+
+.menu li:hover .subMenuInner {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.mobileMenu {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.close span {
+  display: block;
+  content: "";
+  background-color: #000;
+  height: 2px;
+  width: 20px;
+}
+
+.close span:nth-child(1) {
+  transform: rotate(45deg) translateY(1px);
+}
+.close span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-2px);
+}
+/* @media only screen and (min-width: 360px) {
+  .container {
+    padding: 0rem 1rem;
+  }
+} */
+
+/* .mobileMenu h3::before {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 1.5em;
+  background: currentColor;
+  content: "";
+} */

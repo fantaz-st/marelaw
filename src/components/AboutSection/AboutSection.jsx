@@ -1,87 +1,64 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import NextLink from "next/link";
+import SectionCaption from "../SectionCaption/SectionCaption";
 import classes from "./AboutSection.module.css";
 import { useRef } from "react";
-import SectionCaption from "../SectionCaption/SectionCaption";
+import { Box, Button, Grid, List, ListItem, Typography } from "@mui/material";
 
 const AboutSection = () => {
   const titleRef = useRef(null);
   const textRef = useRef(null);
 
-  const isTitleInView = useInView(titleRef, { amount: 0.7, once: true });
-  const isTextInView = useInView(textRef, { amount: 0.7, once: true });
-
-  const textContainerVariant = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      duration: 0.5,
-      delay: 2,
-    },
-  };
-
-  const titleVariants = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const wordVariants = {
-    initial: {
-      x: "30px",
-      opacity: 0,
-    },
-    animate: {
-      x: "0px",
-      opacity: 1,
-      transition: {
-        duration: 0.55,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <div className={classes.container} ref={titleRef}>
-      <div className={classes.inner}>
-        <div className={classes.title}>
-          <SectionCaption>About the project</SectionCaption>
-          <motion.h3 variants={titleVariants} key='heading' initial='initial' animate={isTitleInView ? "animate" : "initial"} className={classes.title}>
-            {"Ensuring a uniform level of seafarers' qualifications".split(" ").map((word, i) => (
-              <span key={i}>
-                <motion.span key={i + "word"} style={{ display: "inline-block" }} variants={wordVariants}>
-                  {word}
-                </motion.span>
-                <span key={i + "span"} style={{ display: "inline-block" }}>
-                  &nbsp;
-                </span>
-              </span>
-            ))}
-          </motion.h3>
-        </div>
-        <motion.div className={classes.text} ref={textRef} variants={textContainerVariant} initial='initial' animate={isTextInView ? "animate" : "initial"} exit='initial'>
-          <p>
-            Provedbu projekta MareLaw koordinira Pomorski fakultet u Splitu pod Erasmus+ poveljom korisnika Sveučilišta u Splitu. Glavni ciljevi projekta su promoviranje međusobno povezanih sustava visokog obrazovanja, poticanje inovativnih praksi učenja i podučavanja te okoliš i borba protiv
-            klimatskih promjena.
-          </p>
-          <p>
-            Provedbom projekta partneri će pripremiti smjernice za izradu kurikuluma predmeta pomorsko pravo za visoka pomorska učilišta, sukladno STCW konvenciji, pripremiti digitalne nastavne materijale zajedno s pitanjima za vježbu i formama za samoevaluaciju koji će se koristiti prilikom učenja
-            pomorskog prava te posebno razvijati stručne i digitalne kompetencije nastavnika pohađanjem certificiranih tečajeva. Time će se nastojati povećati kvaliteta i kapacitet pomorskih visokih učilišta te osigurati ujednačena razina osposobljenosti pomoraca.
-          </p>
-
-          {/* <p>Partnerske institucije koje uz Sveučilište u Splitu sudjeluju na projektu su:</p>
-          <ul>
-            <li> Technical University of Catalonia</li>
-            <li> Riga Technical University</li>
-          </ul> */}
-        </motion.div>
-      </div>
-    </div>
+    <Box className={classes.container} ref={titleRef}>
+      <SectionCaption>About the project</SectionCaption>
+      <Box className={classes.header}>
+        <Typography variant='h3' component='h3' className={classes.title}>
+          Ensuring a uniform level of seafarers' qualifications
+        </Typography>
+        <NextLink href='/about-the-project'>
+          <Button>Read more</Button>
+        </NextLink>
+      </Box>
+      <Grid container className={classes.inner}>
+        <Grid item xs={12} md={6} className={classes.left}>
+          <Box>
+            <Typography variant='body' component='P' sx={{ marginBottom: "3rem" }}>
+              The MareLaw project is a two-year initiative that began on December 1, 2022. Our mission is to improve and harmonize elements of the maritime law curriculum across our partner universities. Unlike law students, maritime students often encounter legal issues for the first time in their
+              maritime law courses. Our project aims to make this complex subject more accessible and understandable for these students.
+            </Typography>
+            {/* <AnimatedTitle text="Ensuring a uniform level of seafarers' qualifications" variant='h3' onScroll={true} /> */}
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6} className={classes.right} ref={textRef}>
+          <Box>
+            <List sx={{ listStyleType: "disc", margin: 0, paddingTop: 0 }}>
+              <ListItem sx={{ color: "#84b4d3", marginTop: 0, paddingTop: 0 }}>
+                <Typography variant='body'>
+                  <strong>Unique Curriculum:</strong> Maritime law courses at maritime HEIs are tailored to meet the specific needs of the sector, differing from general law courses.
+                </Typography>
+              </ListItem>
+              <ListItem sx={{ color: "#84b4d3" }}>
+                <Typography variant='body'>
+                  <strong>Student Focus:</strong> The project addresses the educational needs of maritime students who typically lack prior legal knowledge, making maritime law courses a critical component of their interdisciplinary studies.
+                </Typography>
+              </ListItem>
+              <ListItem sx={{ color: "#84b4d3" }}>
+                <Typography variant='body'>
+                  <strong>Harmonization Effort:</strong> Collaboration among EU maritime universities aims to align maritime law curricula, facilitated by educators from Boxerse backgrounds.
+                </Typography>
+              </ListItem>
+              <ListItem sx={{ color: "#84b4d3" }}>
+                <Typography variant='body'>
+                  <strong>Digital Transition:</strong> Adapting to the digital preferences of modern students, the project prioritizes the digitalization of teaching materials, aligning with the Digital Europe Programme’s goals.
+                </Typography>
+              </ListItem>
+            </List>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 

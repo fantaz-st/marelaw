@@ -1,17 +1,23 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import classes from "./page.module.css";
 import AboutSection from "@/components/AboutSection/AboutSection";
-import Footer from "@/components/Footer/Footer";
-import FAQSection from "@/components/FAQSection/FAQSection";
+import PostsSection from "@/components/PostsSection/PostsSection";
+import PrioritiesSection from "@/components/PrioritiesSection/PrioritiesSection";
+import { fetchApi } from "@/functions/fetchApi";
+import { allNewsQuery } from "@/helpers/queryLists";
+import PartnersSection from "@/components/PartnersSection/PartnersSection";
 
-export default function Home() {
+export default async function Home() {
+  const homePagePosts = await fetchApi(allNewsQuery);
+
+  // console.log(homePagePosts.data);
   return (
     <main className={classes.main}>
       <HeroSection />
       <AboutSection />
-      <FAQSection />
-      <Footer />
-      {/* <div style={{ height: "100vh" }} /> */}
+      <PostsSection posts={homePagePosts.data.posts.nodes} />
+      <PrioritiesSection />
+      <PartnersSection />
     </main>
   );
 }

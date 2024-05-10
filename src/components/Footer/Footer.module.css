@@ -1,13 +1,12 @@
 .container {
   position: relative;
   clear: both;
-  padding: 2rem 2rem 1rem 2rem;
 }
 
 .inner {
   background: #1d212d;
   border-radius: 4px;
-  padding: 4rem 8rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
 }
 
 .rows {
@@ -16,7 +15,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-end;
   align-content: stretch;
   color: #fff;
 }
@@ -32,10 +31,19 @@
 .contact p:not(.title),
 .contact a {
   font-weight: 300;
-  opacity: 0.6;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
 .contact a:hover {
   opacity: 1;
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .rows {
+    flex-wrap: wrap;
+  }
 }

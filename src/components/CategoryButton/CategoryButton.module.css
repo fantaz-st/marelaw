@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0dede;
+  border-radius: 30px;
+  gap: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+.container:hover {
+  background-color: #0e202a;
+}
