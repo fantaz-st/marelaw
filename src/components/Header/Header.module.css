@@ -96,11 +96,11 @@
 
 .close {
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 10px;
 }
 
-.close span {
+/* .close span {
   display: block;
   content: "";
   background-color: #000;
@@ -113,7 +113,7 @@
 }
 .close span:nth-child(2) {
   transform: rotate(-45deg) translateY(-2px);
-}
+} */
 /* @media only screen and (min-width: 360px) {
   .container {
     padding: 0rem 1rem;
@@ -128,3 +128,10 @@
   background: currentColor;
   content: "";
 } */
+
+.downArrow {
+  transition: transform 0.2s ease;
+}
+.menuItem:hover .downArrow {
+  transform: rotate(180deg);
+}

@@ -30,8 +30,10 @@ const PrioritiesSection = () => {
           stagger: 0.02,
           scrollTrigger: {
             trigger: scrollTextRef.current,
+            /* start: "top 80%",
+            end: "top 20%", */
             start: "top 80%",
-            end: "top 20%",
+            end: "bottom 30%",
             scrub: true,
             markers: false,
             toggleActions: "play play reverse reverse",

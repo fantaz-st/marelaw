@@ -106,7 +106,7 @@ const PartnersSection = () => {
         <Typography variant='h3' component='h3' className={classes.sectionSubtitle}>
           We are proud to work with several partner universities in the EU to achieve our goals
         </Typography>
-        <NextLink href='/about-the-project'>
+        <NextLink href='/about-the-project' className={classes.button}>
           <Button variant='contained'>Find out more</Button>
         </NextLink>
       </Box>
@@ -128,6 +128,9 @@ const PartnersSection = () => {
           </Box>
         </Box>
       </Box>
+      <NextLink href='/articles' className={classes.mobileButton}>
+        <Button>Find out more</Button>
+      </NextLink>
     </Box>
   );
 };

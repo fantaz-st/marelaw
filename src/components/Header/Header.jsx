@@ -1,10 +1,13 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import classes from "./Header.module.css";
 import mareLawLogo from "../../../public/marelaw.svg";
 import Link from "next/link";
 import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
-import { useState } from "react";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
+import CloseIcon from "@mui/icons-material/Close";
 
 const Header = ({ menuItems }) => {
   const [open, setOpen] = useState(false);
@@ -28,11 +31,12 @@ const Header = ({ menuItems }) => {
         </Box>
         <List className={classes.menu} sx={{ display: { xs: "none", md: "flex" } }}>
           {menuItems.map((item) => (
-            <ListItem key={item.databaseId}>
+            <ListItem key={item.databaseId} className={classes.menuItem}>
               <Link href={`${item.uri}`}>
                 <Typography variant='body' sx={{ height: "100%" }}>
                   {item.label}
                 </Typography>
+                {item.childNodes.length > 0 && <ArrowDropDownIcon className={classes.downArrow} />}
               </Link>
               {item.childNodes.length > 0 && (
                 <Box className={classes.subMenuInner}>
@@ -55,8 +59,9 @@ const Header = ({ menuItems }) => {
       </Box>
       <Drawer open={open} onClose={toggleDrawer} anchor='left' sx={{ width: "100%" }}>
         <Box className={classes.close} onClick={toggleDrawer}>
-          <span></span>
-          <span></span>
+          {/* <span></span>
+          <span></span> */}
+          <CloseIcon />
         </Box>
         <Box className={classes.mobileDrawerInner} sx={{ minWidth: "300px", padding: "3rem 0.5rem" }}>
           <Typography variant='h2' sx={{ marginBottom: "2rem" }}>

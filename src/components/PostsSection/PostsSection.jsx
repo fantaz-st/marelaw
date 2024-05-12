@@ -1,4 +1,6 @@
 import Link from "next/link";
+import NextLink from "next/link";
+
 import classes from "./PostsSection.module.css";
 import SectionCaption from "../SectionCaption/SectionCaption";
 import PostCard from "../PostCard/PostCard";
@@ -14,7 +16,9 @@ const PostsSection = ({ posts }) => {
         <Typography variant='h3' component='h3'>
           From our worldwide partners articles through to our own stories
         </Typography>
-        <Button variant='outlined'>Read all</Button>
+        <NextLink href='/articles' className={classes.button}>
+          <Button>Read all</Button>
+        </NextLink>
       </Box>
 
       <Grid container spacing={1} className={classes.inner}>
@@ -26,6 +30,9 @@ const PostsSection = ({ posts }) => {
           );
         })}
       </Grid>
+      <NextLink href='/articles' className={classes.mobileButton}>
+        <Button>Read all articles</Button>
+      </NextLink>
     </Box>
   );
 };
