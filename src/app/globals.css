@@ -16,3 +16,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.word {
+  line-height: 1.3;
+  overflow: hidden;
+}

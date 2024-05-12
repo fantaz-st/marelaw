@@ -21,6 +21,7 @@
   position: absolute;
   right: 0%;
   bottom: 0%;
+  scale: 1.1;
 }
 .mask {
   mask-image: none;
@@ -86,4 +87,10 @@
     -webkit-mask-position: top left;
     -webkit-mask-repeat: no-repeat;
   }
+}
+
+.title,
+.subTitle {
+  visibility: hidden;
+  opacity: 0;
 }

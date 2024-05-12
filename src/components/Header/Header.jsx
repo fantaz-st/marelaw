@@ -1,16 +1,37 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import classes from "./Header.module.css";
-import mareLawLogo from "../../../public/marelaw.svg";
 import Link from "next/link";
-import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
+import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
+import mareLawLogo from "../../../public/marelaw.svg";
+import classes from "./Header.module.css";
+import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Header = ({ menuItems }) => {
   const [open, setOpen] = useState(false);
+  const headerContainerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.set(headerContainerRef.current, {
+        yPercent: -100,
+      });
+
+      gsap.to(headerContainerRef.current, {
+        yPercent: 0,
+        autoAlpha: 1,
+        duration: 1,
+        delay: 1.5,
+      });
+    },
+    { scope: headerContainerRef }
+  );
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
@@ -18,7 +39,7 @@ const Header = ({ menuItems }) => {
 
   return (
     <>
-      <Box className={classes.container} sx={{ padding: { xs: "0 1rem", md: "0 4rem" } }}>
+      <Box className={classes.container} sx={{ padding: { xs: "0 1rem", md: "0 4rem" } }} ref={headerContainerRef}>
         <Link href='/'>
           <Box className={classes.logo}>
             <Image src={mareLawLogo} alt='MareLaw main logo' priority />
