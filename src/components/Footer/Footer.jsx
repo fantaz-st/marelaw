@@ -3,7 +3,7 @@ import classes from "./Footer.module.css";
 import mareLawLogo from "../../../public/marelaw-white.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import Signature from "../Signature/Signature";
 
 const Footer = ({ menuItems }) => {
@@ -11,9 +11,9 @@ const Footer = ({ menuItems }) => {
     <Box className={classes.container}>
       <Box className={classes.inner}>
         <Image src={mareLawLogo} alt='marelaw footer logo' />
-        <Box className={classes.rows}>
-          <Box className={classes.links}>
-            <List className={classes.menu} sx={{ display: { xs: "none", md: "block" } }}>
+        <Grid container className={classes.rows}>
+          <Grid item xs={12} md={4} className={classes.links}>
+            <List className={classes.menu}>
               {menuItems.map((item) => (
                 <ListItem key={item.databaseId}>
                   <Link href={`${item.uri}`}>
@@ -24,8 +24,8 @@ const Footer = ({ menuItems }) => {
                 </ListItem>
               ))}
             </List>
-          </Box>
-          <Box className={classes.contact}>
+          </Grid>
+          <Grid item xs={12} md={4} className={classes.contact} sx={{ marginTop: { xs: "1rem", md: "0" } }}>
             <Typography variant='h3' className={classes.title} sx={{ color: "#fff" }}>
               Contact
             </Typography>
@@ -45,9 +45,11 @@ const Footer = ({ menuItems }) => {
             </List>
 
             <p></p>
-          </Box>
-          <Signature />
-        </Box>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Signature />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

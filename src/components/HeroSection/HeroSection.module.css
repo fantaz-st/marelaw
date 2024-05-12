@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 640px) {
   .container {
-    height: 70vh;
+    height: 75vh;
   }
   .scrollDown {
     display: none;
@@ -63,7 +63,7 @@
     padding: 0 1rem;
   }
   .imageWrapper {
-    top: 12%;
+    top: 10%;
     right: 0%;
   }
   .image {
