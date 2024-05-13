@@ -11,8 +11,10 @@ import ListItemBlock from "@/elements/BlockElements/ListItemBlock/ListItemBlock"
 import ParagraphBlock from "@/elements/BlockElements/ParagraphBlock/ParagraphBlock";
 import TableBlock from "@/elements/BlockElements/TableBlock/TableBlock";
 import AccordionBlock from "@/elements/BlockElements/AccordionBlock/AccordionBlock";
+import Spacer from "@/elements/BlockElements/Spacer/Spacer";
 
 const Block = ({ block, size }) => {
+  // console.log(block);
   const { attributes, name, innerBlocks } = block;
   switch (name) {
     case "core/columns":
@@ -35,6 +37,9 @@ const Block = ({ block, size }) => {
       return <TableBlock {...attributes} />;
     case "core/buttons":
       return <ButtonBlock {...innerBlocks[0].attributes} />;
+    case "core/spacer":
+      console.log(attributes);
+      return <Spacer {...attributes} />;
     case "core/group":
       if (attributes?.className === "accordion") return <AccordionBlock {...attributes} components={innerBlocks} />;
       else return <GroupBlock innerBlocks={innerBlocks} />;

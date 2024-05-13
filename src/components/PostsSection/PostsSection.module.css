@@ -1,14 +1,9 @@
 .container {
-  clear: both;
   padding: 2rem 1rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.inner {
-  visibility: hidden;
-  opacity: 0;
 }
 
 .grid {
@@ -29,6 +24,8 @@
   scroll-snap-align: center;
   min-width: 340px;
   /* transform: translateX(100%); */
+  visibility: hidden;
+  opacity: 0;
 }
 
 .header {

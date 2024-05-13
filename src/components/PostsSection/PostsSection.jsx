@@ -16,9 +16,8 @@ const PostsSection = ({ posts }) => {
   const postsContainerRef = useRef(null);
   useGSAP(
     () => {
-      gsap.set(`.${classes.inner}`, { autoAlpha: 1 });
-      gsap.set(`.${classes.grid}`, { xPercent: -100 });
-      gsap.to(`.${classes.grid}`, {
+      gsap.set(`.${classes.item}`, { xPercent: -100 });
+      gsap.to(`.${classes.item}`, {
         xPercent: 0,
         autoAlpha: 1,
         duration: 1,
@@ -46,17 +45,15 @@ const PostsSection = ({ posts }) => {
           <Button>Read all</Button>
         </NextLink>
       </Box>
-      <Box className={classes.inner}>
-        <Grid container spacing={1} className={classes.grid}>
-          {posts.map((post) => {
-            return (
-              <Grid item xs={12} md={3} key={post.id} className={classes.item}>
-                <PostCard article={post} />
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Box>
+      <Grid container spacing={{ xs: 1, md: 3 }} className={classes.grid}>
+        {posts.map((post) => {
+          return (
+            <Grid item xs={12} md={3} key={post.id} className={classes.item}>
+              <PostCard article={post} />
+            </Grid>
+          );
+        })}
+      </Grid>
       <NextLink href='/articles' className={classes.mobileButton}>
         <Button>Read all articles</Button>
       </NextLink>

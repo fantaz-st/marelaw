@@ -1,0 +1,8 @@
+.spacer {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #0e202a;
+  content: "sdsd";
+  margin: 1rem 0 3rem;
+}
