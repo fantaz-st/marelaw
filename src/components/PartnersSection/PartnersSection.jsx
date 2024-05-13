@@ -60,12 +60,11 @@ const PartnersSection = () => {
     () => {
       const loop = horizontalLoop(`.${classes.partner}`, {
         repeat: -1,
-        speed: 1.6,
+        speed: 1.7,
         paddingRight: 32,
       });
 
       let tl;
-
       /* const partnersLogos = gsap.utils.toArray(`.${classes.partner}`);
       gsap.set(partnersLogos, { yPercent: 200, opacity: 0 });
       gsap.to(partnersLogos, {
@@ -80,9 +79,6 @@ const PartnersSection = () => {
           end: "bottom+=50% top+=20%",
         },
       }); */
-
-      // tl = gsap.timeline().to(loop, { timeScale: 1, delay: 0.3, duration: 0.25 });
-
       Observer.create({
         target: window,
         type: "wheel,touch",
@@ -106,7 +102,7 @@ const PartnersSection = () => {
         <Typography variant='h3' component='h3' className={classes.sectionSubtitle}>
           We are proud to work with several partner universities in the EU to achieve our goals
         </Typography>
-        <NextLink href='/about-the-project' className={classes.button}>
+        <NextLink href='/about-the-project/partner-institutions' className={classes.button}>
           <Button variant='contained'>Find out more</Button>
         </NextLink>
       </Box>
@@ -128,7 +124,7 @@ const PartnersSection = () => {
           </Box>
         </Box>
       </Box>
-      <NextLink href='/articles' className={classes.mobileButton}>
+      <NextLink href='/about-the-project/partner-institutions' className={classes.mobileButton}>
         <Button>Find out more</Button>
       </NextLink>
     </Box>

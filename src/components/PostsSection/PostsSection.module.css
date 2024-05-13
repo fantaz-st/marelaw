@@ -6,8 +6,12 @@
   flex-direction: column;
   align-items: center;
 }
-
 .inner {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.grid {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -17,13 +21,14 @@
   scrollbar-width: none;
 }
 
-.inner::-webkit-scrollbar {
+.grid::-webkit-scrollbar {
   display: none;
 }
 
 .item {
   scroll-snap-align: center;
   min-width: 340px;
+  /* transform: translateX(100%); */
 }
 
 .header {
