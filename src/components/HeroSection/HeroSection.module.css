@@ -6,6 +6,7 @@
   align-items: flex-end;
   position: relative;
   overflow: visible;
+  pointer-events: none;
 }
 
 .text {

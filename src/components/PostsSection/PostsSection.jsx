@@ -9,25 +9,58 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PostsSection = ({ posts }) => {
   const postsContainerRef = useRef(null);
+  const titleRef = useRef(null);
   useGSAP(
     () => {
       gsap.set(`.${classes.item}`, { xPercent: -100 });
-      gsap.to(`.${classes.item}`, {
-        xPercent: 0,
-        autoAlpha: 1,
-        duration: 1,
-        ease: "power2.out",
+
+      const word = new SplitType(titleRef.current, {
+        types: "lines",
+        tagName: "span",
+      });
+
+      const titleLine = word.lines;
+
+      gsap.set(`.${classes.header}`, { autoAlpha: 1 });
+
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: postsContainerRef.current,
           start: "top 20%",
           end: "top 80%",
         },
       });
+
+      tl.from(
+        titleLine,
+        {
+          opacity: 0,
+          yPercent: 100,
+          rotationX: -80,
+          ease: "power2.out",
+          stagger: 0.04,
+          transformOrigin: "center 5% -80px",
+        }
+        /*  "-=1.2" */
+      )
+        .to(`.${classes.item}`, {
+          xPercent: 0,
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power2.out",
+        })
+        .from(`.${classes.button}`, {
+          yPercent: 100,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        });
     },
     { scope: postsContainerRef }
   );
@@ -38,7 +71,7 @@ const PostsSection = ({ posts }) => {
 
       {/* <AnimatedTitle text='From our worldwide partners articles through to our own stories' variant='h3' /> */}
       <Box className={classes.header}>
-        <Typography variant='h3' component='h3'>
+        <Typography variant='h3' component='h3' ref={titleRef}>
           From our worldwide partners articles through to our own stories
         </Typography>
         <NextLink href='/articles' className={classes.button}>

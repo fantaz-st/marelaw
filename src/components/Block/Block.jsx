@@ -38,7 +38,6 @@ const Block = ({ block, size }) => {
     case "core/buttons":
       return <ButtonBlock {...innerBlocks[0].attributes} />;
     case "core/spacer":
-      console.log(attributes);
       return <Spacer {...attributes} />;
     case "core/group":
       if (attributes?.className === "accordion") return <AccordionBlock {...attributes} components={innerBlocks} />;

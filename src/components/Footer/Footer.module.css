@@ -2,12 +2,20 @@
   position: relative;
   clear: both;
   padding: 4rem 1rem 1rem;
+  height: 380px;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
 }
 
 .inner {
+  height: 380px;
+  width: 100%;
   background: #1d212d;
   border-radius: 4px;
   padding: 4rem 2rem 2rem 2rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .rows {
@@ -16,12 +24,24 @@
   color: #fff;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
 .links ul {
   list-style-type: none;
+  margin-top: 0;
+  padding-top: 0;
 }
 .links h4 {
   font-weight: 300;
   line-height: 1.4;
+}
+
+.links li:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .contact p:not(.title),
@@ -35,6 +55,33 @@
   opacity: 1;
 }
 
+.funding {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.funding2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 360px) {
   .container {
     padding: 4rem 0 0;
@@ -46,5 +93,12 @@
 
   .rows {
     margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container,
+  .inner {
+    height: 850px;
   }
 }
