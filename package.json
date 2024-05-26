@@ -16,13 +16,16 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.16",
     "@mui/material-nextjs": "^5.15.11",
+    "@plaiceholder/next": "^3.0.0",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.0.8",
     "gsap": "^3.12.5",
     "html-react-parser": "^5.1.10",
     "next": "14.0.3",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.33.4",
     "split-type": "^0.3.4"
   },
   "devDependencies": {
