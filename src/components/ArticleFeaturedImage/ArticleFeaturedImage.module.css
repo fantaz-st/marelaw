@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: #000;
+  transition: all 0.5s ease-out;
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.backdrop.loaded {
+  clip-path: inset(100% 0% 0% 0%);
+}

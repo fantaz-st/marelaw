@@ -88,6 +88,13 @@ export const singlePageContent = (id) => {
 
 export const singlePostPageQuery = (slug) => {
   return `query postData {
+    categories {
+      nodes {
+        count
+        slug
+        name
+      }
+    }
       post(id: "${slug}", idType: SLUG) {
         author {
           node {

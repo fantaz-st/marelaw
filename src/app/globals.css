@@ -21,3 +21,8 @@ a {
   line-height: 1.3;
   overflow: hidden;
 }
+
+.line {
+  line-height: 1;
+  overflow: hidden;
+}
