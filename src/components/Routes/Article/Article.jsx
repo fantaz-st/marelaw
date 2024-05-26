@@ -1,7 +1,6 @@
 // import classes from './Articles.module.css';
 
 import classes from "./Article.module.css";
-import Image from "next/image";
 import Block from "@/components/Block/Block";
 import ArticleHeader from "@/components/ArticleHeader/ArticleHeader";
 import { fetchApi } from "@/functions/fetchApi";
@@ -12,10 +11,8 @@ import ArticleFeaturedImage from "@/components/ArticleFeaturedImage/ArticleFeatu
 
 const Article = async ({ params }) => {
   const allData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
-  //   let category = allData?.data?.post?.categories?.nodes[0]?.name;
-  //   let postData = allData.data.post;
+
   const { author, categories, date, id, title, blocks, featuredImage } = allData.data.post;
-  // console.log(allData.data.categories);
   return (
     <Box as='article' className={classes.container} maxWidth='xxl'>
       <Box className={classes.inner}>
