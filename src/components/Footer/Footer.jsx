@@ -43,56 +43,53 @@ const Footer = ({ menuItems }) => {
   return (
     <Box className={classes.container} ref={containerRef}>
       <Box className={classes.inner}>
-        <Grid container className={classes.rows}>
+        <Grid container className={classes.rows} spacing={3}>
           <Grid item xs={12} md={3}>
             <Box className={classes.logo} sx={{ paddingRight: "2rem" }}>
               <Image src={mareLawLogo} alt='marelaw footer logo' />
-              <Typography variant='body' color='#fff'>
+              <Typography variant='body' color='#fff' mt={4}>
                 Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students,
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={3} className={classes.links}>
-            <List className={classes.menu}>
-              {menuItems.map((item) => (
-                <ListItem key={item.databaseId}>
-                  <Link href={`${item.uri}`}>
-                    <Typography variant='h3' sx={{ color: "#fff" }}>
-                      {item.label}
-                    </Typography>
-                  </Link>
-                </ListItem>
-              ))}
-            </List>
-          </Grid>
-
-          <Grid item xs={12} md={3} className={classes.contact} sx={{ marginTop: { xs: "1rem", md: "0" } }}>
-            <Typography variant='h3' className={classes.title} sx={{ color: "#fff" }}>
-              Contact
+          <Grid item xs={6} md={3} className={classes.links}>
+            <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
+              Menu
             </Typography>
-            <List>
-              <ListItem>
-                <Typography variant='body' component='p'>
-                  Ruđera Boškovića 37,
-                  <br />
-                  21000 Split,
-                  <br />
-                  Croatia
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Link href='mailto:marelaw@pfst.hr'>
-                  <Typography variant='body' component='p'>
-                    marelaw@pfst.hr
+            <Box className={classes.menu}>
+              {menuItems.map((item) => (
+                <Link href={`${item.uri}`} key={item.databaseId}>
+                  <Typography variant='body' sx={{ color: "#fff" }}>
+                    {item.label}
                   </Typography>
                 </Link>
-              </ListItem>
-            </List>
+              ))}
+            </Box>
+          </Grid>
+
+          <Grid item xs={6} md={3} className={classes.contact} sx={{ marginTop: { xs: "1rem", md: "0" } }}>
+            <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
+              Contact
+            </Typography>
+
+            <Typography variant='body' component='p'>
+              Ruđera Boškovića 37,
+              <br />
+              21000 Split,
+              <br />
+              Croatia
+            </Typography>
+
+            <Link href='mailto:marelaw@pfst.hr'>
+              <Typography variant='body' component='p'>
+                marelaw@pfst.hr
+              </Typography>
+            </Link>
           </Grid>
           <Grid item xs={12} md={3}>
             <Box className={classes.funding2}>
-              <Image src={coFundedByEuLogo} alt='Co-funded by the European Union logo' className='fundingImages' />
-              <Image src={erasmusLogo} alt='Erasmus+ logo' className='fundingImages' />
+              <Image src={coFundedByEuLogo} width={300} alt='Co-funded by the European Union logo' className='fundingImages' />
+              <Image src={erasmusLogo} width={300} alt='Erasmus+ logo' className='fundingImages' />
             </Box>
             <Signature />
           </Grid>
