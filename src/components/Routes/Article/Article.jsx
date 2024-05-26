@@ -19,8 +19,8 @@ const Article = async ({ params }) => {
     try {
       const buffer = await fetch(featuredImage.node?.sourceUrl).then(async (res) => Buffer.from(await res.arrayBuffer()));
 
-      const { base64 } = await getPlaiceholder(buffer);
-      featuredImagePlaiceholder = base64;
+      const plaiceholderData = await getPlaiceholder(buffer);
+      featuredImagePlaiceholder = plaiceholderData;
     } catch (err) {
       err;
     }

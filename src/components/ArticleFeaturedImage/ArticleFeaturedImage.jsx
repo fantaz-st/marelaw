@@ -10,7 +10,7 @@ const ArticleFeaturedImage = ({ src, alt, placeholder }) => {
   }; */
   return (
     <Box className={classes.container}>
-      <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} /* onLoad={removePlaceholder}  */ placeholder='blur' blurDataURL={placeholder} />
+      <Image src={src} alt={alt} style={{ objectFit: "cover" }} /* onLoad={removePlaceholder}  */ placeholder='blur' blurDataURL={placeholder.base64} width={placeholder.metadata.width} height={placeholder.metadata.height} />
       {/* <Box className={imageLoaded ? `${classes.backdrop} ${classes.loaded}` : classes.backdrop} /> */}
     </Box>
   );
