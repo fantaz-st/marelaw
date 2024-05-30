@@ -4,11 +4,23 @@
 }
 
 .inner {
-  padding: 95px 0px 80px 0px;
+  padding: 50px 0px 80px 0px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.date span,
+.author span,
+.categories span {
+  display: block;
+}
+
+.date span:first-child,
+.author span:first-child,
+.categories span:first-child {
+  font-size: 0.75rem;
 }

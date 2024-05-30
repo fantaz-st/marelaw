@@ -2,44 +2,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background-color: #000;
-  transition: all 0.5s ease-out;
-  clip-path: inset(0% 0% 0% 0%);
-
-  background-repeat: no-repeat;
-  background-size: 50%;
-  animation-iteration-count: infinite;
-  animation-name: loadingShimmer;
-
-  background-color: #dfdfdf;
-  background-image: linear-gradient(to right, rgba(223, 223, 223, 1) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(223, 223, 223, 1) 90%);
-  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-  animation-duration: 2s;
-}
-
-.backdrop.loaded {
-  clip-path: inset(100% 0% 0% 0%);
-}
-
-.background-loading-shimmer {
-}
-
-@keyframes loadingShimmer {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  /* border-radius: 1rem; */
+  transform-origin: left;
+  visibility: hidden;
 }

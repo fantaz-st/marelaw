@@ -9,6 +9,7 @@ import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import Link from "next/link";
 import ArticleFeaturedImage from "@/components/ArticleFeaturedImage/ArticleFeaturedImage";
 import { getPlaiceholder } from "plaiceholder";
+import formatDate from "@/functions/formatDate";
 
 const Article = async ({ params }) => {
   const allData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
@@ -29,16 +30,26 @@ const Article = async ({ params }) => {
   return (
     <Box as='article' className={classes.container} maxWidth='xxl'>
       <Box className={classes.inner}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={8} className={classes.content}>
-            <ArticleHeader title={title} author={author} date={date} />
-
+        <ArticleHeader title={title} author={author} date={date} />
+        <Grid container columnSpacing={12} sx={{ marginTop: "4rem" }}>
+          {/* slika */}
+          <Grid item xs={12} md={6} className={classes.content}>
             <ArticleFeaturedImage src={featuredImage.node.sourceUrl} alt={featuredImage.node.title || title} placeholder={featuredImagePlaiceholder} />
-            <Box>{blocks && blocks.map((block, i) => <Block block={block} key={i} />)}</Box>
-          </Grid>
-          {/* kategorije i ostalo */}
-          <Grid item xs={12} md={4} className={classes.content}>
-            <Box>Kategorije</Box>
+            <Typography variant='body' className={classes.date}>
+              <span>POSTED ON</span>
+              <span>{formatDate(date)}</span>
+            </Typography>
+            <Typography variant='body' className={classes.categories}>
+              <span>POSTED AT</span>
+              {categories.nodes.map((cat) => (
+                <span key={cat.slug}>{cat.name}</span>
+              ))}
+            </Typography>
+            <Typography variant='body' className={classes.author}>
+              <span>POSTED BY</span>
+              <span>{author.node.name}</span>
+            </Typography>
+            {/*  <Box>Kategorije</Box>
             <List>
               {allData.data.categories.nodes.map((cat) => {
                 return (
@@ -49,7 +60,11 @@ const Article = async ({ params }) => {
                   </ListItem>
                 );
               })}
-            </List>
+            </List> */}
+          </Grid>
+          {/* text */}
+          <Grid item xs={12} md={6} className={classes.content}>
+            <Box>{blocks && blocks.map((block, i) => <Block block={block} key={i} />)}</Box>
           </Grid>
         </Grid>
       </Box>
