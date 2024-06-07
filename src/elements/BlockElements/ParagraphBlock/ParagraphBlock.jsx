@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 
 const ParagraphBlock = (props) => {
   return (
-    <Typography className={classes.paragraph} variant='body' component='p' sx={{ textAlign: props.align, margin: "0.5rem 0 1rem" }}>
+    <Typography className={classes.paragraph} variant='body' component='p' sx={{ lineHeight: "2rem", textAlign: props.align, margin: "0.5rem 0 1rem" }}>
       {parseHtml(props.content)}
     </Typography>
   );

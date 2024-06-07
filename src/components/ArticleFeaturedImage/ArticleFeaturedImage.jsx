@@ -20,7 +20,7 @@ const ArticleFeaturedImage = ({ src, alt, placeholder }) => {
 
   return (
     <Box className={classes.container} ref={container}>
-      <Image src={src} fill alt={alt} style={{ objectFit: "cover" }} /* onLoad={removePlaceholder}  */ placeholder='blur' blurDataURL={placeholder.base64} /* width={placeholder.metadata.width} height={placeholder.metadata.height} */ />
+      <Image src={src} fill alt={alt} style={{ objectFit: "cover" }} /* onLoad={removePlaceholder}  */ placeholder='blur' blurDataURL={placeholder} /* width={placeholder.metadata.width} height={placeholder.metadata.height} */ />
     </Box>
   );
 };
