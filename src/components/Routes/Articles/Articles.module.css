@@ -1,0 +1,15 @@
+.container {
+  margin: 5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.content > *:not(:last-child) {
+  border-bottom: 1px solid #000;
+}

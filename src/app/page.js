@@ -10,7 +10,6 @@ import PartnersSection from "@/components/PartnersSection/PartnersSection";
 export default async function Home() {
   const homePagePosts = await fetchApi(allNewsQuery);
 
-  // console.log(homePagePosts.data);
   return (
     <main className={classes.main}>
       <HeroSection />

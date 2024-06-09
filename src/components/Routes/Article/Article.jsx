@@ -12,7 +12,7 @@ import { useGSAP } from "@gsap/react";
 
 import SplitType from "split-type";
 
-const Article = ({ allArticleData }) => {
+const Article = ({ allArticleData, allCategories }) => {
   const container = useRef(null);
   const titleRef = useRef(null);
 
@@ -21,6 +21,7 @@ const Article = ({ allArticleData }) => {
   useGSAP(
     () => {
       gsap.set(container.current, { autoAlpha: 1 });
+      gsap.set(`.${classes.image}`, { clipPath: "inset(0% 0% 0% 0%)" });
       const splitTitle = new SplitType(titleRef.current, { types: "lines, words" });
 
       const tl = gsap.timeline();
@@ -28,7 +29,7 @@ const Article = ({ allArticleData }) => {
       tl.from(`.${classes.breadCrumb}`, { opacity: 0, yPercent: 100, ease: "power2.out", duration: 0.3, delay: 0.5 })
         .from(splitTitle.words, { yPercent: 100, ease: "power2.out", stagger: 0.03 })
         .from(`.${classes.details}`, { opacity: 0, yPercent: -100, ease: "power2.out", duration: 0.3 })
-        .from(`.${classes.image}`, { opacity: 0, yPercent: -100, ease: "power2.out", duration: 0.5 });
+        .from(`.${classes.image}`, { clipPath: "inset(100% 0% 0% 0%)", ease: "power2.out", duration: 1 });
     },
     { scope: container }
   );
@@ -71,18 +72,18 @@ const Article = ({ allArticleData }) => {
             <Box>{blocks && blocks.map((block, i) => <Block block={block} key={i} />)}</Box>
           </Grid>
           <Grid item xs={12} md={4}>
-            {/* <Box>Kategorije</Box>
+            <Box>Kategorije</Box>
             <List>
-              {allArticleData.categories.nodes.map((cat) => {
+              {allCategories.nodes.map((cat) => {
                 return (
                   <ListItem key={cat.slug}>
-                    <Link href={`/articles&category=${cat.slug}`}>
+                    <Link href={`/articles?category=${cat.slug}`}>
                       <Typography variant='body'>{cat.name}</Typography>
                     </Link>
                   </ListItem>
                 );
               })}
-            </List> */}
+            </List>
           </Grid>
         </Grid>
       </Box>

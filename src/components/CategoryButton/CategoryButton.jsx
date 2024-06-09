@@ -20,7 +20,7 @@ const switchColors = (name) => {
 
 const CategoryButton = ({ category: { name, slug }, postPage = false }) => {
   return (
-    <Link href={`/articles/categories/${slug}`} passHref>
+    <Link href={`/articles?category=${slug}`} passHref>
       <Box className={classes.container} sx={{ backgroundColor: switchColors(name), padding: { xs: postPage ? "0.1rem 0.4rem" : "0 0.3rem", md: "0.3rem 0.6rem 0.3rem 0.4rem" } }}>
         {/* <Box className={classes["category-button-sphere"]} sx={{ backgroundColor: switchColors(name) }} /> */}
         <Typography className={classes.title} variant='body'>

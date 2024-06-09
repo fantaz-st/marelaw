@@ -130,3 +130,72 @@ export const singlePostPageQuery = (slug) => {
       }
   }`;
 };
+
+export const newsQuery = ({ numberOfPosts = 10, search = "", endCursor = "", month = null, year = null, category = "" }) => {
+  return `query MyQuery {
+    categories(first: 10) {
+      nodes {
+        count
+        slug
+        name
+      }
+    }
+    category: categories(where: { slug: "${category}" }) {
+      nodes {
+        name
+        slug
+      }
+    }
+    posts(
+      first: ${numberOfPosts}
+      after: "${endCursor}"
+      where: {
+        search: "${search}"
+        categoryName: "${category === "Erasmus+" ? "Erasmus" : category}"
+        dateQuery: { month: ${month}, year: ${year} }
+      }
+    ) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        title
+        link
+        slug
+        date
+        excerpt
+        categories {
+          nodes {
+            name
+            slug
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        tags {
+          nodes {
+            name
+            slug
+          }
+        }
+        author {
+          node {
+            name
+            firstName
+            lastName
+            id
+            avatar {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+  `;
+};

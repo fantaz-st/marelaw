@@ -1,38 +1,48 @@
 import Article from "@/components/Routes/Article/Article";
+import Articles from "@/components/Routes/Articles/Articles";
 import Page from "@/components/Routes/Page/Page";
 import { fetchApi } from "@/functions/fetchApi";
-import { allPagesUrisQuery, singlePostPageQuery } from "@/helpers/queryLists";
+import { allPagesUrisQuery, newsQuery, singlePostPageQuery } from "@/helpers/queryLists";
 import { getPlaiceholder } from "plaiceholder";
 
 export async function generateMetadata({ params }) {
   return { title: "MareLaw" };
 }
 
-const catchDamnAllPage = async ({ params }) => {
+const catchDamnAllPage = async ({ params, searchParams }) => {
   if (params.slug[0] === "articles") {
-    const articleData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
-    let allArticleData = articleData.data.post;
+    if (params.slug.length === 1) {
+      //svi članci
 
-    if (allArticleData?.featuredImage) {
-      try {
-        const buffer = await fetch(allArticleData.featuredImage?.node?.sourceUrl).then(async (res) => Buffer.from(await res.arrayBuffer()));
+      const articles = await fetchApi(newsQuery.call(this, { numberOfPosts: 12, ...searchParams }));
+      return <Articles articles={articles} searchParams={searchParams} />;
+    } else {
+      //jedan članak
 
-        const { base64 } = await getPlaiceholder(buffer);
-        allArticleData = {
-          ...allArticleData,
-          featuredImage: {
-            ...allArticleData.featuredImage,
-            node: {
-              ...allArticleData.featuredImage.node,
-              base64,
+      const articleData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
+      let allArticleData = articleData.data.post;
+
+      if (allArticleData?.featuredImage) {
+        try {
+          const buffer = await fetch(allArticleData.featuredImage?.node?.sourceUrl).then(async (res) => Buffer.from(await res.arrayBuffer()));
+
+          const { base64 } = await getPlaiceholder(buffer);
+          allArticleData = {
+            ...allArticleData,
+            featuredImage: {
+              ...allArticleData.featuredImage,
+              node: {
+                ...allArticleData.featuredImage.node,
+                base64,
+              },
             },
-          },
-        };
-      } catch (err) {
-        err;
+          };
+        } catch (err) {
+          err;
+        }
       }
+      return <Article params={params} allArticleData={allArticleData} allCategories={articleData.data.categories} />;
     }
-    return <Article params={params} allArticleData={allArticleData} />;
   }
   return <Page params={params} />;
 };
