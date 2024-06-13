@@ -1,9 +1,11 @@
 import classes from "./Articles.module.css";
-import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
 import SearchInput from "@/components/SearchInput/SearchInput";
 import CategoryLink from "@/components/CategoryLink/CategoryLink";
 import ActiveFilters from "@/components/ActiveFilters/ActiveFilters";
+import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
 import { Box, Grid, List, ListItem, Typography } from "@mui/material";
+
+export const dynamic = "force-static";
 
 const Articles = ({ searchParams, articles }) => {
   // Create a mapping from category slug to category name
