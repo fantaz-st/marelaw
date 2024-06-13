@@ -12,21 +12,19 @@ export async function generateMetadata({ params }) {
 const catchDamnAllPage = async ({ params, searchParams }) => {
   if (params.slug[0] === "articles") {
     if (params.slug.length === 1) {
-      //svi članci
-
+      // Fetch all articles
       const articles = await fetchApi(newsQuery.call(this, { numberOfPosts: 12, ...searchParams }));
       return <Articles articles={articles} searchParams={searchParams} />;
     } else {
-      //jedan članak
-
+      // Fetch a single article
       const articleData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
       let allArticleData = articleData.data.post;
 
       if (allArticleData?.featuredImage) {
         try {
           const buffer = await fetch(allArticleData.featuredImage?.node?.sourceUrl).then(async (res) => Buffer.from(await res.arrayBuffer()));
-
           const { base64 } = await getPlaiceholder(buffer);
+
           allArticleData = {
             ...allArticleData,
             featuredImage: {
@@ -38,12 +36,14 @@ const catchDamnAllPage = async ({ params, searchParams }) => {
             },
           };
         } catch (err) {
-          err;
+          console.error("Error fetching image placeholder:", err);
         }
       }
       return <Article params={params} allArticleData={allArticleData} allCategories={articleData.data.categories} />;
     }
   }
+
+  // Default to rendering a general page
   return <Page params={params} />;
 };
 
@@ -51,8 +51,5 @@ export default catchDamnAllPage;
 
 export async function generateStaticParams() {
   const allPagesUris = await fetchApi(allPagesUrisQuery);
-
-  return allPagesUris.data.pages.nodes.map((uri) => {
-    return uri.uri;
-  });
+  return allPagesUris.data.pages.nodes.map((uri) => ({ params: { slug: uri.uri.split("/").filter(Boolean) } }));
 }

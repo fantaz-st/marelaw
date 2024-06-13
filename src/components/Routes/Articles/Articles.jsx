@@ -4,6 +4,9 @@ import HorizontalArticleCard from "@/components/HorizontalArticleCard/Horizontal
 import ArticlesPageSidebar from "@/components/ArticlesPageSidebar/ArticlesPageSidebar";
 
 const Articles = ({ searchParams, articles }) => {
+  const { nodes: articleNodes } = articles.data.posts;
+  const { nodes: categoryNodes } = articles.data.categories;
+
   return (
     <Box className={classes.container} maxWidth='xl'>
       <Box className={classes.header}>
@@ -12,13 +15,13 @@ const Articles = ({ searchParams, articles }) => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={8}>
           <Box className={classes.content}>
-            {articles.data.posts.nodes.map((article) => (
+            {articleNodes.map((article) => (
               <HorizontalArticleCard article={article} id={article.id} key={article.id} />
             ))}
           </Box>
         </Grid>
         <Grid item xs={12} md={4}>
-          <ArticlesPageSidebar searchParams={searchParams} categories={articles.data.categories.nodes} />
+          <ArticlesPageSidebar searchParams={searchParams} categories={categoryNodes} />
         </Grid>
       </Grid>
     </Box>
