@@ -5,13 +5,13 @@ import Link from "next/link";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { Box, List, ListItem, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
-const ArticlesPageSidebar = ({ searchParams, categories }) => {
+const ArticlesPageSidebar = ({ categories }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Create a mapping from category slug to category name
   const categoryMap = {};
   categories.forEach((cat) => {
     categoryMap[cat.slug] = cat.name;
@@ -19,73 +19,51 @@ const ArticlesPageSidebar = ({ searchParams, categories }) => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-
-    const newSearchParams = new URLSearchParams(searchParams);
+    const newSearchParams = new URLSearchParams(searchParams.toString());
     newSearchParams.set("search", searchTerm);
-
     router.push(`/articles?${newSearchParams.toString()}`);
   };
 
   const createCategoryLink = (categorySlug) => {
-    const newSearchParams = new URLSearchParams(searchParams);
-
-    // Set the category parameter to the new categorySlug, effectively replacing any existing category
+    const newSearchParams = new URLSearchParams(searchParams.toString());
     newSearchParams.set("category", categorySlug);
-
     return `/articles?${newSearchParams.toString()}`;
   };
 
-  const handleRemoveFilter = (filterType, filterValue) => {
-    let newSearchString = "";
-
+  const handleRemoveFilter = (filterType) => {
+    const newSearchParams = new URLSearchParams(searchParams.toString());
     if (filterType === "category") {
-      // Clear the category parameter
-      newSearchString = searchParams.search ? `search=${encodeURIComponent(searchParams.search)}` : "";
+      newSearchParams.delete("category");
     } else if (filterType === "search") {
-      // If removing a search term, just construct the search string without the search parameter
-      const category = searchParams.category;
-      newSearchString = category ? `category=${encodeURIComponent(category)}` : "";
+      newSearchParams.delete("search");
     }
-
-    router.push(`/articles?${newSearchString}`);
+    router.push(`/articles?${newSearchParams.toString()}`);
   };
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-      {(searchParams.category || searchParams.search) && <Typography variant='h5'>Active filters</Typography>}
-
-      {searchParams.category && (
+      {(searchParams.get("category") || searchParams.get("search")) && <Typography variant='h5'>Active filters</Typography>}
+      {searchParams.get("category") && (
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <Typography variant='p'>{categoryMap[searchParams.category]}</Typography>
-          <CloseRoundedIcon onClick={() => handleRemoveFilter("category", searchParams.category)} style={{ cursor: "pointer" }} />
+          <Typography variant='body1'>{categoryMap[searchParams.get("category")]}</Typography>
+          <CloseRoundedIcon onClick={() => handleRemoveFilter("category")} style={{ cursor: "pointer" }} />
         </Box>
       )}
-      {searchParams.search && (
+      {searchParams.get("search") && (
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <Typography variant='p'>{searchParams.search}</Typography>
-          <CloseRoundedIcon onClick={() => handleRemoveFilter("search", searchParams.search)} style={{ cursor: "pointer" }} />
+          <Typography variant='body1'>{searchParams.get("search")}</Typography>
+          <CloseRoundedIcon onClick={() => handleRemoveFilter("search")} style={{ cursor: "pointer" }} />
         </Box>
       )}
-
       <form onSubmit={handleSearchSubmit}>
-        <TextField
-          id='outlined-controlled'
-          label='Search'
-          inputProps={{
-            style: {
-              padding: "1.75rem 0.5rem",
-            },
-          }}
-          value={searchTerm}
-          onChange={(event) => setSearchTerm(event.target.value)}
-        />
+        <TextField id='outlined-controlled' label='Search' inputProps={{ style: { padding: "1.75rem 0.5rem" } }} value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
       </form>
       <Typography variant='h5'>Categories</Typography>
       <List>
         {categories.map((cat) => (
           <ListItem key={cat.slug}>
             <Link href={createCategoryLink(cat.slug)}>
-              <Typography variant='body'>{cat.name}</Typography>
+              <Typography variant='body1'>{cat.name}</Typography>
             </Link>
           </ListItem>
         ))}

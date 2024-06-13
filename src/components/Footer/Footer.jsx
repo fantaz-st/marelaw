@@ -87,17 +87,13 @@ const Footer = ({ menuItems }) => {
             </Link>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box className={classes.funding2}>
-              <Image src={coFundedByEuLogo} width={300} alt='Co-funded by the European Union logo' className='fundingImages' />
-              <Image src={erasmusLogo} width={300} alt='Erasmus+ logo' className='fundingImages' />
-            </Box>
             <Signature />
           </Grid>
         </Grid>
-        {/* <Box className={classes.funding} ref={fundingRef}>
+        <Box className={classes.funding} ref={fundingRef}>
           <Image src={coFundedByEuLogo} alt='Co-funded by the European Union logo' width={200} className='fundingImages' />
           <Image src={erasmusLogo} alt='Erasmus+ logo' width={200} className='fundingImages' />
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   );
