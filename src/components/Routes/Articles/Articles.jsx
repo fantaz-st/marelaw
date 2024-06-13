@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import classes from "./Articles.module.css";
 import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
-import ArticlesPageSidebar from "@/components/ArticlesPageSidebar/ArticlesPageSidebar";
+// import ArticlesPageSidebar from "@/components/ArticlesPageSidebar/ArticlesPageSidebar";
 
 const Articles = ({ searchParams, articles }) => {
   return (
@@ -18,7 +18,8 @@ const Articles = ({ searchParams, articles }) => {
           </Box>
         </Grid>
         <Grid item xs={12} md={4}>
-          <ArticlesPageSidebar searchParams={searchParams} categories={articles.data.categories.nodes} />
+          uh-oh
+          {/* <ArticlesPageSidebar searchParams={searchParams} categories={articles.data.categories.nodes} /> */}
         </Grid>
       </Grid>
     </Box>
