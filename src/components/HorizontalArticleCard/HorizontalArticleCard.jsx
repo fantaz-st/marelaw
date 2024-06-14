@@ -36,5 +36,5 @@ const HorizontalArticleCard = React.forwardRef(({ article, id }, ref) => {
     </Box>
   );
 });
-
+HorizontalArticleCard.displayName = "HorizontalArticleCard";
 export default HorizontalArticleCard;
