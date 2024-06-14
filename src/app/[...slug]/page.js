@@ -13,8 +13,8 @@ const catchDamnAllPage = async ({ params, searchParams }) => {
   if (params.slug[0] === "articles") {
     if (params.slug.length === 1) {
       // Fetch all articles
-      const articles = await fetchApi(newsQuery.call(this, { numberOfPosts: 12, ...searchParams }));
-      return <Articles articles={articles} searchParams={searchParams} />;
+      const articles = await fetchApi(newsQuery.call(this, { numberOfPosts: 10, ...searchParams }));
+      return <Articles initialArticles={articles} searchParams={searchParams} />;
     } else {
       // Fetch a single article
       const articleData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));

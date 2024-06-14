@@ -7,7 +7,7 @@ const headers = { "Content-Type": "application/json" };
 const useFetch = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [fetchData, setFetchData] = useState([]);
+  const [fetchData, setFetchData] = useState({});
 
   const sendRequest = useCallback(async (query) => {
     setError(null);
@@ -19,18 +19,26 @@ const useFetch = () => {
         next: {
           revalidate: 60,
         },
-        body: JSON.stringify({
-          query,
-        }),
+        body: JSON.stringify({ query }),
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
-      setFetchData(data.data);
+
+      if (data.errors) {
+        throw new Error(data.errors.map((error) => error.message).join(", "));
+      }
+
+      setFetchData(data.data || {});
     } catch (err) {
       setError(err);
-      console.error(err.message);
+      console.error("Fetch error:", err.message);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }, []);
 
   return {

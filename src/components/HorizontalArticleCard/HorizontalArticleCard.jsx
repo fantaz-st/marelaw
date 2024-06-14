@@ -2,11 +2,14 @@ import { Box, Typography } from "@mui/material";
 import classes from "./HorizontalArticleCard.module.css";
 import Link from "next/link";
 import formatDate from "@/functions/formatDate";
+import React from "react"; // Import React
 
-const HorizontalArticleCard = ({ article, id }) => {
+const HorizontalArticleCard = React.forwardRef(({ article, id }, ref) => {
   const { title, slug, author, featuredImage, categories, date } = article;
   return (
-    <Box className={classes.container}>
+    <Box ref={ref} className={classes.container}>
+      {" "}
+      {/* Use ref here */}
       <Box className={classes.details}>
         <Typography as='p' variant='body'>
           BY {author.node.name}
@@ -32,6 +35,6 @@ const HorizontalArticleCard = ({ article, id }) => {
       </Link>
     </Box>
   );
-};
+});
 
 export default HorizontalArticleCard;
