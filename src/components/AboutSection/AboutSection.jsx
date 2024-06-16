@@ -24,7 +24,7 @@ const AboutSection = () => {
       <Grid container className={classes.inner}>
         <Grid item xs={12} md={6} className={classes.left}>
           <Box>
-            <Typography variant='body' component='P' sx={{ marginBottom: "3rem" }}>
+            <Typography variant='body' component='p' sx={{ marginBottom: "3rem" }}>
               The MareLaw project is a two-year initiative that began on December 1, 2022. Our mission is to improve and harmonize elements of the maritime law curriculum across our partner universities. Unlike law students, maritime students often encounter legal issues for the first time in their
               maritime law courses. Our project aims to make this complex subject more accessible and understandable for these students.
             </Typography>

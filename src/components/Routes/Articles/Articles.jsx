@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useCallback, useState } from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import classes from "./Articles.module.css";
 import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
 import useFetch from "@/hooks/useFetch";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { newsQuery } from "@/helpers/queryLists";
+import Link from "next/link";
 
 const Articles = ({ searchParams, initialArticles }) => {
   const { nodes: articleNodes } = initialArticles.data.posts;
@@ -25,6 +26,7 @@ const Articles = ({ searchParams, initialArticles }) => {
   });
 
   useEffect(() => {
+    console.log("ran");
     // Function to fetch initial articles based on searchParams
     const fetchInitialArticles = async () => {
       const query = newsQuery.call(this, {
@@ -138,6 +140,15 @@ const Articles = ({ searchParams, initialArticles }) => {
               </Box>
             )}
           </Box>
+          <List>
+            {categoryNodes.map((cat) => (
+              <ListItem key={cat.slug}>
+                <Link href={`/articles?category=${cat.slug}`}>
+                  <Typography variant='body'>{cat.name}</Typography>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
           {/* <ArticlesPageSidebar searchParams={searchParams} categories={categoryNodes} /> */}
         </Grid>
       </Grid>
