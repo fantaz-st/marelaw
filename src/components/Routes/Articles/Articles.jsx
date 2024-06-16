@@ -129,25 +129,6 @@ const Articles = ({ searchParams, initialArticles }) => {
     <Box className={classes.container} maxWidth='xl'>
       <Box className={classes.header}>
         <Typography variant='h1'>All Articles</Typography>
-        <Box sx={{ display: "flex", gap: "1rem" }}>
-          {(filter.category || filter.search) && (
-            <Typography variant='h5' mb={1}>
-              Active filters:
-            </Typography>
-          )}
-          {filter.category && (
-            <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }} className={classes.filter}>
-              <Typography variant='body'>{categoryMap[filter.category]}</Typography>
-              <CloseRoundedIcon onClick={() => handleRemoveFilter("category", filter.category)} style={{ cursor: "pointer" }} />
-            </Box>
-          )}
-          {filter.search && (
-            <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }} className={classes.filter}>
-              <Typography variant='body'>{filter.search}</Typography>
-              <CloseRoundedIcon onClick={() => handleRemoveFilter("search", filter.search)} style={{ cursor: "pointer" }} />
-            </Box>
-          )}
-        </Box>
       </Box>
       {articles?.length === 0 && <Typography variant='body'>No articles matching your query</Typography>}
       <Grid container spacing={3}>
@@ -165,6 +146,21 @@ const Articles = ({ searchParams, initialArticles }) => {
           {!hasNextPage && <Typography variant='body'>No more articles matching current filters</Typography>}
         </Grid>
         <Grid item xs={12} md={4} sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {(filter.category || filter.search) && <Typography variant='h5'>Active filters</Typography>}
+            {filter.category && (
+              <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Typography variant='body'>{categoryMap[filter.category]}</Typography>
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("category", filter.category)} style={{ cursor: "pointer" }} />
+              </Box>
+            )}
+            {filter.search && (
+              <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Typography variant='body'>{filter.search}</Typography>
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("search", filter.search)} style={{ cursor: "pointer" }} />
+              </Box>
+            )}
+          </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             <Typography variant='h5' mb={1}>
               All categories

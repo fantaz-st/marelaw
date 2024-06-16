@@ -1,6 +1,5 @@
 "use client";
 import NextLink from "next/link";
-
 import classes from "./PostsSection.module.css";
 import SectionCaption from "../SectionCaption/SectionCaption";
 import PostCard from "../PostCard/PostCard";
@@ -49,12 +48,16 @@ const PostsSection = ({ posts }) => {
         }
         /*  "-=1.2" */
       )
-        .from(`.${classes.button}`, {
-          yPercent: 100,
-          opacity: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        })
+        .from(
+          `.${classes.button}`,
+          {
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          "<"
+        )
         .to(`.${classes.item}`, {
           xPercent: 0,
           autoAlpha: 1,
@@ -69,7 +72,6 @@ const PostsSection = ({ posts }) => {
     <Box className={classes.container} ref={postsContainerRef}>
       <SectionCaption>Media exposure</SectionCaption>
 
-      {/* <AnimatedTitle text='From our worldwide partners articles through to our own stories' variant='h3' /> */}
       <Box className={classes.header}>
         <Typography variant='h3' component='h3' ref={titleRef}>
           From our worldwide partners articles through to our own stories

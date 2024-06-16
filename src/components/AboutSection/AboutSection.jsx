@@ -5,16 +5,76 @@ import SectionCaption from "../SectionCaption/SectionCaption";
 import classes from "./AboutSection.module.css";
 import { useRef } from "react";
 import { Box, Button, Grid, List, ListItem, Typography } from "@mui/material";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
-  const titleRef = useRef(null);
   const textRef = useRef(null);
+  const aboutContainerRef = useRef(null);
+  const titleRef = useRef(null);
+  useGSAP(
+    () => {
+      gsap.set(aboutContainerRef.current, { autoAlpha: 1 });
+
+      const word = new SplitType(titleRef.current, {
+        types: "lines",
+        tagName: "span",
+      });
+
+      const titleLine = word.lines;
+
+      gsap.set(`.${classes.header}`, { autoAlpha: 1 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutContainerRef.current,
+          start: "top 50%",
+          end: "top 80%",
+        },
+      });
+
+      tl.from(
+        titleLine,
+        {
+          opacity: 0,
+          yPercent: 100,
+          rotationX: -80,
+          ease: "power2.out",
+          stagger: 0.04,
+          transformOrigin: "center 5% -80px",
+        }
+        /*  "-=1.2" */
+      )
+        .from(
+          `.${classes.button}`,
+          {
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          "<"
+        )
+        .from(`.${classes.inner}`, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 1,
+          ease: "power2.out",
+        });
+    },
+    { scope: aboutContainerRef }
+  );
 
   return (
-    <Box className={classes.container} ref={titleRef}>
+    <Box className={classes.container} ref={aboutContainerRef}>
       <SectionCaption>About the project</SectionCaption>
       <Box className={classes.header}>
-        <Typography variant='h3' component='h3' className={classes.title}>
+        <Typography variant='h3' component='h3' className={classes.title} ref={titleRef}>
           Ensuring a uniform level of seafarers&apos; qualifications
         </Typography>
         <NextLink href='/about-the-project' className={classes.button}>
