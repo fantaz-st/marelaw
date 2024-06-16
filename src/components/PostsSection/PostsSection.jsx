@@ -32,7 +32,7 @@ const PostsSection = ({ posts }) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: postsContainerRef.current,
-          start: "top 20%",
+          start: "top 50%",
           end: "top 80%",
         },
       });
@@ -49,16 +49,16 @@ const PostsSection = ({ posts }) => {
         }
         /*  "-=1.2" */
       )
-        .to(`.${classes.item}`, {
-          xPercent: 0,
-          autoAlpha: 1,
-          duration: 1,
-          ease: "power2.out",
-        })
         .from(`.${classes.button}`, {
           yPercent: 100,
           opacity: 0,
           duration: 0.5,
+          ease: "power2.out",
+        })
+        .to(`.${classes.item}`, {
+          xPercent: 0,
+          autoAlpha: 1,
+          duration: 1,
           ease: "power2.out",
         });
     },

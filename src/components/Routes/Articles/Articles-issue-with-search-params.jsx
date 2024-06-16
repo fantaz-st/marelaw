@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useCallback, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Box, Grid, List, ListItem, TextField, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import classes from "./Articles.module.css";
 import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
 import useFetch from "@/hooks/useFetch";
@@ -13,10 +13,7 @@ import Link from "next/link";
 const Articles = ({ searchParams, initialArticles }) => {
   const { nodes: categoryNodes } = initialArticles.data.categories;
   const router = useRouter();
-  const observer = useRef();
-
   const searchParamsHook = useSearchParams();
-
   const { sendRequest, fetchData, loading } = useFetch();
 
   const [articles, setArticles] = useState(initialArticles.data.posts.nodes);
@@ -24,14 +21,11 @@ const Articles = ({ searchParams, initialArticles }) => {
   const [hasNextPage, setHasNextPage] = useState(initialArticles.data.posts.pageInfo.hasNextPage);
   const [filter, setFilter] = useState({ category: searchParams.category, search: searchParams.search });
 
-  const [searchTerm, setSearchTerm] = useState(searchParams.search || "");
-  //map category slug to the category name
   const categoryMap = {};
   categoryNodes.forEach((cat) => {
     categoryMap[cat.slug] = cat.name;
   });
 
-  // fetch new articles when filter has changed
   useEffect(() => {
     const fetchInitialArticles = async () => {
       const query = newsQuery.call(this, {
@@ -46,16 +40,6 @@ const Articles = ({ searchParams, initialArticles }) => {
     fetchInitialArticles();
   }, [filter, sendRequest]);
 
-  //set state whn sendRequest data is received
-  useEffect(() => {
-    if (fetchData && fetchData.posts) {
-      setArticles(fetchData.posts.nodes);
-      setEndCursor(fetchData.posts.pageInfo.endCursor);
-      setHasNextPage(fetchData.posts.pageInfo.hasNextPage);
-    }
-  }, [fetchData]);
-
-  //set filter when the url changes
   useEffect(() => {
     const urlParams = new URLSearchParams(searchParamsHook.toString());
     const category = urlParams.get("category") || "";
@@ -63,6 +47,8 @@ const Articles = ({ searchParams, initialArticles }) => {
 
     setFilter({ category, search });
   }, [searchParamsHook]);
+
+  const observer = useRef();
 
   const loadMorePosts = useCallback(async () => {
     if (loading) return;
@@ -93,65 +79,25 @@ const Articles = ({ searchParams, initialArticles }) => {
     [loading, hasNextPage, loadMorePosts]
   );
 
-  const handleRemoveFilter = (filterType) => {
+  const handleRemoveFilter = (filterType, filterValue) => {
     const newFilter = { ...filter };
     if (filterType === "search") {
       newFilter.search = "";
-      setSearchTerm("");
     } else if (filterType === "category") {
       newFilter.category = "";
     }
-
-    // Remove empty filter parameters
-    const params = new URLSearchParams();
-    if (newFilter.category) params.set("category", newFilter.category);
-    if (newFilter.search) params.set("search", newFilter.search);
-
     setFilter(newFilter);
-    router.push(`/articles?${params.toString()}`);
-  };
-
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    const params = new URLSearchParams();
-    if (filter.category) params.set("category", filter.category);
-    if (searchTerm) params.set("search", searchTerm);
-
-    setFilter((prevFilter) => ({
-      ...prevFilter,
-      search: searchTerm,
-    }));
-
-    router.push(`/articles?${params.toString()}`);
+    router.push(`/articles?${new URLSearchParams(newFilter).toString()}`);
   };
 
   return (
     <Box className={classes.container} maxWidth='xl'>
       <Box className={classes.header}>
         <Typography variant='h1'>All Articles</Typography>
-        <Box sx={{ display: "flex", gap: "1rem" }}>
-          {(filter.category || filter.search) && (
-            <Typography variant='h5' mb={1}>
-              Active filters:
-            </Typography>
-          )}
-          {filter.category && (
-            <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }} className={classes.filter}>
-              <Typography variant='body'>{categoryMap[filter.category]}</Typography>
-              <CloseRoundedIcon onClick={() => handleRemoveFilter("category", filter.category)} style={{ cursor: "pointer" }} />
-            </Box>
-          )}
-          {filter.search && (
-            <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }} className={classes.filter}>
-              <Typography variant='body'>{filter.search}</Typography>
-              <CloseRoundedIcon onClick={() => handleRemoveFilter("search", filter.search)} style={{ cursor: "pointer" }} />
-            </Box>
-          )}
-        </Box>
       </Box>
       {articles?.length === 0 && <Typography variant='body'>No articles matching your query</Typography>}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={8} sx={{ paddingTop: "0rem !important" }}>
+        <Grid item xs={12} md={8}>
           <Box className={classes.content}>
             {articles.map((article, index) => (
               <HorizontalArticleCard
@@ -164,33 +110,32 @@ const Articles = ({ searchParams, initialArticles }) => {
           </Box>
           {!hasNextPage && <Typography variant='body'>No more articles matching current filters</Typography>}
         </Grid>
-        <Grid item xs={12} md={4} sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-            <Typography variant='h5' mb={1}>
-              All categories
-            </Typography>
-
+        <Grid item xs={12} md={4}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {(filter.category || filter.search) && <Typography variant='h5'>Active filters</Typography>}
+            {filter.category && (
+              <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Typography variant='body'>{categoryMap[filter.category]}</Typography>
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("category", filter.category)} style={{ cursor: "pointer" }} />
+              </Box>
+            )}
+            {filter.search && (
+              <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Typography variant='body'>{filter.search}</Typography>
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("search", filter.search)} style={{ cursor: "pointer" }} />
+              </Box>
+            )}
+          </Box>
+          <Typography variant='h5'>All categories</Typography>
+          <List>
             {categoryNodes.map((cat) => (
-              <Link href={`/articles?category=${cat.slug}`} key={cat.slug} className={classes.category}>
-                <Typography variant='body'>{cat.name}</Typography>
-              </Link>
+              <ListItem key={cat.slug}>
+                <Link href={`/articles?category=${cat.slug}`}>
+                  <Typography variant='body'>{cat.name}</Typography>
+                </Link>
+              </ListItem>
             ))}
-          </Box>
-          <Box>
-            <form onSubmit={handleSearchSubmit}>
-              <TextField
-                id='outlined-controlled'
-                label='Search'
-                inputProps={{
-                  style: {
-                    padding: "1.75rem 0.5rem",
-                  },
-                }}
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-              />
-            </form>
-          </Box>
+          </List>
         </Grid>
       </Grid>
     </Box>

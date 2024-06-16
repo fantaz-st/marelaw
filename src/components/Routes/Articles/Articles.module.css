@@ -12,3 +12,7 @@
 .content > *:not(:last-child) {
   border-bottom: 1px solid #000;
 }
+
+.header {
+  margin-bottom: 3rem;
+}
