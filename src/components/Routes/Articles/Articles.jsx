@@ -26,7 +26,6 @@ const Articles = ({ searchParams, initialArticles }) => {
   });
 
   useEffect(() => {
-    console.log("ran");
     // Function to fetch initial articles based on searchParams
     const fetchInitialArticles = async () => {
       const query = newsQuery.call(this, {

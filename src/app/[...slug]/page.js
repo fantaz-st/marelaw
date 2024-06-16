@@ -5,6 +5,8 @@ import { fetchApi } from "@/functions/fetchApi";
 import { allPagesUrisQuery, newsQuery, singlePostPageQuery } from "@/helpers/queryLists";
 import { getPlaiceholder } from "plaiceholder";
 
+export const dynamic = "force-dynamic"; // Explicitly mark the page as dynamic
+
 export async function generateMetadata({ params }) {
   return { title: "MareLaw" };
 }
@@ -14,12 +16,7 @@ const catchDamnAllPage = async ({ params, searchParams }) => {
     if (params.slug.length === 1) {
       // Fetch all articles
       const articles = await fetchApi(newsQuery.call(this, { numberOfPosts: 10, ...searchParams }));
-      return (
-        <div>
-          <h1>test articles</h1>
-          <Articles initialArticles={articles} searchParams={searchParams} />
-        </div>
-      );
+      return <Articles initialArticles={articles} searchParams={searchParams} />;
     } else {
       // Fetch a single article
       const articleData = await fetchApi(singlePostPageQuery.call(this, params.slug[1]));
