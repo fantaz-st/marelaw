@@ -1,16 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Typography, List, ListItem, ListItemText, Radio, RadioGroup, FormControl, FormControlLabel, Button, Alert } from "@mui/material";
 import classes from "./SingleLesson.module.css";
-import ReactMarkdown from "react-markdown";
 
-import { getOverrides, MuiMarkdown } from "mui-markdown";
+import { MuiMarkdown } from "mui-markdown";
+import Link from "next/link";
 
 const SingleLesson = ({ content, metaData }) => {
   //   console.log(metaData);
   const [showQuiz, setShowQuiz] = useState(false);
   const [answers, setAnswers] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const quizRef = useRef(null);
 
   const handleAnswer = (index, option) => {
     setAnswers((prev) => ({ ...prev, [index]: option }));
@@ -24,6 +26,8 @@ const SingleLesson = ({ content, metaData }) => {
     setAnswers({});
     setIsSubmitted(false);
     setShowQuiz(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    quizRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -40,26 +44,26 @@ const SingleLesson = ({ content, metaData }) => {
           <Typography variant='h5' gutterBottom>
             Learning Outcomes
           </Typography>
-          <List>
+          <List sx={{ listStyleType: "disc" }}>
             {metaData.learning_outcomes.map((outcome, index) => (
               <ListItem key={index}>
-                <ListItemText primary={outcome} />
+                <Typography variant='body'>{outcome}</Typography>
+                {/* <ListItemText primary={outcome} /> */}
               </ListItem>
             ))}
           </List>
-          {/* <List>
-            {metaData.links.map((link, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={link} />
-              </ListItem>
-            ))}
-          </List> */}
 
           {/* <Typography variant='body1' dangerouslySetInnerHTML={{ __html: content }} sx={{ marginBottom: 4 }} /> */}
 
           {/* <ReactMarkdown className={`${classes.markdown}`}>{content}</ReactMarkdown> */}
           <MuiMarkdown
             overrides={{
+              h1: {
+                component: Typography,
+                props: {
+                  variant: "h1",
+                },
+              },
               p: {
                 component: Typography,
                 props: {
@@ -74,13 +78,62 @@ const SingleLesson = ({ content, metaData }) => {
           >
             {content}
           </MuiMarkdown>
+          <Typography variant='h5' gutterBottom>
+            Links:
+          </Typography>
+          <List sx={{ listStyleType: "disc" }}>
+            {metaData.links.map((link, index) => {
+              const match = link.match(/\[(.*)\]\((.*)\)/);
+              if (match) {
+                const [, text, url] = match;
+                return (
+                  <ListItem key={index}>
+                    <Link href={url} target='_blank' rel='noopener noreferrer'>
+                      <Typography variant='body' sx={{ textDecoration: "underline" }}>
+                        {text}
+                      </Typography>
+                    </Link>
+                  </ListItem>
+                );
+              }
+              return null;
+            })}
+          </List>
+          <Typography variant='h5' gutterBottom>
+            Literature:
+          </Typography>
+          <List sx={{ listStyleType: "square" }}>
+            {metaData.literature.map((item, index) => {
+              const match = item.match(/\[(.*)\]\((.*)\)/);
+              if (match) {
+                const [, text, url] = match;
+                return (
+                  <ListItem key={index}>
+                    <Typography component='span' variant='body'>
+                      {item.split(match[0])[0]} {/* text before the link */}
+                      <Link href={url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: "underline" }}>
+                        {text}
+                      </Link>
+                      {item.split(match[0])[1]} {/* Text after the link */}
+                    </Typography>
+                  </ListItem>
+                );
+              }
+              return (
+                <ListItem key={index}>
+                  <Typography variant='body'>{item}</Typography>
+                </ListItem>
+              );
+            })}
+          </List>
+
           <Button variant='contained' color='primary' onClick={handleStartQuiz}>
             Take the Quiz
           </Button>
         </>
       ) : (
         <>
-          <Typography variant='h5' gutterBottom>
+          <Typography variant='h5' gutterBottom ref={quizRef}>
             Reviewing questions
           </Typography>
           {metaData.quiz.map((q, index) => (

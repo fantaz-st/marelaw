@@ -10,10 +10,16 @@ learning_outcomes:
   - to distinguish shipping agents' rights and duties
   - to analyse Maritime agency agreement.
 
+links:
+  - "[UNCTAD Minimum Standards for Shipping Agents](https://unctad.org/system/files/official-document/unctadstship13_en.pdf)"
+  - "[The Federation of National Associations of Ship Brokers and Agents (FONASBA)](https://www.fonasba.com/)"
+  - "[FONASBA Quality Standard](https://www.fonasba.com/fonasba-initiatives/fonasba-quality-standard)"
+  - "[FONASBA Documentation](https://www.fonasba.com/documentation)"
+
 literature:
   - Drago Pavić, Pomorsko imovinsko pravo, Književni krug, Split, 2006
   - Nikola Mandić – Ivana Lovrić, Pomorske agencije i otpremništvo, Pomorski fakultet, Split, 2019
-  - Regulations on Conditions Required to Conduct the Activity of the Maritime Agent and Rights and Duties of the Maritime Agent, Official Gazette, no. 82/07 (Pravilnik o uvjetima za obavljanje djelatnosti pomorskog agenta, te pravima i obvezama pomorskog agenta, Narodne novine, br. 82/07.) – https://asbac.hr/wp-content/dokumenti/pravilnici/uvjeti_za_obavljanje_djelatnosti.pdf
+  - Regulations on Conditions Required to Conduct the Activity of the Maritime Agent and Rights and Duties of the Maritime Agent, Official Gazette, no. 82/07 (Pravilnik o uvjetima za obavljanje djelatnosti pomorskog agenta, te pravima i obvezama pomorskog agenta, Narodne novine, br. 82/07.) – [https://asbac.hr/wp-content/dokumenti/pravilnici/uvjeti_za_obavljanje_djelatnosti.pdf](https://asbac.hr/wp-content/dokumenti/pravilnici/uvjeti_za_obavljanje_djelatnosti.pdf)
 
 quiz:
   - question: "The shipping agent can be:"
@@ -31,9 +37,7 @@ quiz:
     correct_answer: 1
 ---
 
-# SHIP'S AGENTS AND AGENCY
-
-**Shipping agent** is a legal or natural person who, on the basis of a general or special power of attorney, performs maritime agency services, i.e. representation, mediation and assistance based on a maritime agency agreement. **Maritime agency** services include above all, activities in connection with shipping, ships and their use, the crew and in particular: acceptance and clearance of ships, mediation in the conclusion of contracts for the use of ships, purchase and sale, construction, modification and repair of ships, insurance of ships, cargo and interest, provision of supplies and care of passengers and crew.
+**Shipping agent** is a legel or natural person who, on the basis of a general or special power of attorney, performs maritime agency services, i.e. representation, mediation and assistance based on a maritime agency agreement. **Maritime agency** services include above all, activities in connection with shipping, ships and their use, the crew and in particular: acceptance and clearance of ships, mediation in the conclusion of contracts for the use of ships, purchase and sale, construction, modification and repair of ships, insurance of ships, cargo and interest, provision of supplies and care of passengers and crew.
 
 Shipping agent is not an employee of his principal (who is usually the shipowner or a shipper, but can also be other person), but performs the work of a maritime agency based on maritime agency agreement concluded with the principal. The shipping agent carries out its activities in the name and on behalf of its principal. This means that the agent is not a party to the contracts concluded through his mediation but is his principal.
 By means of the **Maritime agency agreement**, the shipping agent undertakes, on the basis of a general or special power of attorney, to carry out agency jobs in the name and on behalf of the principal, i.e. representation, mediation and assistance, and the principal undertakes to pay the shipping agent an expense allowance and remuneration.
