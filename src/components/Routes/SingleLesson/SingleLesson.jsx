@@ -12,6 +12,10 @@ const SingleLesson = ({ content, metaData }) => {
   const [answers, setAnswers] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
+
+  const containerRef = useRef(null);
   const quizRef = useRef(null);
 
   const handleAnswer = (index, option) => {
@@ -19,6 +23,19 @@ const SingleLesson = ({ content, metaData }) => {
   };
 
   const handleSubmit = () => {
+    let correct = 0;
+    let incorrect = 0;
+
+    metaData.quiz.forEach((q, index) => {
+      if (answers[index] === q.correct_answer) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+    });
+
+    setCorrectCount(correct);
+    setIncorrectCount(incorrect);
     setIsSubmitted(true);
   };
 
@@ -26,12 +43,16 @@ const SingleLesson = ({ content, metaData }) => {
     setAnswers({});
     setIsSubmitted(false);
     setShowQuiz(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
     quizRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleBackToLesson = () => {
+    setShowQuiz(false);
+    containerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <Box sx={{ padding: 4, maxWidth: 800, margin: "0 auto" }}>
+    <Box sx={{ padding: 4, maxWidth: 800, margin: "0 auto" }} ref={containerRef}>
       {!showQuiz ? (
         <>
           <Typography variant='h1' className={classes.title} gutterBottom>
@@ -161,9 +182,21 @@ const SingleLesson = ({ content, metaData }) => {
           )}
 
           {isSubmitted && (
-            <Button variant='outlined' color='secondary' onClick={() => setShowQuiz(false)} sx={{ marginTop: 2 }}>
-              Back to Lesson
-            </Button>
+            <Box sx={{ marginTop: 3 }}>
+              <Typography variant='h6' gutterBottom>
+                Quiz Results
+              </Typography>
+              <Alert severity='success' sx={{ marginBottom: 2 }}>
+                Correct Answers: {correctCount}
+              </Alert>
+              <Alert severity='error' sx={{ marginBottom: 2 }}>
+                Incorrect Answers: {incorrectCount}
+              </Alert>
+
+              <Button variant='outlined' color='secondary' onClick={handleBackToLesson} sx={{ marginTop: 2 }}>
+                Back to Lesson
+              </Button>
+            </Box>
           )}
         </>
       )}

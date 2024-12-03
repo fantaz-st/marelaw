@@ -35,6 +35,114 @@ quiz:
       - "On his behalf but in the name of the principal"
       - "In his own name and on his behalf"
     correct_answer: 1
+  - question: "Concluding services in another's name and on another's behalf means that they:"
+    options:
+      - "Do not bind the principal, but only the shipping agent"
+      - "Bind both the principal and the shipping agent within the scope of the obligations assumed"
+      - "They do not bind the shipping agent, but directly his principal"
+    correct_answer: 2
+  - question: "The shipping agent is not a party to the contracts concluded through his mediation, but rather his principal."
+    options:
+      - "True"
+      - "False"
+    correct_answer: 0
+  - question: "Only the shipowner is authorised to appoint a shipping agent."
+    options:
+      - "True"
+      - "False"
+    correct_answer: 1
+  - question: "A shipping agent acting in ports is called:"
+    options:
+      - "Port agent"
+      - "An intermediary agent"
+      - "Cargo agent"
+      - "Insurance agent"
+    correct_answer: 0
+  - question: "A shipping agent who mediates and represents his charterer when concluding various contracts is called:"
+    options:
+      - "Port agent"
+      - "An intermediary agent"
+      - "Cargo agent"
+      - "Insurance agent"
+    correct_answer: 1
+  - question: "A shipping agent who continuously analyzes the market, predicts trends and monitors the demand for shipping space and the supply of cargo for transport is called:"
+    options:
+      - "Port agent"
+      - "An intermediary agent"
+      - "Cargo agent"
+      - "Insurance agent"
+    correct_answer: 1
+  - question: "A shipping agent acting on the basis of a general power of attorney is considered to be:"
+    options:
+      - "Agent with unlimited powers"
+      - "Agent with limited powers"
+      - "General agent"
+      - "Special agent"
+    correct_answer: 2
+  - question: "The powers of the general agent, given by the maritime agency agreement are always limited in time and not of a permanent nature."
+    options:
+      - "True"
+      - "False"
+    correct_answer: 1
+  - question: "In case of disagreement between the master of the ship and the shipping agent, it is considered that priority should be given to:"
+    options:
+      - "Shipping agent"
+      - "Master of the ship"
+    correct_answer: 1
+  - question: "The parties to the maritime agency agreement are:"
+    options:
+      - "Principal (shipper/shipowner) and charterer"
+      - "Charterer and shipping agent"
+      - "Principal (shipper/shipowner) and shipping agent"
+    correct_answer: 2
+  - question: "The minimum standards for shipping agents were adopted in 1988 in order to harmonize the standards of shipping agents and to prevent maritime fraud, and were adopted by:"
+    options:
+      - "The Federation of National Associations of Ship Brokers and Agents."
+      - "UN Conference on Trade and Development"
+      - "Multiport network of maritime agencies"
+    correct_answer: 1
+  - question: "UNCTAD's Minimum Standards for Shipping Agents:"
+    options:
+      - "Govern the content and template for concluding maritime agency agreement"
+      - "Prescribes business ethics and professional conduct for shipping agents"
+      - "Prescribes FONASBA quality standards for shipping agents"
+    correct_answer: 1
+  - question: "UNCTAD's Minimum Standards for Shipping Agents is a mandatory guideline for national authorities and professional associations of shipping agents when developing their own national standards."
+    options:
+      - "True"
+      - "False"
+    correct_answer: 1
+  - question: "The study of the legal status of shipping agents, in particular their standardization in the legislation of individual countries and the rules governing their work and conduct at international level, is actively pursued by:"
+    options:
+      - "The Federation of National Associations of Ship Brokers and Agents"
+      - "UN Conference on Trade and Development"
+      - "Multiport network of maritime agencies"
+    correct_answer: 0
+  - question: "The set of standards developed by the Federation of National Associations of Ship Brokers and Agents in 2007 to provide the maritime industry with a robust, enforceable and practical standard of quality and to help ensure that the activities, responsibilities and obligations of shipping agents and brokers are subject to control is called:"
+    options:
+      - "FIATA quality standard"
+      - "FONASBA quality standard"
+      - "EUROCREW quality standard"
+      - "MULTIPORT quality standard"
+    correct_answer: 1
+  - question: "The liner shipping company and the general agent for the exercise of the general agency activity in the territory on the basis of which the general agent is authorized to act as agent for the principal in a certain area, conclude:"
+    options:
+      - "General agency agreement (for liner services) 1993"
+      - "General agency agreement 2017"
+      - "Agency appointment agreement 2017"
+    correct_answer: 0
+  - question: "To appoint an agent for a longer period of time and for a larger range of ports, the following is concluded:"
+    options:
+      - "General agency agreement (for liner services) 1993"
+      - "General agency agreement 2017"
+      - "Agency appointment agreement 2017"
+    correct_answer: 1
+  - question: "To appoint an agent for a small number of ports, the following is concluded:"
+    options:
+      - "General agency agreement (for liner services) 1993"
+      - "General agency agreement 2017"
+      - "Agency appointment agreement 2017"
+    correct_answer: 2
 ---
 
 **Shipping agent** is a legel or natural person who, on the basis of a general or special power of attorney, performs maritime agency services, i.e. representation, mediation and assistance based on a maritime agency agreement. **Maritime agency** services include above all, activities in connection with shipping, ships and their use, the crew and in particular: acceptance and clearance of ships, mediation in the conclusion of contracts for the use of ships, purchase and sale, construction, modification and repair of ships, insurance of ships, cargo and interest, provision of supplies and care of passengers and crew.
