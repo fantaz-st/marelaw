@@ -2,6 +2,15 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
+.breadCrumb {
+  font-size: 12px;
+  font-weight: 400;
+  color: #959494;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
 .title {
   margin-bottom: 1rem;
   font-weight: 300;
@@ -9,6 +18,12 @@
 
 .inner {
   padding: 50px 0px 80px 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .lesson {

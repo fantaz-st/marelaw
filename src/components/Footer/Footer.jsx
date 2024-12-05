@@ -48,7 +48,7 @@ const Footer = ({ menuItems }) => {
             <Box className={classes.logo} sx={{ paddingRight: "2rem" }}>
               <Image src={mareLawLogo} alt='marelaw footer logo' />
               <Typography variant='body' color='#fff' mt={4}>
-                Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students,
+                Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
               </Typography>
             </Box>
           </Grid>
@@ -73,9 +73,9 @@ const Footer = ({ menuItems }) => {
             </Typography>
 
             <Typography variant='body' component='p'>
-              Ruđera Boškovića 37,
+              Ruđera Boškovića 37
               <br />
-              21000 Split,
+              21000 Split
               <br />
               Croatia
             </Typography>
