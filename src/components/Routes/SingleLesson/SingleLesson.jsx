@@ -1,22 +1,61 @@
 "use client";
-import React, { useRef, useState } from "react";
-import { Box, Typography, List, ListItem, ListItemText, Radio, RadioGroup, FormControl, FormControlLabel, Button, Alert, Grid } from "@mui/material";
-import classes from "./SingleLesson.module.css";
 
+import { useRef, useState, useLayoutEffect } from "react";
+import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
 import Link from "next/link";
+import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 
+import PauseCircleIcon from "@mui/icons-material/PauseCircle";
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const SingleLesson = ({ content, metaData }) => {
-  //   console.log(metaData);
   const [showQuiz, setShowQuiz] = useState(false);
   const [answers, setAnswers] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
 
   const containerRef = useRef(null);
   const quizRef = useRef(null);
+  const titleRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const title = titleRef.current;
+
+    gsap.to(title, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 200", // When the top of the title reaches the top of the viewport
+        end: "+=100", // Adjust this to control the duration of the animation
+        scrub: true,
+      },
+      y: 0,
+    });
+  }, []);
+
+  const { isSpeaking, isPaused, speak, pause } = useTextToSpeech();
+
+  const handleReadContent = () => {
+    if (isPaused) {
+      speak(""); // Resume speech if paused
+    } else if (isSpeaking) {
+      pause(); // Pause speech
+    } else {
+      const textToRead = `
+        Title: ${metaData.read_title}.
+        Estimated Hours: ${metaData.estimated_hours}.
+        Learning Outcomes: ${metaData.learning_outcomes.join(", ")}.
+        Content: ${content.replace(/<\/?[^>]+(>|$)/g, "")}.
+        Definitions: ${metaData.definitions}.
+      `;
+      speak(textToRead); // Start reading content
+    }
+  };
 
   const handleAnswer = (index, option) => {
     setAnswers((prev) => ({ ...prev, [index]: option }));
@@ -40,6 +79,7 @@ const SingleLesson = ({ content, metaData }) => {
   };
 
   const handleStartQuiz = () => {
+    pause();
     setAnswers({});
     setIsSubmitted(false);
     setShowQuiz(true);
@@ -71,25 +111,25 @@ const SingleLesson = ({ content, metaData }) => {
           <strong>Estimated Hours:</strong> {metaData.estimated_hours}
         </Typography>
       </Box>
-      <Grid container spacing={6}>
+      <Grid container spacing={6} position='relative'>
         <Grid item xs={12} md={8}>
           {!showQuiz ? (
             <>
-              <Typography variant='h5' gutterBottom>
-                Learning Outcomes
-              </Typography>
-              <List sx={{ listStyleType: "disc" }}>
-                {metaData.learning_outcomes.map((outcome, index) => (
-                  <ListItem key={index}>
-                    <Typography variant='body'>{outcome}</Typography>
-                    {/* <ListItemText primary={outcome} /> */}
-                  </ListItem>
-                ))}
-              </List>
+              {metaData.learning_outcomes && (
+                <>
+                  <Typography variant='h5' gutterBottom>
+                    Learning Outcomes
+                  </Typography>
+                  <List sx={{ listStyleType: "disc" }}>
+                    {metaData.learning_outcomes.map((outcome, index) => (
+                      <ListItem key={index}>
+                        <Typography variant='body'>{outcome}</Typography>
+                      </ListItem>
+                    ))}
+                  </List>
+                </>
+              )}
 
-              {/* <Typography variant='body1' dangerouslySetInnerHTML={{ __html: content }} sx={{ marginBottom: 4 }} /> */}
-
-              {/* <ReactMarkdown className={`${classes.markdown}`}>{content}</ReactMarkdown> */}
               <MuiMarkdown
                 overrides={{
                   h1: {
@@ -112,58 +152,63 @@ const SingleLesson = ({ content, metaData }) => {
               >
                 {content}
               </MuiMarkdown>
-              <Typography variant='h5' gutterBottom>
-                Links:
-              </Typography>
-              <List sx={{ listStyleType: "disc" }}>
-                {metaData.links.map((link, index) => {
-                  const match = link.match(/\[(.*)\]\((.*)\)/);
-                  if (match) {
-                    const [, text, url] = match;
-                    return (
-                      <ListItem key={index}>
-                        <Link href={url} target='_blank' rel='noopener noreferrer'>
-                          <Typography variant='body' sx={{ textDecoration: "underline" }}>
-                            {text}
-                          </Typography>
-                        </Link>
-                      </ListItem>
-                    );
-                  }
-                  return null;
-                })}
-              </List>
-              <Typography variant='h5' gutterBottom>
-                Literature:
-              </Typography>
-              <List sx={{ listStyleType: "square" }}>
-                {metaData.literature.map((item, index) => {
-                  const match = item.match(/\[(.*)\]\((.*)\)/);
-                  if (match) {
-                    const [, text, url] = match;
-                    return (
-                      <ListItem key={index}>
-                        <Typography component='span' variant='body'>
-                          {item.split(match[0])[0]} {/* text before the link */}
-                          <Link href={url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: "underline" }}>
-                            {text}
-                          </Link>
-                          {item.split(match[0])[1]} {/* Text after the link */}
-                        </Typography>
-                      </ListItem>
-                    );
-                  }
-                  return (
-                    <ListItem key={index}>
-                      <Typography variant='body'>{item}</Typography>
-                    </ListItem>
-                  );
-                })}
-              </List>
 
-              <Button variant='contained' color='primary' onClick={handleStartQuiz}>
-                Take the Quiz
-              </Button>
+              {metaData.links && (
+                <div className={classes.links}>
+                  <Typography variant='h5' gutterBottom>
+                    Links:
+                  </Typography>
+                  <List sx={{ listStyleType: "disc" }}>
+                    {metaData.links.map((link, index) => {
+                      const match = link.match(/\[(.*)\]\((.*)\)/);
+                      if (match) {
+                        const [, text, url] = match;
+                        return (
+                          <ListItem key={index}>
+                            <Link href={url} target='_blank' rel='noopener noreferrer'>
+                              <Typography variant='body' sx={{ textDecoration: "underline" }}>
+                                {text}
+                              </Typography>
+                            </Link>
+                          </ListItem>
+                        );
+                      }
+                      return null;
+                    })}
+                  </List>
+                </div>
+              )}
+              {metaData.literature && (
+                <div className={classes.literature}>
+                  <Typography variant='h5' gutterBottom>
+                    Literature:
+                  </Typography>
+                  <List sx={{ listStyleType: "square" }}>
+                    {metaData.literature.map((item, index) => {
+                      const match = item.match(/\[(.*)\]\((.*)\)/);
+                      if (match) {
+                        const [, text, url] = match;
+                        return (
+                          <ListItem key={index}>
+                            <Typography component='span' variant='body'>
+                              {item.split(match[0])[0]}
+                              <Link href={url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: "underline" }}>
+                                {text}
+                              </Link>
+                              {item.split(match[0])[1]}
+                            </Typography>
+                          </ListItem>
+                        );
+                      }
+                      return (
+                        <ListItem key={index}>
+                          <Typography variant='body'>{item}</Typography>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
+                </div>
+              )}
             </>
           ) : (
             <>
@@ -180,20 +225,13 @@ const SingleLesson = ({ content, metaData }) => {
                       ))}
                     </RadioGroup>
                   </FormControl>
-                  {/* {isSubmitted && (
-                <Alert severity={answers[index] === q.correct_answer ? "success" : "error"} sx={{ marginTop: 2 }}>
-                  {answers[index] === q.correct_answer ? "Correct!" : `Incorrect. Correct answer: ${q.options[q.correct_answer]}`}
-                </Alert>
-              )} */}
                 </Box>
               ))}
-
               {!isSubmitted && (
                 <Button variant='contained' color='primary' onClick={handleSubmit} sx={{ marginTop: 2 }}>
                   Submit
                 </Button>
               )}
-
               {isSubmitted && (
                 <Box sx={{ marginTop: 3 }}>
                   <Typography variant='h6' gutterBottom>
@@ -205,7 +243,6 @@ const SingleLesson = ({ content, metaData }) => {
                   <Alert severity='error' sx={{ marginBottom: 2 }}>
                     Incorrect Answers: {incorrectCount}
                   </Alert>
-
                   <Button variant='outlined' color='secondary' onClick={handleBackToLesson} sx={{ marginTop: 2 }}>
                     Back to Lesson
                   </Button>
@@ -215,7 +252,25 @@ const SingleLesson = ({ content, metaData }) => {
           )}
         </Grid>
         <Grid item xs={12} md={4}>
-          All lessons
+          <Box className={classes.sticky}>
+            <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
+              <span ref={titleRef}>{metaData.title}</span>
+            </Typography>
+            <Button className={classes.button} variant='contained' color={isSpeaking || isPaused ? "secondary" : "primary"} onClick={handleReadContent} sx={{ marginTop: 2 }}>
+              {isSpeaking ? (
+                <span>
+                  <PauseCircleIcon /> Pause Read
+                </span>
+              ) : (
+                <span>
+                  <PlayCircleIcon /> Read Aloud
+                </span>
+              )}
+            </Button>
+            <Button variant='contained' color='primary' onClick={handleStartQuiz}>
+              Take the Quiz
+            </Button>
+          </Box>
         </Grid>
       </Grid>
     </Box>

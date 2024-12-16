@@ -14,6 +14,12 @@
 .title {
   margin-bottom: 1rem;
   font-weight: 300;
+  overflow: hidden;
+}
+
+.title span {
+  display: inline-block;
+  transform: translateY(100%);
 }
 
 .inner {
@@ -34,4 +40,19 @@
 
 .question {
   margin-top: 20px;
+}
+
+.button span {
+  display: flex;
+  gap: 1rem;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 40px;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

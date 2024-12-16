@@ -1,5 +1,6 @@
 ---
 title: "1.6.12. Ship's Agents and Agency"
+read_title: "Ship's Agents and Agency"
 slug: "lesson-1"
 estimated_hours: 2
 learning_outcomes:
