@@ -15,6 +15,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
+const ListItemTypo = (props) => {
+  return (
+    <ListItem className='list-item' variant='body' sx={{ display: "list-item", listStyleType: "disc" }}>
+      <Typography variant='body'>{props.children}</Typography>
+    </ListItem>
+  );
+};
+
 gsap.registerPlugin(ScrollTrigger);
 const SingleLesson = ({ content, metaData }) => {
   const [showQuiz, setShowQuiz] = useState(false);
@@ -149,6 +157,23 @@ const SingleLesson = ({ content, metaData }) => {
         <Typography variant='subtitle1' gutterBottom>
           <strong>Estimated Hours:</strong> {metaData.estimated_hours}
         </Typography>
+
+        <Box sx={{ display: { xs: "flex", md: "none" }, gap: "1rem" }}>
+          <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} className={classes.button} variant='contained' color={isSpeaking || isPaused ? "secondary" : "primary"} onClick={handleReadContent}>
+            {isSpeaking ? (
+              <span>
+                <PauseCircleIcon /> Pause Read
+              </span>
+            ) : (
+              <span>
+                <PlayCircleIcon /> Read Aloud
+              </span>
+            )}
+          </Button>
+          <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} variant='contained' color='primary' onClick={handleStartQuiz}>
+            Take the Quiz
+          </Button>
+        </Box>
       </Box>
       <Grid container spacing={6} position='relative'>
         <Grid item xs={12} md={8} id='markdown-gallery'>
@@ -171,6 +196,13 @@ const SingleLesson = ({ content, metaData }) => {
 
               <MuiMarkdown
                 overrides={{
+                  ul: {
+                    component: List,
+                  },
+                  li: {
+                    component: ListItemTypo,
+                  },
+
                   h1: {
                     component: Typography,
                     props: {
@@ -282,7 +314,9 @@ const SingleLesson = ({ content, metaData }) => {
               </Typography>
               {metaData.quiz.map((q, index) => (
                 <Box key={index} sx={{ marginBottom: 3 }}>
-                  <Typography variant='body1'>{q.question}</Typography>
+                  <Typography variant='body1'>
+                    {index + 1}. {q.question}
+                  </Typography>
                   <FormControl component='fieldset' sx={{ marginTop: 1 }}>
                     <RadioGroup name={`question-${index}`} onChange={(e) => handleAnswer(index, parseInt(e.target.value))}>
                       {q.options.map((option, i) => (
@@ -316,7 +350,7 @@ const SingleLesson = ({ content, metaData }) => {
             </>
           )}
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ display: { xs: "none", md: "block" } }}>
           <Box className={classes.sticky}>
             <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
               <span ref={titleRef}>{metaData.title}</span>
@@ -332,9 +366,11 @@ const SingleLesson = ({ content, metaData }) => {
                 </span>
               )}
             </Button>
-            <Button variant='contained' color='primary' onClick={handleStartQuiz}>
-              Take the Quiz
-            </Button>
+            {!showQuiz && (
+              <Button variant='contained' color='primary' onClick={handleStartQuiz}>
+                Take the Quiz
+              </Button>
+            )}
           </Box>
         </Grid>
       </Grid>
