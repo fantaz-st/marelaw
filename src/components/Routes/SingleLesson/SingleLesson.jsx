@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect, useEffect } from "react";
 import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
@@ -11,6 +11,9 @@ import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
 
 gsap.registerPlugin(ScrollTrigger);
 const SingleLesson = ({ content, metaData }) => {
@@ -23,6 +26,32 @@ const SingleLesson = ({ content, metaData }) => {
   const containerRef = useRef(null);
   const quizRef = useRef(null);
   const titleRef = useRef(null);
+
+  useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#markdown-gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+
+    // Prevent the default browser behavior for links
+    const galleryLinks = document.querySelectorAll("#markdown-gallery .pspw");
+    galleryLinks.forEach((link) => {
+      console.log(link);
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent opening in a new tab
+      });
+    });
+
+    return () => {
+      lightbox.destroy();
+      galleryLinks.forEach((link) => {
+        link.removeEventListener("click", (e) => e.preventDefault());
+      });
+    };
+  }, []);
 
   useLayoutEffect(() => {
     const title = titleRef.current;
@@ -112,7 +141,7 @@ const SingleLesson = ({ content, metaData }) => {
         </Typography>
       </Box>
       <Grid container spacing={6} position='relative'>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} id='markdown-gallery'>
           {!showQuiz ? (
             <>
               {metaData.learning_outcomes && (
@@ -148,6 +177,18 @@ const SingleLesson = ({ content, metaData }) => {
                       },
                     },
                   },
+                  img: ({ node, ...props }) => (
+                    <a
+                      className='pspw'
+                      href={props.src} // Full-size image URL
+                      data-pswp-width='1200' // Replace with actual width if available
+                      data-pswp-height='800' // Replace with actual height if available
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <img {...props} style={{ maxWidth: "100%", height: "auto", cursor: "pointer" }} alt={props.alt || "Image"} />
+                    </a>
+                  ),
                 }}
               >
                 {content}
