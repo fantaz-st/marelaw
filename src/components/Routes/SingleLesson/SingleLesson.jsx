@@ -27,19 +27,29 @@ const SingleLesson = ({ content, metaData }) => {
   const quizRef = useRef(null);
   const titleRef = useRef(null);
 
+  const fetchImageDimensions = (src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        resolve({ width: img.naturalWidth, height: img.naturalHeight });
+      };
+      img.onerror = reject;
+      img.src = src;
+    });
+  };
+
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: "#markdown-gallery",
-      children: "a",
+      children: "a[data-lightbox-image]", // Only target images with this attribute
       pswpModule: () => import("photoswipe"),
     });
 
     lightbox.init();
 
     // Prevent the default browser behavior for links
-    const galleryLinks = document.querySelectorAll("#markdown-gallery .pspw");
+    const galleryLinks = document.querySelectorAll("#markdown-gallery a[data-lightbox-image]");
     galleryLinks.forEach((link) => {
-      console.log(link);
       link.addEventListener("click", (e) => {
         e.preventDefault(); // Prevent opening in a new tab
       });
@@ -177,18 +187,32 @@ const SingleLesson = ({ content, metaData }) => {
                       },
                     },
                   },
-                  img: ({ node, ...props }) => (
-                    <a
-                      className='pspw'
-                      href={props.src} // Full-size image URL
-                      data-pswp-width='1200' // Replace with actual width if available
-                      data-pswp-height='800' // Replace with actual height if available
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <img {...props} style={{ maxWidth: "100%", height: "auto", cursor: "pointer" }} alt={props.alt || "Image"} />
-                    </a>
-                  ),
+
+                  img: ({ node, ...props }) => {
+                    const [dimensions, setDimensions] = useState({ width: 1200, height: 800 }); // Default dimensions
+
+                    useEffect(() => {
+                      fetchImageDimensions(props.src)
+                        .then(({ width, height }) => {
+                          setDimensions({ width, height });
+                        })
+                        .catch((err) => {
+                          console.error("Error fetching image dimensions:", err);
+                        });
+                    }, [props.src]);
+
+                    return (
+                      <a
+                        className='pspw'
+                        href={props.src} // Full-size image URL
+                        data-pswp-width={dimensions.width}
+                        data-pswp-height={dimensions.height}
+                        data-lightbox-image
+                      >
+                        <img {...props} style={{ maxWidth: "100%", height: "auto", cursor: "pointer" }} alt={props.alt || "Image"} />
+                      </a>
+                    );
+                  },
                 }}
               >
                 {content}
