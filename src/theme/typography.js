@@ -1,16 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 import { breakpoints } from "./breakpoints";
-import { Oswald, Roboto } from "next/font/google";
+import { Oswald, Plus_Jakarta_Sans } from "next/font/google";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "500", "700"], style: "normal", variable: "--font-playfair" });
-const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700"], style: "normal", variable: "--font-nunito" });
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700"], style: "normal", variable: "--font-jakarta" });
 
 const breakpointsTheme = createTheme({
   breakpoints,
 });
 
 const heading = {
-  fontFamily: oswald.style.fontFamily,
+  fontFamily: plusJakarta.style.fontFamily,
   fontWeight: "400",
   color: "#0e202a",
   msWordWrap: "break-word",
@@ -18,11 +18,11 @@ const heading = {
 };
 
 const body = {
-  fontFamily: roboto.style.fontFamily,
+  fontFamily: plusJakarta.style.fontFamily,
   fontWeight: "300",
   fontSize: "16px",
   letterSpacing: 0,
-  color: "#646464",
+  color: "#112033",
 };
 
 export const typography = () => {

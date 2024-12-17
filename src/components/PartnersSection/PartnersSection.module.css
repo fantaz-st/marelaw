@@ -4,6 +4,15 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  position: relative;
+}
+
+.container svg {
+  z-index: -1;
+  color: #f1f4fe;
+  width: 60vw;
+  position: absolute;
+  inset: 20% 0% auto auto;
 }
 
 .inner {

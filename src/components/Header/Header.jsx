@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import mareLawLogo from "../../../public/marelaw.svg";
+import mareLawLogo from "../../../public/marelaw-blue.svg";
 import classes from "./Header.module.css";
 import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -17,7 +17,7 @@ const Header = ({ menuItems }) => {
   const [open, setOpen] = useState(false);
   const headerContainerRef = useRef(null);
 
-  useGSAP(
+  /* useGSAP(
     () => {
       gsap.set(headerContainerRef.current, {
         yPercent: -100,
@@ -31,7 +31,7 @@ const Header = ({ menuItems }) => {
       });
     },
     { scope: headerContainerRef }
-  );
+  ); */
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);

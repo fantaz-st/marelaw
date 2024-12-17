@@ -20,7 +20,7 @@ export default async function RootLayout({ children }) {
   const menuItems = createDataTree(data.menu.menuItems.nodes);
 
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body /* className={`${playfairDisplay.variable} ${nunitoSans.variable}`} */>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>

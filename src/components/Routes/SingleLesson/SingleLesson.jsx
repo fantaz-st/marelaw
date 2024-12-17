@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
+import ImgComponent from "./ImgComponent";
 
 const ListItemTypo = (props) => {
   return (
@@ -35,31 +36,19 @@ const SingleLesson = ({ content, metaData }) => {
   const quizRef = useRef(null);
   const titleRef = useRef(null);
 
-  const fetchImageDimensions = (src) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.onload = () => {
-        resolve({ width: img.naturalWidth, height: img.naturalHeight });
-      };
-      img.onerror = reject;
-      img.src = src;
-    });
-  };
-
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: "#markdown-gallery",
-      children: "a[data-lightbox-image]", // Only target images with this attribute
+      children: "a[data-lightbox-image]",
       pswpModule: () => import("photoswipe"),
     });
 
     lightbox.init();
 
-    // Prevent the default browser behavior for links
     const galleryLinks = document.querySelectorAll("#markdown-gallery a[data-lightbox-image]");
     galleryLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent opening in a new tab
+        e.preventDefault();
       });
     });
 
@@ -77,8 +66,8 @@ const SingleLesson = ({ content, metaData }) => {
     gsap.to(title, {
       scrollTrigger: {
         trigger: title,
-        start: "top 200", // When the top of the title reaches the top of the viewport
-        end: "+=100", // Adjust this to control the duration of the animation
+        start: "top 200",
+        end: "+=100",
         scrub: true,
       },
       y: 0,
@@ -89,9 +78,9 @@ const SingleLesson = ({ content, metaData }) => {
 
   const handleReadContent = () => {
     if (isPaused) {
-      speak(""); // Resume speech if paused
+      speak("");
     } else if (isSpeaking) {
-      pause(); // Pause speech
+      pause();
     } else {
       const textToRead = `
         Title: ${metaData.read_title}.
@@ -100,7 +89,7 @@ const SingleLesson = ({ content, metaData }) => {
         Content: ${content.replace(/<\/?[^>]+(>|$)/g, "")}.
         Definitions: ${metaData.definitions}.
       `;
-      speak(textToRead); // Start reading content
+      speak(textToRead);
     }
   };
 
@@ -202,7 +191,6 @@ const SingleLesson = ({ content, metaData }) => {
                   li: {
                     component: ListItemTypo,
                   },
-
                   h1: {
                     component: Typography,
                     props: {
@@ -219,31 +207,8 @@ const SingleLesson = ({ content, metaData }) => {
                       },
                     },
                   },
-
-                  img: ({ node, ...props }) => {
-                    const [dimensions, setDimensions] = useState({ width: 1200, height: 800 }); // Default dimensions
-
-                    useEffect(() => {
-                      fetchImageDimensions(props.src)
-                        .then(({ width, height }) => {
-                          setDimensions({ width, height });
-                        })
-                        .catch((err) => {
-                          console.error("Error fetching image dimensions:", err);
-                        });
-                    }, [props.src]);
-
-                    return (
-                      <a
-                        className='pspw'
-                        href={props.src} // Full-size image URL
-                        data-pswp-width={dimensions.width}
-                        data-pswp-height={dimensions.height}
-                        data-lightbox-image
-                      >
-                        <img {...props} style={{ maxWidth: "100%", height: "auto", cursor: "pointer" }} alt={props.alt || "Image"} />
-                      </a>
-                    );
+                  img: {
+                    component: ImgComponent,
                   },
                 }}
               >
