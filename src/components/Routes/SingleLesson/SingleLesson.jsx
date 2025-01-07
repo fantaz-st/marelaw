@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState, useLayoutEffect, useEffect, useContext, createContext } from "react";
 import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
-import Link from "next/link";
 import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
