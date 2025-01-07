@@ -1,7 +1,9 @@
 .container {
-  padding: 6rem 1rem;
+  padding: 6rem 0rem;
   background-color: #0e202a;
   color: #fff;
+}
+.inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,9 +11,8 @@
   text-align: center;
   gap: 6rem;
 }
-
 @media only screen and (min-width: 640px) {
   .container {
-    padding: 10rem 10rem;
+    padding: 10rem 0rem;
   }
 }

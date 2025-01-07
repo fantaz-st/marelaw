@@ -8,7 +8,11 @@
   align-items: center;
   align-content: stretch;
   height: 80px;
-  visibility: hidden;
+  /* visibility: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
 .hamburger span {
@@ -38,6 +42,7 @@
   font-size: 1rem;
   font-weight: 400;
   height: 100%;
+  color: #fff;
 }
 
 .menu li a {
@@ -45,6 +50,7 @@
   align-items: center;
   align-content: center;
   height: 100%;
+  color: #fff;
 }
 
 .menu li a span {

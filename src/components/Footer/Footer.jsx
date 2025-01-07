@@ -14,6 +14,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,59 +43,61 @@ const Footer = ({ menuItems }) => {
 
   return (
     <Box className={classes.container} ref={containerRef}>
-      <Box className={classes.inner}>
-        <Grid container className={classes.rows} spacing={3}>
-          <Grid item xs={12} md={3}>
-            <Box className={classes.logo} sx={{ paddingRight: "2rem" }}>
-              <Image src={mareLawLogo} alt='marelaw footer logo' />
-              <Typography variant='body' color='#fff' mt={4}>
-                Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
+      <PaddingGlobal>
+        <Box className={classes.inner}>
+          <Grid container className={classes.rows} spacing={3}>
+            <Grid item xs={12} md={3}>
+              <Box className={classes.logo} sx={{ paddingRight: "2rem" }}>
+                <Image src={mareLawLogo} alt='marelaw footer logo' />
+                <Typography variant='body' color='#fff' mt={4}>
+                  Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={6} md={3} className={classes.links}>
+              <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
+                Menu
               </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={6} md={3} className={classes.links}>
-            <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
-              Menu
-            </Typography>
-            <Box className={classes.menu}>
-              {menuItems.map((item) => (
-                <Link href={`${item.uri}`} key={item.databaseId}>
-                  <Typography variant='body' sx={{ color: "#fff" }}>
-                    {item.label}
-                  </Typography>
-                </Link>
-              ))}
-            </Box>
-          </Grid>
+              <Box className={classes.menu}>
+                {menuItems.map((item) => (
+                  <Link href={`${item.uri}`} key={item.databaseId}>
+                    <Typography variant='body' sx={{ color: "#fff" }}>
+                      {item.label}
+                    </Typography>
+                  </Link>
+                ))}
+              </Box>
+            </Grid>
 
-          <Grid item xs={6} md={3} className={classes.contact} sx={{ marginTop: { xs: "1rem", md: "0" } }}>
-            <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
-              Contact
-            </Typography>
+            <Grid item xs={6} md={3} className={classes.contact} sx={{ marginTop: { xs: "1rem", md: "0" } }}>
+              <Typography variant='body' sx={{ fontWeight: 500, color: "#fff" }}>
+                Contact
+              </Typography>
 
-            <Typography variant='body' component='p'>
-              Ruđera Boškovića 37
-              <br />
-              21000 Split
-              <br />
-              Croatia
-            </Typography>
-
-            <Link href='mailto:marelaw@pfst.hr'>
               <Typography variant='body' component='p'>
-                marelaw@pfst.hr
+                Ruđera Boškovića 37
+                <br />
+                21000 Split
+                <br />
+                Croatia
               </Typography>
-            </Link>
+
+              <Link href='mailto:marelaw@pfst.hr'>
+                <Typography variant='body' component='p'>
+                  marelaw@pfst.hr
+                </Typography>
+              </Link>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Signature />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={3}>
-            <Signature />
-          </Grid>
-        </Grid>
-        <Box className={classes.funding} ref={fundingRef}>
-          <Image src={coFundedByEuLogo} alt='Co-funded by the European Union logo' width={200} className='fundingImages' />
-          <Image src={erasmusLogo} alt='Erasmus+ logo' width={200} className='fundingImages' />
+          <Box className={classes.funding} ref={fundingRef}>
+            <Image src={coFundedByEuLogo} alt='Co-funded by the European Union logo' width={200} className='fundingImages' />
+            <Image src={erasmusLogo} alt='Erasmus+ logo' width={200} className='fundingImages' />
+          </Box>
         </Box>
-      </Box>
+      </PaddingGlobal>
     </Box>
   );
 };

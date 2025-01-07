@@ -14,7 +14,7 @@ const Lessons = ({ lessons }) => {
             {lessons.map((lesson) => (
               <ListItem key={lesson.slug}>
                 <Link href={`/lessons/${lesson.slug}`}>
-                  <Typography variant='body'>{lesson.title}</Typography>
+                  <Typography variant='h3'>{lesson.title}</Typography>
                 </Link>
               </ListItem>
             ))}

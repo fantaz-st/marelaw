@@ -41,6 +41,13 @@ const theme = createTheme({
         /* variants: */
       },
     },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          paddingLeft: "2rem",
+        },
+      },
+    },
     MuiListItem: {
       styleOverrides: {
         root: {

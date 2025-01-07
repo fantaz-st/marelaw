@@ -1,14 +1,14 @@
 .container {
   position: relative;
   clear: both;
-  padding: 3rem 1rem 2rem;
+  padding: 3rem 0 2rem;
+  background: #1d212d;
 }
 
 .inner {
   width: 100%;
-  background: #1d212d;
   border-radius: 4px;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 4rem 0 2rem;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@
   }
 
   .inner {
-    padding: 2rem 4rem 10rem;
+    padding: 2rem 0 10rem;
   }
 
   .rows {

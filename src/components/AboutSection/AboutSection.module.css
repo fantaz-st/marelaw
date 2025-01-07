@@ -1,14 +1,15 @@
 .container {
-  padding: 6rem 1rem;
+  padding: 6rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   visibility: hidden;
-}
-.inner {
-  /* margin: 4rem 0 0; */
+  position: relative;
 }
 
+.inner {
+  position: relative;
+}
 .right {
   padding: 0 1rem;
   margin-bottom: 3rem;
@@ -26,9 +27,21 @@
   display: none;
 }
 
+.container svg {
+  z-index: -1;
+  color: #f1f4fe;
+  width: 65%;
+  position: absolute;
+  inset: 0% auto auto 0%;
+}
+
+.button {
+  position: relative;
+}
+
 @media only screen and (min-width: 640px) {
   .container {
-    padding: 4rem;
+    padding: 4rem 0;
   }
   .right {
     padding: 0 3rem;

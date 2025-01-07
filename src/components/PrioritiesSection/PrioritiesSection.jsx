@@ -8,6 +8,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,12 +46,16 @@ const PrioritiesSection = () => {
   );
   return (
     <Box className={classes.container} ref={scrollContainerRef}>
-      <Typography variant='h1' component='h1' sx={{ fontWeight: 300, color: "#fff", wordWrap: "break-word", boxSizing: "border-box" }} ref={scrollTextRef}>
-        Our project focuses on three main priorities: promoting inter-connected higher education systems, stimulating innovative learning and teaching practices, and implementing measures against climate change
-      </Typography>
-      <NextLink href='/about-the-project' className={classes.button}>
-        <Button variant='alt'>Read more</Button>
-      </NextLink>
+      <PaddingGlobal>
+        <div className={classes.inner}>
+          <Typography variant='h1' component='h1' sx={{ fontWeight: 300, color: "#fff", wordWrap: "break-word", boxSizing: "border-box" }} ref={scrollTextRef}>
+            Our project focuses on three main priorities: promoting inter-connected higher education systems, stimulating innovative learning and teaching practices, and implementing measures against climate change
+          </Typography>
+          <NextLink href='/about-the-project' className={classes.button}>
+            <Button variant='alt'>Read more</Button>
+          </NextLink>
+        </div>
+      </PaddingGlobal>
     </Box>
   );
 };

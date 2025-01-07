@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect, useEffect } from "react";
 import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
@@ -11,6 +11,18 @@ import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
+import ImgComponent from "./ImgComponent";
+
+const ListItemTypo = (props) => {
+  return (
+    <ListItem className='list-item' variant='body' sx={{ display: "list-item", listStyleType: "disc" }}>
+      <Typography variant='body'>{props.children}</Typography>
+    </ListItem>
+  );
+};
 
 gsap.registerPlugin(ScrollTrigger);
 const SingleLesson = ({ content, metaData }) => {
@@ -24,14 +36,38 @@ const SingleLesson = ({ content, metaData }) => {
   const quizRef = useRef(null);
   const titleRef = useRef(null);
 
+  useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#markdown-gallery",
+      children: "a[data-lightbox-image]",
+      pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+
+    const galleryLinks = document.querySelectorAll("#markdown-gallery a[data-lightbox-image]");
+    galleryLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    });
+
+    return () => {
+      lightbox.destroy();
+      galleryLinks.forEach((link) => {
+        link.removeEventListener("click", (e) => e.preventDefault());
+      });
+    };
+  }, []);
+
   useLayoutEffect(() => {
     const title = titleRef.current;
 
     gsap.to(title, {
       scrollTrigger: {
         trigger: title,
-        start: "top 200", // When the top of the title reaches the top of the viewport
-        end: "+=100", // Adjust this to control the duration of the animation
+        start: "top 200",
+        end: "+=100",
         scrub: true,
       },
       y: 0,
@@ -42,9 +78,9 @@ const SingleLesson = ({ content, metaData }) => {
 
   const handleReadContent = () => {
     if (isPaused) {
-      speak(""); // Resume speech if paused
+      speak("");
     } else if (isSpeaking) {
-      pause(); // Pause speech
+      pause();
     } else {
       const textToRead = `
         Title: ${metaData.read_title}.
@@ -53,7 +89,7 @@ const SingleLesson = ({ content, metaData }) => {
         Content: ${content.replace(/<\/?[^>]+(>|$)/g, "")}.
         Definitions: ${metaData.definitions}.
       `;
-      speak(textToRead); // Start reading content
+      speak(textToRead);
     }
   };
 
@@ -110,9 +146,26 @@ const SingleLesson = ({ content, metaData }) => {
         <Typography variant='subtitle1' gutterBottom>
           <strong>Estimated Hours:</strong> {metaData.estimated_hours}
         </Typography>
+
+        <Box sx={{ display: { xs: "flex", md: "none" }, gap: "1rem" }}>
+          <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} className={classes.button} variant='contained' color={isSpeaking || isPaused ? "secondary" : "primary"} onClick={handleReadContent}>
+            {isSpeaking ? (
+              <span>
+                <PauseCircleIcon /> Pause Read
+              </span>
+            ) : (
+              <span>
+                <PlayCircleIcon /> Read Aloud
+              </span>
+            )}
+          </Button>
+          <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} variant='contained' color='primary' onClick={handleStartQuiz}>
+            Take the Quiz
+          </Button>
+        </Box>
       </Box>
       <Grid container spacing={6} position='relative'>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} id='markdown-gallery'>
           {!showQuiz ? (
             <>
               {metaData.learning_outcomes && (
@@ -132,6 +185,12 @@ const SingleLesson = ({ content, metaData }) => {
 
               <MuiMarkdown
                 overrides={{
+                  ul: {
+                    component: List,
+                  },
+                  li: {
+                    component: ListItemTypo,
+                  },
                   h1: {
                     component: Typography,
                     props: {
@@ -166,6 +225,9 @@ const SingleLesson = ({ content, metaData }) => {
                         marginBottom: "1rem",
                       },
                     },
+                  },
+                  img: {
+                    component: ImgComponent,
                   },
                 }}
               >
@@ -239,6 +301,9 @@ const SingleLesson = ({ content, metaData }) => {
                   <Typography variant='body1'>
                     {index + 1}. {q.question}
                   </Typography>
+                  <Typography variant='body1'>
+                    {index + 1}. {q.question}
+                  </Typography>
                   <FormControl component='fieldset' sx={{ marginTop: 1 }}>
                     <RadioGroup name={`question-${index}`} onChange={(e) => handleAnswer(index, parseInt(e.target.value))}>
                       {q.options.map((option, i) => (
@@ -272,7 +337,7 @@ const SingleLesson = ({ content, metaData }) => {
             </>
           )}
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ display: { xs: "none", md: "block" } }}>
           <Box className={classes.sticky}>
             <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
               <span ref={titleRef}>{metaData.title}</span>

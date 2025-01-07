@@ -177,8 +177,8 @@ quiz:
 
 **Depth for Freeboard (D)** is the moulded depth amidships plus the thickness of the freeboard deck stringer plate, where fitted, plus **T(L-S)/L**, if the exposed freeboard deck is sheathed:
 
-\- T is the mean thickness of the exposed sheathing clear of openings and
-\- S is the total length of superstructures
+- T is the mean thickness of the exposed sheathing clear of openings and
+- S is the total length of superstructures
 
 **Block coefficient (Cb)** is the volume of moulded displacement of the ship, divided by the volume of length, breadth and moulded depth, excluding bossing, in a metal shell ship and the volume of displacement of the hull in a ship with a shell of any other material.
 
@@ -210,13 +210,13 @@ Load lines marked in the ship side, corresponding to a season, area, zone or reg
 
 A ship shall be subjected to the surveys and inspections, specified below:
 
-\- A complete survey before the entrance in service of her structure and equipment; of everything related with this convention
-\- A periodic survey at least once every five years, to check the state of the structure, equipment, devices and materials; of the ship.
-\- A yearly inspection, to check no modification of hull or superstructure, has been done, specially:
-\- Protection of openings;
-\- Guard rails;
-\- Freeing ports;
-\- Means of access to crew’s quarters
+- A complete survey before the entrance in service of her structure and equipment; of everything related with this convention
+- A periodic survey at least once every five years, to check the state of the structure, equipment, devices and materials; of the ship.
+- A yearly inspection, to check no modification of hull or superstructure, has been done, specially:
+- Protection of openings;
+- Guard rails;
+- Freeing ports;
+- Means of access to crew’s quarters
 
 After those inspections has been done, it will be no possible to modify any item, without the administration authorization.
 
@@ -267,17 +267,17 @@ The lines detailed in the image which indicate the Load line assigned, shall be 
 
 The following Load lines shall be used:
 
-\- the Summer Load Line indicated by the upper edge of the line which passes through the centre of the ring and also by a line marked S.
+- the Summer Load Line indicated by the upper edge of the line which passes through the centre of the ring and also by a line marked S.
 
-\- the Winter Load Line indicated by the upper edge of a line marked W.
+- the Winter Load Line indicated by the upper edge of a line marked W.
 
-\- the Winter North Atlantic Load Line indicated by the upper edge of a line marked WNA.
+- the Winter North Atlantic Load Line indicated by the upper edge of a line marked WNA.
 
-\- the Tropical Load Line indicated by the upper edge of a line marked T.
+- the Tropical Load Line indicated by the upper edge of a line marked T.
 
-\- the Fresh Water Load Line in summer indicated by the upper edge of a line marked F. The Fresh Water Load Line in summer is marked abaft the vertical line. The difference between the Fresh Water Load Line in summer and the Summer Load Line is the allowance to be made for Loading in fresh water at the other Load lines.
+- the Fresh Water Load Line in summer indicated by the upper edge of a line marked F. The Fresh Water Load Line in summer is marked abaft the vertical line. The difference between the Fresh Water Load Line in summer and the Summer Load Line is the allowance to be made for Loading in fresh water at the other Load lines.
 
-\- the Tropical Fresh Water Load Line indicated by the upper edge of a line marked TF, and marked abaft the vertical line.
+- the Tropical Fresh Water Load Line indicated by the upper edge of a line marked TF, and marked abaft the vertical line.
 
 If timber freeboards are assigned, the timber Load lines shall be marked in addition to ordinary Load lines. They will be marked adding a L (lumber).
 
@@ -311,17 +311,17 @@ Other corrections considered within the Convention are to be applied for ships o
 
 ###Minimum freeboards
 
-\- summer freeboard is obtained from table in rule 28, having applied the established corrections (Regulations 27 as applicable, 29, 30, 31, 32, 37, 38 and, if applicable, 39).
+- summer freeboard is obtained from table in rule 28, having applied the established corrections (Regulations 27 as applicable, 29, 30, 31, 32, 37, 38 and, if applicable, 39).
 
-\- winter freeboard shall be obtained adding the summer freeboard the one forty-eighth of the summer freeboard.
+- winter freeboard shall be obtained adding the summer freeboard the one forty-eighth of the summer freeboard.
 
-\- winter North Atlantic freeboard shall be obtained adding 50 millimetres or 2” the winter freeboard, and shall be only applicable to ships less than 100 metres in length.
+- winter North Atlantic freeboard shall be obtained adding 50 millimetres or 2” the winter freeboard, and shall be only applicable to ships less than 100 metres in length.
 
-\- tropical freeboard, shall be obtained deducting the summer freeboard the one forty-eighth of the summer freeboard.
+- tropical freeboard, shall be obtained deducting the summer freeboard the one forty-eighth of the summer freeboard.
 
-\- fresh Water freeboard in unit density shall be obtained by deducting from the minimum freeboard in salt water, dividing the summer Displacement by 40T centimetres (inches), (T = tons per centimetre (inch) immersion in salt water at the summer Load waterline).
+- fresh Water freeboard in unit density shall be obtained by deducting from the minimum freeboard in salt water, dividing the summer Displacement by 40T centimetres (inches), (T = tons per centimetre (inch) immersion in salt water at the summer Load waterline).
 
-\- tropical Fresh Water freeboard in unit density shall be obtained by deducting the Fresh Water freeboard the one forty-eighth of the summer freeboard.
+- tropical Fresh Water freeboard in unit density shall be obtained by deducting the Fresh Water freeboard the one forty-eighth of the summer freeboard.
 
 ###ANNEX II
 

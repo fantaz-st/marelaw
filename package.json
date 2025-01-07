@@ -24,6 +24,7 @@
     "html-react-parser": "^5.1.10",
     "mui-markdown": "^1.2.3",
     "next": "14.0.3",
+    "photoswipe": "^5.4.4",
     "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
