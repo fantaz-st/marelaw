@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useLayoutEffect, useEffect } from "react";
+import { useRef, useState, useLayoutEffect, useEffect, useContext, createContext } from "react";
 import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
@@ -16,9 +16,20 @@ import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import ImgComponent from "./ImgComponent";
 
+const ListTypeContext = createContext();
+export const useListType = () => useContext(ListTypeContext);
+
 const ListItemTypo = (props) => {
+  const listType = useListType();
+
   return (
-    <ListItem className='list-item' variant='body' sx={{ display: "list-item", listStyleType: "disc" }}>
+    <ListItem
+      className='list-item'
+      sx={{
+        display: "list-item",
+        listStyleType: listType === "ol" ? "decimal" : "disc",
+      }}
+    >
       <Typography variant='body'>{props.children}</Typography>
     </ListItem>
   );
@@ -186,7 +197,18 @@ const SingleLesson = ({ content, metaData }) => {
               <MuiMarkdown
                 overrides={{
                   ul: {
-                    component: List,
+                    component: (props) => (
+                      <ListTypeContext.Provider value='ul'>
+                        <List {...props} style={{ paddingLeft: "1.2rem" }} />
+                      </ListTypeContext.Provider>
+                    ),
+                  },
+                  ol: {
+                    component: (props) => (
+                      <ListTypeContext.Provider value='ol'>
+                        <List {...props} style={{ paddingLeft: "1.2rem" }} />
+                      </ListTypeContext.Provider>
+                    ),
                   },
                   li: {
                     component: ListItemTypo,
@@ -197,25 +219,6 @@ const SingleLesson = ({ content, metaData }) => {
                       variant: "h1",
                     },
                   },
-                  ol: {
-                    component: List,
-                    props: {
-                      style: {
-                        paddingLeft: "1.2rem",
-                      },
-                    },
-                  },
-                  /* li: {
-                    component: ListItem,
-                    props: {
-                      variant: "body",
-                      style: {
-                        color: "#5B5B66",
-                        display: "list-item",
-                        listStyleType: "decimal",
-                      },
-                    },
-                  }, */
                   p: {
                     component: Typography,
                     props: {
