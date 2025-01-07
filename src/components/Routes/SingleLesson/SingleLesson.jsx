@@ -301,9 +301,6 @@ const SingleLesson = ({ content, metaData }) => {
                   <Typography variant='body1'>
                     {index + 1}. {q.question}
                   </Typography>
-                  <Typography variant='body1'>
-                    {index + 1}. {q.question}
-                  </Typography>
                   <FormControl component='fieldset' sx={{ marginTop: 1 }}>
                     <RadioGroup name={`question-${index}`} onChange={(e) => handleAnswer(index, parseInt(e.target.value))}>
                       {q.options.map((option, i) => (
