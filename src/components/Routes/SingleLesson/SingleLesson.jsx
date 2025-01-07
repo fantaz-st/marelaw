@@ -120,7 +120,7 @@ const SingleLesson = ({ content, metaData }) => {
                   <Typography variant='h5' gutterBottom>
                     Learning Outcomes
                   </Typography>
-                  <List sx={{ listStyleType: "disc" }}>
+                  <List sx={{ listStyleType: "disc", paddingLeft: "1.2rem" }}>
                     {metaData.learning_outcomes.map((outcome, index) => (
                       <ListItem key={index}>
                         <Typography variant='body'>{outcome}</Typography>
@@ -136,6 +136,25 @@ const SingleLesson = ({ content, metaData }) => {
                     component: Typography,
                     props: {
                       variant: "h1",
+                    },
+                  },
+                  ol: {
+                    component: List,
+                    props: {
+                      style: {
+                        paddingLeft: "1.2rem",
+                      },
+                    },
+                  },
+                  li: {
+                    component: ListItem,
+                    props: {
+                      variant: "body",
+                      style: {
+                        color: "#5B5B66",
+                        display: "list-item",
+                        listStyleType: "decimal",
+                      },
                     },
                   },
                   p: {
@@ -217,7 +236,9 @@ const SingleLesson = ({ content, metaData }) => {
               </Typography>
               {metaData.quiz.map((q, index) => (
                 <Box key={index} sx={{ marginBottom: 3 }}>
-                  <Typography variant='body1'>{q.question}</Typography>
+                  <Typography variant='body1'>
+                    {index + 1}. {q.question}
+                  </Typography>
                   <FormControl component='fieldset' sx={{ marginTop: 1 }}>
                     <RadioGroup name={`question-${index}`} onChange={(e) => handleAnswer(index, parseInt(e.target.value))}>
                       {q.options.map((option, i) => (
@@ -256,20 +277,25 @@ const SingleLesson = ({ content, metaData }) => {
             <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
               <span ref={titleRef}>{metaData.title}</span>
             </Typography>
-            <Button className={classes.button} variant='contained' color={isSpeaking || isPaused ? "secondary" : "primary"} onClick={handleReadContent} sx={{ marginTop: 2 }}>
-              {isSpeaking ? (
-                <span>
-                  <PauseCircleIcon /> Pause Read
-                </span>
-              ) : (
-                <span>
-                  <PlayCircleIcon /> Read Aloud
-                </span>
-              )}
-            </Button>
-            <Button variant='contained' color='primary' onClick={handleStartQuiz}>
-              Take the Quiz
-            </Button>
+
+            {!showQuiz && (
+              <>
+                <Button className={classes.button} variant='contained' color={isSpeaking || isPaused ? "secondary" : "primary"} onClick={handleReadContent} sx={{ marginTop: 2 }}>
+                  {isSpeaking ? (
+                    <span>
+                      <PauseCircleIcon /> Pause Read
+                    </span>
+                  ) : (
+                    <span>
+                      <PlayCircleIcon /> Read Aloud
+                    </span>
+                  )}
+                </Button>
+                <Button variant='contained' color='primary' onClick={handleStartQuiz}>
+                  Take the Quiz
+                </Button>
+              </>
+            )}
           </Box>
         </Grid>
       </Grid>
