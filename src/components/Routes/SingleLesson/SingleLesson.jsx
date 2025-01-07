@@ -205,7 +205,7 @@ const SingleLesson = ({ content, metaData }) => {
                       },
                     },
                   },
-                  li: {
+                  /* li: {
                     component: ListItem,
                     props: {
                       variant: "body",
@@ -215,7 +215,7 @@ const SingleLesson = ({ content, metaData }) => {
                         listStyleType: "decimal",
                       },
                     },
-                  },
+                  }, */
                   p: {
                     component: Typography,
                     props: {
@@ -246,11 +246,13 @@ const SingleLesson = ({ content, metaData }) => {
                         const [, text, url] = match;
                         return (
                           <ListItem key={index}>
-                            <Link href={url} target='_blank' rel='noopener noreferrer'>
-                              <Typography variant='body' sx={{ textDecoration: "underline" }}>
+                            <Typography component='span' variant='body'>
+                              {link.split(match[0])[0]}
+                              <Link href={url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: "underline" }}>
                                 {text}
-                              </Typography>
-                            </Link>
+                              </Link>
+                              {link.split(match[0])[1]}
+                            </Typography>
                           </ListItem>
                         );
                       }

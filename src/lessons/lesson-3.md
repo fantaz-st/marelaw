@@ -1,6 +1,6 @@
 ---
 title: "1.4. International Convention for the Prevention of Pollution from Ships (MARPOL)"
-read_title: "MARPOL Convention"
+read_title: "International Convention for the Prevention of Pollution from Ships (MARPOL)"
 slug: "lesson-3"
 estimated_hours: 3
 learning_outcomes:
@@ -9,17 +9,6 @@ learning_outcomes:
   - to know all the required certificates, books, and documents and be able to assign them to the appropriate annex
   - to be able to define all types of surveys and their role
   - to know the definition of the term "special area" and "special area" in the various annexes
-
-links:
-  - "[MARPOL Annexes and Requirements](https://www.imo.org/en/OurWork/Environment/Pages/Special-Areas-Marpol.aspx)"
-  - "[Double Hull Requirements](https://www.imo.org/en/OurWork/Environment/Pages/constructionrequirements.aspx)"
-  - "[Double Hull Requirements](https://www.imo.org/en/OurWork/Environment/Pages/constructionrequirements.aspx)"
-  - "[Oil Record Book Part I Example](http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/app3.htm)"
-  - "[SOPEP Example Plan](https://docs2.cer-rec.gc.ca/ll-eng/llisapi.dll/fetch/2000/90464/90550/327915/3546272/3905220/3912508/C05468%2D3_THIALF_SOPEP_Shipboard_Oil_Pollution_Emergency_Plan_%2D_A7E4X7.pdf)"
-
-literature:
-  - MARPOL Training Documentation; Annex I to VI
-  - IMO Resources and Guidelines
 
 quiz:
   - question: "Which answer is correct?"
