@@ -34,7 +34,7 @@ const AboutSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: aboutContainerRef.current,
-          start: "top 50%",
+          start: "top 90%",
           end: "top 80%",
         },
       });

@@ -32,7 +32,7 @@ export const typography = () => {
       fontSize: "3.625rem",
       lineHeight: "1.17021em",
       [breakpointsTheme.breakpoints.down("xxl")]: {
-        fontSize: "47px",
+        fontSize: "30px",
         lineHeight: "1.4",
       },
     },

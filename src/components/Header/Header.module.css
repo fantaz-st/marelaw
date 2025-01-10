@@ -18,7 +18,7 @@
 .hamburger span {
   display: block;
   content: "";
-  background-color: #000;
+  background-color: #fff;
   height: 2px;
   width: 20px;
 }
@@ -50,7 +50,7 @@
   align-items: center;
   align-content: center;
   height: 100%;
-  color: #fff;
+  color: #fff !important;
 }
 
 .menu li a span {

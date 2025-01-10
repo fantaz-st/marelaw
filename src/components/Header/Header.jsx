@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import mareLawLogo from "../../../public/marelaw-blue.svg";
+import mareLawLogo from "../../../public/marelaw-blue-white.svg";
 import classes from "./Header.module.css";
 import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -54,7 +54,7 @@ const Header = ({ menuItems }) => {
           {menuItems.map((item) => (
             <ListItem key={item.databaseId} className={classes.menuItem}>
               <Link href={`${item.uri}`}>
-                <Typography variant='body' sx={{ height: "100%" }}>
+                <Typography variant='body' sx={{ height: "100%", color: "#fff" }}>
                   {item.label}
                 </Typography>
                 {item.childNodes.length > 0 && <ArrowDropDownIcon className={classes.downArrow} />}

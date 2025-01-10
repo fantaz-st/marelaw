@@ -1,9 +1,10 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import classes from "./Hero.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
+import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
 
 const Hero = () => {
   const heroContainerRef = useRef(null);
@@ -35,13 +36,16 @@ const Hero = () => {
 
   return (
     <div className={classes.container} ref={heroContainerRef}>
-      <div className={classes.content}>
-        <div className={classes.text}>
-          <div className={classes.title} ref={titleRef}>
-            Marelaw - Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
+      <PaddingGlobal>
+        <div className={classes.content}>
+          <div className={classes.text}>
+            <div className={classes.title} ref={titleRef}>
+              Marelaw - Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
+            </div>
           </div>
         </div>
-      </div>
+      </PaddingGlobal>
+      <div className={classes.waves}>{/* <Image src='/waves-fntz.svg' alt='waves svg' width={3000} height={550} /> */}</div>
     </div>
   );
 };

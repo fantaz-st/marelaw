@@ -3,25 +3,21 @@
   width: 100vw;
   height: 90svh;
   overflow: hidden;
+  background: linear-gradient(90deg, #000851 0%, #1cb5e0 100%);
 }
 
 .content {
-  width: 80%;
-  margin: 0 auto;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-items: stretch;
-  align-content: stretch;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
 }
 
 .text {
   margin-bottom: 4rem;
   width: 100%;
   max-width: 100ch;
-  color: #112033;
+  color: #fff;
 }
 
 .title {
@@ -35,27 +31,6 @@
   color: #006bef;
 }
 
-.videoBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: #000;
-}
-
-.videoOverlay {
-  z-index: 1;
-  background-image: linear-gradient(180deg, #000, #11203300);
-  opacity: 1;
-  height: 50%;
-  position: absolute;
-  inset: 0% 0% auto;
-}
-.videoBackground video {
-  opacity: 0.75;
-}
 .title {
   line-height: 1.2;
   position: relative;
@@ -72,6 +47,19 @@
   transform: translateY(100%);
   will-change: transform;
 }
+
+.waves {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%);
+  z-index: 0;
+  background: url("/waves-fntz.svg") no-repeat;
+  background-size: cover;
+  width: 200vw;
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .content {
     width: 100%;
@@ -82,6 +70,11 @@
   }
   .title {
     font-size: 2rem;
+  }
+  .waves {
+    width: 200vw;
+    height: 100%;
+    left: -20%;
   }
 }
 
