@@ -1,18 +1,18 @@
 ---
 title: "1.2. International Convention on Load Lines (LLC)"
 read_title: "International Convention on Load Lines (LLC)"
-slug: "lesson-1"
+slug: "lesson-2"
 estimated_hours: 2
 learning_outcomes:
-  - to establish the Convention requirements to be complied by a ship.
-  - to distinguish the conditions of assignment of a vessel load lines.
-  - to differentiate the factors determining the freeboards assigned to a vessel.
-  - to check the initial, renewal and annual surveys; coverage.
+  - to state the Convention requirements to be complied by a ship.
+  - to understand the conditions of assignment of a vessel load lines.
+  - to describe the factors determining the freeboards assigned to a vessel.
+  - to describe the initial, renewal and annual surveys; coverage.
   - to distinguish the contents of the documentation and records, to be maintained on the ship, regarding certificates, records and stability and lading information of the ship
-  - to conclude that no change should be made in the structure, equipment or other matters, once a survey has been completed.
-  - to differentiate that the appropriate load lines of the ship corresponding to the season and to the zone or area, should not be submerged at any time.
-  - to predict that when a ship is in fresh water or unit density, the appropriate load line may be submerged for the fresh water allowance.
-  - to establish that when a ship departs from port situated on a river or inland waters, deeper loading is permitted corresponding to the weight of bunker and all other materials to be consumed before the arrival to sea.
+  - to understand that no change should be made in the structure, equipment or other matters, once a survey has been completed.
+  - to understand that the appropriate load lines of the ship corresponding to the season and to the zone or area, should not be submerged at any time.
+  - to clarify that when a ship is in fresh water or unit density, the appropriate load line may be submerged for the fresh water allowance.
+  - to state that when a ship departs from port situated on a river or inland waters, deeper loading is permitted corresponding to the weight of bunker and all other materials to be consumed before the arrival to sea.
   - to distinguish the boundary between two zones or areas of a port lying.
 
 links:
@@ -255,7 +255,7 @@ is a horizontal line meeting the following requirements:
 - marked amidships in both sides
 - its upper edge passes through the point where the continuation of upper surface of the freeboard deck intersects the outer surface of the shell.
 
-![Deck line](/images/lessons/lesson-1/Picture1.png)
+![Deck line](/images/lessons/lesson-2/Picture1.png)
 
 Deck line. Source: <https://assets.publishing.service.gov.uk/media/644633e96dda69000d11e2e6/MSIS41_International_Load_Line_R05.23.pdf>
 
@@ -285,7 +285,7 @@ If timber freeboards are assigned, the timber Load lines shall be marked in addi
 
 The ring, lines and letters shall be painted in white or yellow on a dark ground or in black on a light ground. They shall also be permanently marked on the sides of the ships to the satisfaction of the Administration.
 
-![Load lines and marks](/images/lessons/lesson-1/Picture2.png)
+![Load lines and marks](/images/lessons/lesson-2/Picture2.png)
 
 Load lines and marks. Source: <https://www.themastermariner.com/stcw-a-ii2/load-line-convention/>
 
@@ -297,13 +297,13 @@ For the purposes of freeboard computation, ships shall be divided into Type A an
 
 Type "A" ship shall be assigned a freeboard not less than that based on Table A of Regulation 28.
 
-![Freeboard table sample for Type A ships](/images/lessons/lesson-1/Picture3.png)
+![Freeboard table sample for Type A ships](/images/lessons/lesson-2/Picture3.png)
 
 Freeboard table sample for Type A ships. Source: <https://puc.overheid.nl/nsi/doc/PUC_2383_14/2/>
 
 **Type “B”** ship is the one which does not come within the provisions regarding Type "A" ship. Except for exceptions provided in Regulation 15(7) or 16 shall, except as provided in paragraphs (7) to (10) inclusive of this Regulation, be assigned freeboards on Table B of Regulation 28.
 
-![Freeboard table sample for Type B ships](/images/lessons/lesson-1/Picture4.png)
+![Freeboard table sample for Type B ships](/images/lessons/lesson-2/Picture4.png)
 
 Freeboard table sample for Type B ships. Source: <https://puc.overheid.nl/nsi/doc/PUC_2383_14/2/>
 
@@ -331,12 +331,14 @@ Summer, maximum 10 per cent winds of force 8 Beaufort (34 knots) or more.
 
 Tropical, maximum 1 per cent winds of force 8 Beaufort (34 knots) or more. Not more than one tropical storm in 10 years in an area of 5 degrees square in any month.
 
-![International load lines Zones and Areas, map](/images/lessons/lesson-1/Picture5.png)
+![International load lines Zones and Areas, map](/images/lessons/lesson-2/Picture5.png)
 
 International load lines Zones and Areas, map.
 
 Source: <https://www.nauticarobinson.com/cartas/international-load-line-zones-and-areas-map/29476/>
 
-###ANNEX III - Certificates
+###ANNEX III
 
-![International load lines Zones and Areas, map](/images/lessons/lesson-1/Picture6.png)
+Certificates
+
+![International load lines Zones and Areas, map](/images/lessons/lesson-2/Picture6.png)

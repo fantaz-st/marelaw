@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.16",
     "@mui/material-nextjs": "^5.15.11",
+    "@mui/x-charts": "^7.23.6",
     "@plaiceholder/next": "^3.0.0",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.0.8",

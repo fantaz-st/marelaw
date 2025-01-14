@@ -3,19 +3,13 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import mareLawLogo from "../../../public/marelaw-blue-white.svg";
+import mareLawLogo from "../../../public/marelaw-blue.svg";
 import classes from "./Header.module.css";
 import { Box, Drawer, List, ListItem, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { useRef } from "react";
-
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
 const Header = ({ menuItems }) => {
   const [open, setOpen] = useState(false);
-  const headerContainerRef = useRef(null);
 
   /* useGSAP(
     () => {
@@ -39,7 +33,7 @@ const Header = ({ menuItems }) => {
 
   return (
     <>
-      <Box className={classes.container} sx={{ padding: { xs: "0 1rem", md: "0 4rem" } }} ref={headerContainerRef}>
+      <Box className={classes.container} sx={{ padding: { xs: "0 1rem", md: "0 4rem" } }}>
         <Link href='/'>
           <Box className={classes.logo}>
             <Image src={mareLawLogo} alt='MareLaw main logo' priority />
@@ -54,7 +48,7 @@ const Header = ({ menuItems }) => {
           {menuItems.map((item) => (
             <ListItem key={item.databaseId} className={classes.menuItem}>
               <Link href={`${item.uri}`}>
-                <Typography variant='body' sx={{ height: "100%", color: "#fff" }}>
+                <Typography variant='body' sx={{ height: "100%" }}>
                   {item.label}
                 </Typography>
                 {item.childNodes.length > 0 && <ArrowDropDownIcon className={classes.downArrow} />}

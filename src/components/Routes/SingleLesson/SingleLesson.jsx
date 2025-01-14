@@ -7,6 +7,8 @@ import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
 import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 
+import { Gauge, GaugeContainer, GaugeReferenceArc, GaugeValueArc } from "@mui/x-charts/Gauge";
+
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { gsap } from "gsap";
@@ -155,7 +157,7 @@ const SingleLesson = ({ content, metaData }) => {
           {metaData.title}
         </Typography>
         <Typography variant='subtitle1' gutterBottom>
-          <strong>Estimated Hours:</strong> {metaData.estimated_hours}
+          <strong>Estimated class hours according to IMO Model Course 7.01: {metaData.estimated_hours}</strong>
         </Typography>
 
         <Box sx={{ display: { xs: "flex", md: "none" }, gap: "1rem" }}>
@@ -176,7 +178,7 @@ const SingleLesson = ({ content, metaData }) => {
         </Box>
       </Box>
       <Grid container spacing={6} position='relative'>
-        <Grid item xs={12} md={8} id='markdown-gallery'>
+        <Grid item xs={12} md={8} id='markdown-gallery' sx={{ textAlign: "justify" }}>
           {!showQuiz ? (
             <>
               {metaData.learning_outcomes && (
@@ -321,6 +323,40 @@ const SingleLesson = ({ content, metaData }) => {
                 </Button>
               )}
               {isSubmitted && (
+                <Grid container sx={{ marginTop: 3, marginBottom: 6, textAlign: "center" }}>
+                  <Grid item xs={12} sm={6}>
+                    <Box className={classes.results}>
+                      <Typography variant='h5'>Quiz Results</Typography>
+
+                      <Gauge
+                        value={Math.round((correctCount / metaData.quiz.length) * 100)}
+                        startAngle={-110}
+                        endAngle={110}
+                        innerRadius='75%'
+                        outerRadius='100%'
+                        width={250}
+                        height={250}
+                        text={({ value }) => `${value}%`}
+                        sx={{
+                          "& .MuiGauge-valueText": {
+                            fontWeight: "bold",
+                            fontSize: "3rem",
+                          },
+                        }}
+                      />
+                      <Typography variant='body1' sx={{ marginTop: "-2rem" }}>
+                        {correctCount} / {metaData.quiz.length}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <Button variant='outlined' color='secondary' onClick={handleBackToLesson} sx={{ marginTop: 2 }}>
+                      Back to Lesson
+                    </Button>
+                  </Grid>
+                </Grid>
+              )}
+              {/* {isSubmitted && (
                 <Box sx={{ marginTop: 3 }}>
                   <Typography variant='h6' gutterBottom>
                     Quiz Results
@@ -335,7 +371,7 @@ const SingleLesson = ({ content, metaData }) => {
                     Back to Lesson
                   </Button>
                 </Box>
-              )}
+              )} */}
             </>
           )}
         </Grid>

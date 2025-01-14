@@ -13,12 +13,13 @@
   top: 0;
   left: 0;
   z-index: 9;
+  background-color: #fff;
 }
 
 .hamburger span {
   display: block;
   content: "";
-  background-color: #fff;
+  background-color: #000;
   height: 2px;
   width: 20px;
 }
@@ -42,7 +43,7 @@
   font-size: 1rem;
   font-weight: 400;
   height: 100%;
-  color: #fff;
+  color: #000;
 }
 
 .menu li a {
@@ -50,7 +51,7 @@
   align-items: center;
   align-content: center;
   height: 100%;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .menu li a span {

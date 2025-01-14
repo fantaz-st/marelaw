@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from "./Lessons.module.css";
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, Button, List, ListItem, Typography } from "@mui/material";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const Lessons = ({ lessons }) => {
   return (
@@ -10,15 +11,16 @@ const Lessons = ({ lessons }) => {
           <Typography variant='h1' className={classes.title}>
             Lessons
           </Typography>
-          <List>
-            {lessons.map((lesson) => (
-              <ListItem key={lesson.slug}>
-                <Link href={`/lessons/${lesson.slug}`}>
-                  <Typography variant='h3'>{lesson.title}</Typography>
-                </Link>
-              </ListItem>
-            ))}
-          </List>
+          {lessons.map((lesson) => (
+            <Link href={`/lessons/${lesson.slug}`} key={lesson.slug} className={classes.lesson}>
+              <Typography variant='h5' className={classes.title}>
+                {lesson.title}
+              </Typography>
+              <Button className={classes.button} sx={{ display: { xs: "none", md: "block" } }}>
+                <ArrowOutwardIcon />
+              </Button>
+            </Link>
+          ))}
         </Box>
       </Box>
     </Box>

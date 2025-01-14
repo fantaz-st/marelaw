@@ -50,7 +50,7 @@ const Signature = () => {
 
   return (
     <Box className={classes.container} ref={containerRef}>
-      <Image src={cbLogo} height={40} width={30} alt='cblogo' />
+      <Image src={cbLogo} height={40} width='auto' alt='cblogo' style={{ margin: 0 }} />
 
       <Link className={classes.text} ref={textRef} href='mailto:cbabic@pfst.hr'>
         <Typography variant='body' component='p'>

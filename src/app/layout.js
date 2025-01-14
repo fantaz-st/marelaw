@@ -9,7 +9,6 @@ import { CssBaseline } from "@mui/material";
 import { pagesMenuQuery } from "@/helpers/queryLists";
 import { fetchApi } from "@/functions/fetchApi";
 import createDataTree from "@/functions/createDataTree";
-import Head from "next/head";
 
 export const metadata = {
   title: "MareLaw",

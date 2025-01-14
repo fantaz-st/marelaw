@@ -1,383 +1,182 @@
 ---
-title: "1.4. International Convention for the Prevention of Pollution from Ships (MARPOL)"
-read_title: "International Convention for the Prevention of Pollution from Ships (MARPOL)"
+title: "1.5. Maritime Declarations of Health and the requirements of the International Health Regulations"
+read_title: "Maritime Declarations of Health and the requirements of the International Health Regulations"
 slug: "lesson-3"
 estimated_hours: 3
 learning_outcomes:
-  - to explain the aim of the MARPOL Convention
-  - to distinguish between the various Annexes I - VI and their objectives
-  - to know all the required certificates, books, and documents and be able to assign them to the appropriate annex
-  - to be able to define all types of surveys and their role
-  - to know the definition of the term "special area" and "special area" in the various annexes
+  - to analyse the International Health Regulations (2005) (IHR)
+  - to establish understanding on the general principles, and a purpose and scope of IHR
+  - to present port formalities in respect of health issues on a ship
+  - to analyse the Maritime Declaration of Health (MDH), Ship Sanitation Control Exemption Certificates (SSCEC) and Ship Sanitation Control Certificates (SSCC)
+
+links:
+  - "The International Health Regulations 2005 (IHR), available at: [https://www.who.int/publications/i/item/9789241580410](https://www.who.int/publications/i/item/9789241580410)"
+  - "Handbook for inspection of ships and issuance of ship sanitation certificates, available at: [https://www.who.int/publications/i/item/9789241548199](https://www.who.int/publications/i/item/9789241548199)"
+  - "Section 6 of Res.FAL.14(46), adopted on 13 May 2022, Amendments to the Annex to the Convention on Facilitation of International Maritime Traffic, 1965, available at: [https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/FALDocuments/FAL.14(46).pdf](https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/FALDocuments/FAL.14(46).pdf)"
+  - "Guide to ship sanitation, 3rd edition, available at: [https://www.who.int/publications/i/item/9789241546690](https://www.who.int/publications/i/item/9789241546690)"
+
+literature:
+  - "From International Sanitary Conventions to Global Health Security: The New International Health Regulations, available at:[https://academic.oup.com/chinesejil/article/4/2/325/490058](https://academic.oup.com/chinesejil/article/4/2/325/490058)"
 
 quiz:
-  - question: "Which answer is correct?"
+  - question: "Purpose and scope of the IHR is:"
     options:
-      - "The SOLAS Convention has the following Annexes: prevention of pollution by oil (I), prevention of pollution by harmful liquid substances carried in bulk (II), prevention of pollution by harmful substances carried by sea in packaged form (III), prevention of pollution by sewage (IV), prevention of pollution by garbage (V), prevention of air pollution (VI)"
-      - "The MARPOL Convention has the following Annexes: prevention of pollution by oil (I), prevention of pollution by harmful liquids carried in bulk (II), control of harmful anti-fouling systems on ships (III), prevention of pollution by sewage (IV), prevention of pollution by garbage (V), prevention of air pollution (VI)"
-      - "The MARPOL Convention has the following Annexes: prevention of pollution by oil (I), prevention of pollution by Noxious Liquid Substances in bulk (II), prevention of pollution by harmful substances carried by sea in packaged form (III), prevention of pollution by sewage from ships(IV), prevention of pollution by garbage from ships (V), prevention of air pollution from ships(VI)"
-      - "The STCW Convention has the following Annexes: prevention of pollution by oil (I), prevention of pollution by harmful liquids carried in bulk (II), prevention of pollution by chemicals (III), prevention of pollution by ballast water (IV), prevention of pollution by garbage (V), prevention of air pollution (VI)"
+      - "to prevent, protect against, control and provide a public health response to the domestic spread of disease in ways that are commensurate with and restricted to public health risks, and which avoid unnecessary interference with domestic traffic and trade;"
+      - "to prevent, protect against, control and provide a public health response to the international spread of disease in ways that are commensurate with and restricted to public health risks, and which avoid unnecessary interference with international traffic and trade."
+      - "to prevent, protect against, control and provide a public health response to the domestic spread of disease in ways that are commensurate with and restricted to public health risks, and which avoid unnecessary interference with domestic traffic and trade according to national law only."
+    correct_answer: 1
+
+  - question: "Legal status of IHR is:"
+    options:
+      - "legally binding international agreement to all States;"
+      - "legally binding international agreement between States Parties to the IHR;"
+      - "only WHO recommendations."
+    correct_answer: 1
+
+  - question: "Term “National IHR Focal Point” in IHR means:"
+    options:
+      - "port agent responsible for submitting MDH to the competent authorities;"
+      - "the national centre at the port for communication with arriving vessel in the port;"
+      - "the national centre, designated by each State Party, which shall be accessible at all times for communications with WHO IHR Contact Points."
     correct_answer: 2
 
-  - question: "What does the acronym SOPEP stand for?"
+  - question: "Term “public health emergency of international concern” in IHR means an extraordinary event which is determined to constitute a public health risk to other States through the international spread of disease and to potentially require a coordinated international response:"
     options:
-      - "Shipboard Oil Pollution Emergency Plan"
-      - "Shipboard Oil Pollution Emergency Procedure"
-      - "Shipboard Operational Pollution Emergency Plan"
-      - "Shipboard Operational Pollution Emergency Protocol"
+      - "True;"
+      - "False."
     correct_answer: 0
 
-  - question: "Which vessels are required to have a SOPEP Plan?"
+  - question: "Subject to applicable international agreements and IHR a State Party may require for public health purposes, on arrival or departure:"
     options:
-      - "all vessels irrespective of size"
-      - "All vessels + 400GT"
-      - "All tankers +150GT"
-      - "all ships of 150 GT which carry harmful substances"
-    correct_answer: 2
-
-  - question: "After a basic or regular inspection in accordance with the provisions of Rule 6 of Annex I of the MARPOL Convention, to each oil tanker of 150 gross tonnage and above or all other ships of 400 gross tonnage and above making voyages to ports or offshore terminals under the jurisdiction of other contracting parties According to the MARPOL Convention, a following certificate must be issued:"
-    options:
-      - "International certificate on the prevention of sea pollution by faeces"
-      - "International certificate on the prevention of sea pollution by oil"
-      - "International certificate on the prevention of sea pollution by garbage"
-      - "International certificate on the prevention of sea pollution by ballast water"
+      - "unloading of baggage, cargo, containers, conveyances, goods, postal parcels and human remains in separate terminal in its port;"
+      - "inspection of baggage, cargo, containers, conveyances, goods, postal parcels and human remains;"
+      - "arrest of baggage, cargo, containers, conveyances, goods, postal parcels and human remains."
     correct_answer: 1
 
-  - question: "Which vessels are required to have the Oil Record Book- Part 1?"
+  - question: "Subject to IHR or other applicable international agreement a ship shall not be prevented for public health reasons from calling at any point of entry. However, if the port is not equipped for applying health measures under IHR, the ship may be ordered to proceed at its own risk to the nearest suitable PORT available to it, unless the ship or aircraft has an operational problem which would make this diversion unsafe:"
     options:
-      - "all vessels irrespective of size"
-      - "All vessels + 400GT"
-      - "All tankers +150GT"
-      - "all ships of 150 GT which carry harmful substances"
-    correct_answer: 2
-
-  - question: "Special ballast tanks, double hull design, tanks for residues of tank washing mixtures, oil discharge monitoring and control device are just some of the preventive measures to prevent pollution:"
-    options:
-      - "by oils from bulk carriers as per Annex I"
-      - "by oils from tankers as per Annex I"
-      - "by oils from tankers as per Annex II"
-      - "by harmful substances as per Annex III"
-    correct_answer: 1
-
-  - question: "Areas in which, for technical reasons relating to their oceanographical and ecological condition and to their sea traffic, the adoption of special mandatory methods for the prevention of sea pollution is required:"
-    options:
-      - "Special Area"
-      - "Particularly Sensitive Sea Area"
-      - "Special purpose area"
-      - "Place of refuge for ships"
+      - "True;"
+      - "False."
     correct_answer: 0
 
-  - question: "In the Antarctic area, oily water can be discharged if filtering equipment and a 15 ppm alarm are used:"
+  - question: "Subject to IHR, or as provided in applicable international agreements, ships shall not be refused free pratique (permission for a ship to enter a port, embark or disembark, discharge or load cargo or stores) by States Parties for public health reasons. In particular, they shall not be prevented from embarking or disembarking; discharging or loading cargo or stores; or taking on fuel, water, food and supplies:"
     options:
-      - "True"
-      - "False"
-    correct_answer: 1
-
-  - question: "Which code classify harmful substances from Annex into 9 categories according to the way of reaction in:"
-    options:
-      - "IBC Code"
-      - "IGC Code"
-      - "IMDG Code"
-      - "IMSBC Code"
-    correct_answer: 2
-
-  - question: "In accordance with Annex II, substances are classified into 4 categories, which do not indicate the degree of hazard."
-    options:
-      - "True"
-      - "False"
-    correct_answer: 1
-
-  - question: "A complete ban on the discharge of harmful liquid substances does not apply in particularly sensitive marine areas and Antarctic."
-    options:
-      - "True"
-      - "False"
-    correct_answer: 1
-
-  - question: "Which certification is required under Annex 4?"
-    options:
-      - "International Sewage Pollution Prevention Certificate"
+      - "True;"
+      - "False."
     correct_answer: 0
 
-  - question: "According to Annex IV of MARPOL, sewage includes water from toilets and urinals, water from medical premises, and areas where animals are kept that are transported by ship."
+  - question: "According to IHR the officers in command of ships, or their agents, shall make known to the port control at the port of destination any cases of illness indicative of a disease of an infectious nature or evidence of a public health risk on board as soon as such illnesses or public health risks are made known to the officer:"
     options:
-      - "True"
-      - "False"
+      - "as early as possible before arrival;"
+      - "not later than 24 hours before arrival;"
+      - "at least 1 hour before arrival."
     correct_answer: 0
 
-  - question: "What are the food discharge requirements for vessels inside Special Areas?"
+  - question: "According to the IHR the State Parties shall ensure that the conveyance operators:"
     options:
-      - "Comminuted or ground"
-      - "12nm from nearest land"
-      - "en route"
-      - "3 nm from nearest land"
-    correct_answer: 1
-
-  - question: "What does MARPOL Annex V specifically regulate?"
-    options:
-      - "Discharge of oil into the sea"
-      - "Discharge of garbage from ships"
-      - "Emission of harmful gases from ships"
-      - "Control of sewage discharge from ships"
-    correct_answer: 1
-
-  - question: "Which of the following items is prohibited from being discharged into the sea under MARPOL Annex V?"
-    options:
-      - "Food waste comminuted or ground"
-      - "Cleaning agents and additives in cargo hold wash water"
-      - "Plastics, including synthetic ropes and fishing nets"
-      - "Animal carcasses"
-    correct_answer: 2
-
-  - question: "Under MARPOL Annex 5, how far from the nearest land must a ship be to dispose of comminuted or ground food wastes?"
-    options:
-      - "3 nautical miles"
-      - "12 nautical miles"
-      - "25 nautical miles"
-      - "50 nautical miles"
-    correct_answer: 1
-
-  - question: "What is required for a ship of 400 GT and above or certified to carry 15 persons or more according to MARPOL Annex 5?"
-    options:
-      - "A Ballast Water Management plan"
-      - "An International Air Pollution Prevention Certificate"
-      - "A Garbage Management Plan"
-      - "A Sewage Treatment Plant"
-    correct_answer: 2
-
-  - question: "Which pollutant’s emissions are regulated under MARPOL Annex VI?"
-    options:
-      - "Garbage"
-      - "Oil"
-      - "Sewage"
-      - "Sulphur oxides and nitrogen oxides"
-    correct_answer: 3
-
-  - question: "As per MARPOL Annex VI, what is the maximum sulphur content allowed in fuel in an Emission Control Area (ECA)?"
-    options:
-      - "0.1 %m/m"
-      - "0.3 %m/m"
-      - "0.5 %m/m"
-      - "0.8 %m/m"
+      - "comply with the health measures recommended by WHO and adopted by the State Party;"
+      - "ensure conveyances for which they are responsible free of sources of infection or contamination only for the period the ship is in the port;"
+      - "do not inform travellers of the health measures;"
+      - "up to three times per year make sure that the conveyances for which they are responsible are free of sources of infection or contamination, including vectors and reservoirs."
     correct_answer: 0
+
+  - question: "No medical examination, vaccination, prophylaxis or health measures shall be carried out on travellers without their prior express informed consent, except in situations if there is evidence of an imminent public health risk:"
+    options:
+      - "True;"
+      - "False."
+    correct_answer: 0
+
+  - question: "Container consignees and consignors shall make every effort to avoid cross-contamination when multiple-use loading of containers is employed:"
+    options:
+      - "True;"
+      - "False."
+    correct_answer: 0
+
+  - question: "The MDH should be completed and delivered to the competent authority of the port the ship arrives:"
+    options:
+      - "on arrival, or in advance of the vessel’s arrival;"
+      - "after a ship leaves the port;"
+      - "only if the public health emergency situation."
+    correct_answer: 0
+
+  - question: "Ship Sanitation Control Certificate (SSCC) or its extension shall be valid for a maximum period of six months:"
+    options:
+      - "True;"
+      - "False."
+    correct_answer: 1
+
+  - question: "The use of the model certificate:"
+    options:
+      - "do not minimizes unnecessary delays;"
+      - "facilitates the international movement of shipping;"
+      - "allows to enter into port without following the port formalities;"
+      - "allows uniform and easily recognizable communication of risks."
+    correct_answer: 1
+
+  - question: "Conveyance operators according to the IHR shall facilitate inspections of the cargo, containers and conveyance, medical examinations of persons on board, application of other health measures under the IHR, and provision of relevant public health information requested by the State Party:"
+    options:
+      - "True;"
+      - "False."
+    correct_answer: 0
+
+  - question: "Conveyance operators shall provide to the competent authority:"
+    options:
+      - "a valid SSCEC or SSCC and an MDH;"
+      - "a valid SSCEC and SSCC and an MDH;"
+      - "a valid MDH only."
+    correct_answer: 0
+
+  - question: "MDH (see model provided in IHR, Annex 8) contains basic data relating to the state of health of crew and passengers during the voyage and on arrival at the port, and:"
+    options:
+      - "provides information on identification of the ship and ports of call within past 30 days (to be listed), as well as affected areas visited;"
+      - "specific sanitary measures not need to be mentioned;"
+      - "contains information on any ill person in passenger terminal."
+    correct_answer: 0
+
+  - question: "According to IHR the potable water is:"
+    options:
+      - "any tap water;"
+      - "only bottled water;"
+      - "fresh water that is intended for human consumption, drinking, washing, teeth brushing, bathing or showering; preparing or cooking food."
+    correct_answer: 2
+
+  - question: "Which of the following documents, according to the document list in the FAL, no need to be requested by the competent authority to assess public health risk:"
+    options:
+      - "General Declaration;"
+      - "reception facilities and brief particulars of voyage;"
+      - "cargo ship stowage plan;"
+      - "Cargo Declaration and Ship’s Stores Declaration;"
+      - "Dangerous Goods Manifest."
+    correct_answer: 2
+
+  - question: "The additional sources of information may be required for assessment of public health risk:"
+    options:
+      - "crew list;"
+      - "management plans concerning, for example, water bunkering, food safety, pest control, sewage or waste;"
+      - "cargo ship stowage plan."
+    correct_answer: 1
 ---
 
-**The International Convention for the Prevention of Pollution from Ships (MARPOL), **adopted by the IMO in 1973, is an international instrument for the **prevention and minimizing of operational and accidental pollution of the marine environment by ships**.
+**The International Health Regulations 2005** **(IHR)** are alegally binding agreement on 196 countries, including the 194 Member States ofthe World Health Organization (WHO). IHR provide a legal framework that definesthe rights and obligations of the States Parties in handling public healthevents and emergencies that have the potential to cross borders of the state. The stated **purposeand scope of the IHR** are “to prevent, protect against, control and providea public health response to the international spread of disease in ways thatare commensurate with and restricted to public health risks, and which avoidunnecessary interference with international traffic and trade”. This binding instrumentof international law entered into force on 15 June 2007.
 
-MARPOL includes **six Annexes**:
+IHR contain anobligation for each State Party to designate or establish a **National IHR Focal Point** and theauthorities responsible within its respective jurisdiction for theimplementation of health measures under the IHR.
 
-1. **Annex I Regulations for the Prevention of Pollution by Oil** (entered into force 2 October 1983);
-2. **Annex II Regulations for the Control of Pollution by Noxious Liquid Substances in Bulk** (entered into force 2 October 1983, provisions took effect from 6 April 1987);
-3. **Annex III Prevention of Pollution by Harmful Substances Carried by Sea in Packaged Form** (entered into force 1 July 1992);
-4. **Annex IV Prevention of Pollution by Sewage from Ships** (entered into force 27 September 2003);
-5. **Annex V Prevention of Pollution by Garbage from Ships** (entered into force 31 December 1988);
-6. **Annex VI Prevention of Air Pollution from Ships** (entered into force 19 May 2005).
+It is theobligation of each State Party according to the IHR to develop, strengthen andmaintain the capacity **to detect, assess,notify and report** events which may constitute a public health emergency ofinternational concern occurring within its territory. The Director-General ofthe WHO shall determine, on the basis of the information received, inparticular from the State Party within whose territory an event is occurring,whether an event constitutes a public health emergency of international concernin accordance with the criteria and the procedure set out in the IHR. If it has been determined that a public healthemergency of international concern is occurring the Director-General of the WHOcan issue the temporary recommendationsor standing recommendationsaccording to the procedure stated in the IHR.
 
-**A pollution incident** within the meaning of MARPOL is a discharge or potential discharge above the permitted limits.
+IHR includes specific measures countries can take at ports, airports andground crossings to limit the spread of health risks to other countries, and toprevent unwarranted travel and trade restrictions. Subject to **applicableinternational agreements and relevant articles of these Regulations**, anyState Party may require for public health purposes, on arrival or departure:
 
-**Special areas **within the meaning of MARPOL are areas where, for technical reasons related to their oceanographic and environmental characteristics and heavy maritime traffic, the application of special mandatory pollution prevention methods, i.e. a higher level of protection, is required. Special Areas with strict controls on operational discharges are included in most Annexes.
+(a) with regard totravellers:
 
-More on **Special area** at:
+(i) information concerning the traveller’s destinationso that the traveller may be contacted;
 
-<https://www.imo.org/en/OurWork/Environment/Pages/Special-Areas-Marpol.aspx>
+(ii) information concerning the traveller’s itineraryto ascertain if there was any travel in or near an affected area or otherpossible contacts with infection or contamination prior to arrival, as well asreview of the traveller’s health documents if they are required under
 
-**1. Annex I Regulations for the Prevention of Pollution by Oil**
+these Regulations; and/or
 
-The aim of Annex I is to prevent operational and accidental pollution of the marine environment by oil. It includes various preventive measures such as requirements for the construction and operation of tankers. For example, all new tankers should have double hulls, bilge water should only be discharged via the oily water separator, and oily water from the cargo tanks should only be discharged via the oil discharge and monitoring system and crude oil washing should be applied.
+(iii) anon-invasive medical examination which is the least intrusive examination thatwould achieve the public health objective;
 
-More on **double hull** at:
+(b) inspection ofbaggage, cargo, containers, conveyances, goods, postal parcels and human remains.
 
-<https://www.imo.org/en/OurWork/Environment/Pages/constructionrequirements.aspx>
+IHR contain the special provisionsfor conveyance and conveyance operators, for ships crossing State Partyterritory in transit, the procedure with conveyance affected by infection andcontamination, and procedure for entering into port of the State Party. States Parties shall ensure that **ShipSanitation Control Exemption Certificates** (SSCEC) and **Ship Sanitation Control Certificates** (SSCC) are issued at its portsaccording to the model provided in Annex 3 the IHR. **The Maritime Declarationof Health (MDH)** is another documentrequired by the IHR, and it is a document containing data related to thestate of health on board a ship during passage and on arrival at port. The MDHModel with Attachment is contained as Annex No.8 of the IHR. TheMDH is the basic document containing the data required by port healthauthorities relating to the state of health on board a ship during the voyageand on arrival at a port also required by the Convention on Facilitation ofInternational Maritime Traffic, 1965 (FAL). Wheneverpossible, control measures shall be carried out when the ship and holds areempty. In the case of a ship in ballast, they shall be carried out beforeloading.
 
-**Oily water is water in which oil content of the effluent without dilution does exceed 15 ppm.**
-
-**Crude oil washing (COW) **is a measure to prevent the operational pollution of oil tankers. The tanks are cleaned with crude oil. COW was made mandatory for new tankers by the 1978 Protocol to the MARPOL Convention, and in 1999 the IMO adopted revised specifications for COW.  Regulation 33 of MARPOL Annex I require _every new crude oil tanker of 20,000 tons deadweight and above to be fitted with a cargo tank cleaning system using crude oil washing_.
-
-More on **COW** at:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/r33.htm>
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Crude-Oil-Washing.aspx>
-
-All oil tankers of 150 gross tonnage and above and all other ships of 400 gross tonnage and above should hold an **International Oil Pollution Prevention Certificate** (IOPPC) after an initial or renewal survey in accordance with Regulation 6 of Annex I. The certificate may be issued either by the administration or by a duly authorized person or organization, for a maximum period of five years.
-
-More on Regulation 6 -- Surveys at:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/r6.htm>
-
-Form of IOPPC:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/app2.pdf>
-
-Every oil tanker with a gross tonnage of 150 and more and every ship with a gross tonnage of 400 and more should have the **Oil Record Book Part I (Machinery space operation).** It must be duly completed for each prescribed operation immediately after its completion and signed. It should be kept for five years and be available for inspection at any time.
-
-More on Oil record book Part I:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/r17.htm>
-
-Example of Oil record book Part I:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/app3.htm>
-
-Every oil tanker of 150 gross tonnage and above shall be provided with an **Oil Record Book Part II** (Cargo/Ballast Operations). It must be duly completed for each prescribed operation immediately after its completion and signed. It should be kept for five years and be available for inspection at any time.
-
-More on Oil record book Part II:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/r36.htm>
-
-Example of Oil record book Part II:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/app3.htm>
-
-Approved **Shipboard Oil Pollution Emergency Plan** (SOPEP) for oil tankers of 150 gross tonnage and above and for all ships of 400 gross tonnage and above are required by Regulation 37 of MARPOL Annex I and Article 3 of the International Convention on Oil Pollution Preparedness, Response and Cooperation, 1990. The plan should have:
-
-1. _the procedure to be followed by the master or other persons having charge of the ship to report an oil pollution incident_,
-2. _the list of authorities or persons to be contacted in the event of an oil pollution incident_,
-3. _a detailed description of the action to be taken immediately by persons on board to reduce or control the discharge of oil following the incident_, and
-4. _the procedures and point of contact on the ship for coordinating shipboard action with national and local authorities in combating the pollution_.
-
-More on **SOPEP** at:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_I/r37.htm>
-
-SOPEP example:
-
-<https://docs2.cer-rec.gc.ca/ll-eng/llisapi.dll/fetch/2000/90464/90550/327915/3546272/3905220/3912508/C05468%2D3_THIALF_SOPEP_Shipboard_Oil_Pollution_Emergency_Plan_%2D_A7E4X7.pdf?nodeid=3912880&vernum=-2>
-
-**2. Annex II Regulations for the Control of Pollution by Noxious Liquid Substances in Bulk**
-
-Carriage of chemicals in bulk is covered by regulations in **SOLAS Chapter VII - Carriage of dangerous goods** and MARPOL Annex II - Regulations for the Control of Pollution by Noxious Liquid Substances in Bulk.
-
-The aim of **Annex II** is to control pollution by noxious liquid substances (NLS) in bulk. It categorize noxious and liquid substances into the following categories:
-
-**Category X**: if discharged into the sea present a major hazard to either marine resources or human health and whose discharge into the marine environment is therefore prohibited,
-
-**Category Y**: _if discharged into the sea present a hazard to either marine resources or human health or cause harm to amenities or other legitimate uses of the sea a limitation on the quality and quantity of the discharge into the marine environment_,
-
-**Category Z**: _if discharged into the sea present a minor hazard to either marine resources or human health and therefore justify less stringent restrictions on the quality and quantity of the discharge into the marine environment_; and
-
-**Other Substances**:substances which have been evaluated and found to fall outside Category X, Y or Z because they are considered to present no harm to marine resources, human health, or other legitimate uses of the sea when discharged into the sea.
-
-More on Annex II:
-
-<https://www.imo.org/en/OurWork/Environment/Pages/ChemicalPollution-Default.aspx>
-
-**An International Pollution Prevention Certificate for the Carriage of Noxious Liquid Substances in Bulk **shall be issued**, **after an initial or renewal survey to any ship carry NLS in bulk. It should be issued for a period specified by the Administration which shall not exceed 5 years.
-More on surveys:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_II/r8.htm>
-
-More on duration and validity of Certificate at:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_II/r10.htm>
-
-Form of Certificate:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_II/pdf/app3.pdf>
-
-**The International Code for the Construction and Equipment of Ships carrying Dangerous Chemicals in Bulk** (IBC Code) is an international standard for the safe carriage of chemicals in bulk by sea. The Code prescribes the design and construction standards for ships and the equipment they should carry, taking into account the nature of the products concerned.
-
-Chemical tankers constructed before 1 July 1986 should comply with the requirements of the **Code for the Construction and Equipment of Ships Carrying Dangerous Chemicals in Bulk (BCH Code)**.
-
-Every ship carrying LNS should have **Cargo Record Book**, and every operation, including accidental discharge, should be recorded in it.
-
-Form of Cargo Record Book for ships carrying noxious liquid substances in bulk
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_II/pdf/app4.pdf>
-
-**3. Annex III Prevention of Pollution by Harmful Substances Carried by Sea in Packaged Form**
-
-Harmful Substances Carried by sea in packaged form are regulated by **SOLAS Chapter VII - Carriage of Dangerous Goods **and MARPOL Annex III. SOLAS Chapter VII - Carriage of Dangerous Goods prescribes the _classification, packaging, marking, labelling and placarding, documentation and stowage of chemicals carried in packaged form_.
-
-The aim of Annex III is to prevent pollution by harmful substances in packaged form. The harmful substances are substances that are identified as marine pollutants in **International Maritime Dangerous Goods code (IMDG)**. It gives general requirements for the _issuing of detailed standards on packing, marking, labelling, documentation, stowage, quantity limitations, exceptions and notifications for preventing pollution by harmful substances_.
-
-The **IMDG Code** is an international code for the transportation of dangerous goods in packaged form to ensure the safety of crew and ship and to prevent pollution. It contains regulations for each individual substance, material or article relating to packaging, container traffic and stowage issues, in particular the segregation of incompatible substances.
-
-**4. Annex IV Prevention of Pollution by Sewage from Ships**
-
-The purpose of **Annex IV** is to prevent pollution by sewage form ships. It prescribes measures for _discharge of sewage into the sea from ships, including regulations regarding the ships' equipment and systems for the control of sewage discharge, the provision of port reception facilities for sewage, and requirements for survey and certification_.
-
-The **sewage** includes drainage and other wastes from any form of toilets and urinals, medical premises, spaces containing living animals or other waste waters when mixed with the drainages defined above.
-
-The Annex is applied to ships engaged in international voyages, of 400 gross tonnage and above or which are certified to carry more than 15 persons. The ships should be equipped with either an approved **sewage treatment plant** or an approved **sewage comminuting and disinfecting system** or a **sewage holding tank**.
-
-The **discharge of sewage** into the sea is prohibited, except when the ship has in operation an approved sewage treatment plant or when the ship is discharging comminuted and disinfected sewage using an approved system at a distance of more than **three nautical miles** **from the nearest land**. Sewage which is not comminuted or disinfected may be discharged at a distance of more than **12 nautical miles from the nearest land** when the ship is en route and proceeding at not less than 4 knots, and the approved rate of discharge of untreated sewage.
-
-The discharge of sewage from passenger ships within a Special Area is prohibited. The only special area nowadays according to the Annex IV is Baltic sea.
-
-After an initial or renewal survey to any ship within the scope of Annex IV **International Sewage Pollution Prevention Certificate** will be issued for a period which shall not exceed five years.
-
-Form of International Sewage Pollution Prevention Certificate:
-
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_IV/app1.htm>
-
-**5. Annex V Prevention of Pollution by Garbage from Ships**
-
-The objective of Annex V is the prevention of pollution from ship-generated garbage and applies to all ships. Although Annex V prohibits the discharge of all garbage into the sea, there are some exceptions in regulations 4, 5 and 6 of the Annex, which relate to food waste, cargo residues, cleaning agents and additives and animal carcasses.
-
-Annex V recognize **special area**. More on Special area according Annex V:
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Special-Areas-Marpol.aspx>
-
-Simplified overview of the discharge provisions of the revised MARPOL Annex V which entered into force on 1 March 2018:
-
-<https://wwwcdn.imo.org/localresources/en/OurWork/Environment/Documents/Simplified%20overview%20of%20the%20discharge%20provisions%20of%20the%20revised%20MARPOL%20Annex%20V.pdf>
-
-The ships should have:
-
-1.  Placard,
-2.  Garbage management plan, and
-3.  Garbage Record Book.
-
-More on garbage Record Book:
-
-<https://www.traficom.fi/sites/default/files/media/file/MU6653e%20Garbage%20Record%20Book%20Part%20I%20%28all%20ships%29.pdf>
-
-<https://www.traficom.fi/sites/default/files/media/file/MU6654e%20Garbage%20Record%20Book%20Part%20II%20%28solid%20bulk%20cargoes%29%20%282%29.pdf>
-
-**6. Annex VI Prevention of Air Pollution from Ships**(entered into force 19 May 2005)
-
-The aim of Annex VI is to minimize airborne emissions from ships (SOx, NOx, ODS, VOC shipboard incineration) and the carbon intensity of global shipping in order to annihilate its contribution to local and global air pollution and environmental problems.
-
-More on regulation regarding **Ozone depleting substances (ODS):**
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Ozone-depleting-substances-(ODS)-%E2%80%93-Regulation-12.aspx>
-
-More on regulation regarding **Nitrogen Oxides** **(NOx)**:
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Nitrogen-oxides-(NOx)-%E2%80%93-Regulation-13.aspx>
-
-More on regulation regarding **Sulphur oxides (SOx) and Particulate Matter (PM):**
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Sulphur-oxides-(SOx)-%E2%80%93-Regulation-14.aspx>
-
-More on regulation regarding **Volatile organic compounds (VOC):**
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Volatile-organic-compounds-(VOC)-%E2%80%93-Regulation-15.aspx>
-
-More on regulation regarding **Shipboard incineration:**
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Shipboard-incineration-%E2%80%93-Regulation-16.aspx>
-
-More on **Fuel oil availability and quality:**
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Fuel-oil-quality-%E2%80%93-Regulation-18.aspx>
-
-More on **Improving the energy efficiency of ships**:
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Improving%20the%20energy%20efficiency%20of%20ships.aspx>
-
-Annex V recognize **special area**. More on Special area according Annex VI:
-
-<https://www.imo.org/en/OurWork/Environment/Pages/Special-Areas-Marpol.aspx>
-
-![IMO addressing climate change](/images/lessons/lesson-3/Picture1.png)
-
-Figure 1. IMO addressing climate change
-
-Every ship of 400 gross tonnage and above and every fixed and floating drilling rig and other platforms shall be subject to the surveys. After an initial or renewal survey An **International Air Pollution Prevention Certificate** (IOPPC) shall be issued.
-
-More on surveys:
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_VI/r5.htm>
-
-Form of IOPPC:
-<http://www.marpoltraining.com/MMSKOREAN/MARPOL/Annex_VI/app1.htm>
+Guidance for preparing and performing ship inspection, completing the certificatesand applying public health measures within the framework of IHR is provided inthe Handbook for Inspection of Ships and Issuance of Ship SanitationCertificates provides, issued by WHO.
