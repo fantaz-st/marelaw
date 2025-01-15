@@ -333,7 +333,10 @@ Tropical, maximum 1 per cent winds of force 8 Beaufort (34 knots) or more. Not m
 
 ![International load lines Zones and Areas, map](/images/lessons/lesson-1/Picture5.png)
 
+<br/>
 International load lines Zones and Areas, map.
+
+<br/>
 
 Source: <https://www.nauticarobinson.com/cartas/international-load-line-zones-and-areas-map/29476/>
 

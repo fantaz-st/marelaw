@@ -178,9 +178,9 @@ const SingleLesson = ({ content, metaData }) => {
         </Box>
       </Box>
       <Grid container spacing={6} position='relative'>
-        <Grid item xs={12} md={8} id='markdown-gallery' sx={{ textAlign: "justify" }}>
+        <Grid item xs={12} md={8} id='markdown-gallery'>
           {!showQuiz ? (
-            <>
+            <Box className={classes.textContent}>
               {metaData.learning_outcomes && (
                 <>
                   <Typography variant='h5' gutterBottom>
@@ -297,7 +297,7 @@ const SingleLesson = ({ content, metaData }) => {
                   </List>
                 </div>
               )}
-            </>
+            </Box>
           ) : (
             <>
               <Typography variant='h5' gutterBottom ref={quizRef}>

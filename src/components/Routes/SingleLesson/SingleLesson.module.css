@@ -69,3 +69,24 @@
   align-items: center;
   align-content: stretch;
 }
+
+.textContent {
+  text-align: justify;
+  margin-bottom: 3rem;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .textContent a[href] {
+    /* Add ellipsis at the end if text does not fit in given width */
+    text-overflow: ellipsis;
+    /* Have to add this line to make upper line work */
+    overflow: hidden;
+    /* Decide what is the longest link width in given units (px, em, rem etc.) */
+    max-width: 300px;
+    /* Element has to be inline-block to have width and fit inline in the same time */
+    display: inline-block;
+    /* We want to have all the link in one line without wrapping */
+    white-space: nowrap;
+  }
+}
