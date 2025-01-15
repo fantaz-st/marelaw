@@ -199,24 +199,18 @@ Convention of the Prevention of Marine Pollution by Dumping of Wastes and Other 
 ## Aims of the Convention:
 
 - **Art. I:** Parties shall individually and collectively promote the effective control of all sources of pollution of the marine environment, and pledge themselves especially to take all practicable steps to prevent the pollution of the sea by the dumping of waste and other matter that is liable to create hazards to human health, to harm living resources and marine life, to damage amenities or to interfere with other legitimate uses of the sea.
-
 - **Art. II:** Parties shall take effective measures individually, according to their scientific, technical and economic capabilities, and collectively, to prevent marine pollution caused by dumping and shall harmonize their policies in this regard.
 
 ## Definitions (Art. III):
 
 - _Dumping _(Art. III.1.a)_:_ (i) any deliberate disposal at sea of wastes or other matter from vessels, aircraft, platforms or other man-made structures at sea; (ii) any deliberate disposal at sea of vessels, aircraft, platforms or other manmade structures at sea.
-
-_"Dumping" does not include (Art. III.1.b_): (i) the disposal at sea of wastes or other matter incidental to, or derived from the normal operations of vessels, aircraft, platforms or other man-made structures at sea and their equipment, other than wastes or other matter transported by or to vessels, aircraft, platforms or other man-made structures at sea, operating for the purpose of disposal of such matter or derived from the treatment of such wastes or other matter on such vessels, aircraft, platforms or structures; (ii) placement of matter for a purpose other than the mere disposal thereof, provided that such placement is not contrary to the aims of this Convention.
-
-_Exclusions of the Convention (Art. III.1.c):_ The disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources will not be covered by the provisions of this Convention.
-
+  _"Dumping" does not include (Art. III.1.b_): (i) the disposal at sea of wastes or other matter incidental to, or derived from the normal operations of vessels, aircraft, platforms or other man-made structures at sea and their equipment, other than wastes or other matter transported by or to vessels, aircraft, platforms or other man-made structures at sea, operating for the purpose of disposal of such matter or derived from the treatment of such wastes or other matter on such vessels, aircraft, platforms or structures; (ii) placement of matter for a purpose other than the mere disposal thereof, provided that such placement is not contrary to the aims of this Convention.
+  _Exclusions of the Convention (Art. III.1.c):_ The disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources will not be covered by the provisions of this Convention.
 - **Wastes or other matter (Art. III.4)**: means material and substance of any kind, form or description.
-
 - **Special permit (Art. III.5)** :means permission granted specifically on application in advance and in accordance with Annex II and Annex III.
+- **General permit (Art. III.6):** means permission granted in advance and in accordance with Annex III.
 
-- \**General permit (Art. III.6): *means permission granted in advance and in accordance with Annex III.
-
-** Provisions regarding the dumping of wastes (Art. IV):** In accordance with the provisions of the Convention Contracting Parties shall prohibit the dumping of any wastes or other matter in whatever form or condition except as otherwise specified below: (a) the dumping of wastes or other matter listed in Annex I is prohibited; (b) the dumping of wastes or other matter listed in Annex II requires a prior special permit; (c) the dumping of all other wastes or matter requires a prior general permit.
+**Provisions regarding the dumping of wastes (Art. IV):** In accordance with the provisions of the Convention Contracting Parties shall prohibit the dumping of any wastes or other matter in whatever form or condition except as otherwise specified below: (a) the dumping of wastes or other matter listed in Annex I is prohibited; (b) the dumping of wastes or other matter listed in Annex II requires a prior special permit; (c) the dumping of all other wastes or matter requires a prior general permit.
 
 Any permit shall be issued only after careful consideration of all the factors set forth in Annex III, including prior studies of the characteristics of the dumping site, as set forth in sections B and C of that Annex.
 
