@@ -1,7 +1,7 @@
 ---
 title: "1.3. Responsibilities under the relevant requierments of the International Convention for the Safety of life at Sea"
 read_title: "Responsibilities under the relevant requierments of the International Convention for the Safety of life at Sea"
-slug: "lesson-2"
+slug: "lesson-02"
 estimated_hours: 2
 learning_outcomes:
   - To analyse master’s obligations concerning danger messages and the information required in those messages.

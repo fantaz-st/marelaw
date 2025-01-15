@@ -1,7 +1,7 @@
 ---
 title: "1.2. International Convention on Load Lines (LLC)"
 read_title: "International Convention on Load Lines (LLC)"
-slug: "lesson-1"
+slug: "lesson-01"
 estimated_hours: 2
 learning_outcomes:
   - to establish the Convention requirements to be complied by a ship.

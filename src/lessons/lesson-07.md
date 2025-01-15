@@ -1,7 +1,7 @@
 ---
 title: "1.6.7. Classification Societies"
 read_title: "Classification Societies"
-slug: "lesson-7"
+slug: "lesson-07"
 estimated_hours: 1
 learning_outcomes:
   - to establish understanding on the importance of facilitating maritime traffic

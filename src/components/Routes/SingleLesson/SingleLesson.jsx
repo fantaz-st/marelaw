@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { useRef, useState, useLayoutEffect, useEffect, useContext, createContext } from "react";
-import { Box, Typography, List, ListItem, Button, Alert, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+import { Box, Typography, List, ListItem, Button, Grid, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import classes from "./SingleLesson.module.css";
 import { MuiMarkdown } from "mui-markdown";
 import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 
-import { Gauge, GaugeContainer, GaugeReferenceArc, GaugeValueArc } from "@mui/x-charts/Gauge";
+import { Gauge } from "@mui/x-charts/Gauge";
 
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
@@ -183,9 +183,7 @@ const SingleLesson = ({ content, metaData }) => {
             <Box className={classes.textContent}>
               {metaData.learning_outcomes && (
                 <>
-                  <Typography variant='h5' gutterBottom>
-                    Learning Outcomes
-                  </Typography>
+                  <Typography variant='h2'>Learning Outcomes</Typography>
                   <List sx={{ listStyleType: "disc", paddingLeft: "1.2rem" }}>
                     {metaData.learning_outcomes.map((outcome, index) => (
                       <ListItem key={index}>

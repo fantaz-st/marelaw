@@ -1,16 +1,17 @@
 ---
-title: "1.4. Convention of Facilitation of International Maritime Traffic (FAL)"
+title: "1.6.1. Convention of Facilitation of International Maritime Traffic (FAL)"
 read_title: "Convention of Facilitation of International Maritime Traffic (FAL)"
-slug: "lesson-4"
+slug: "lesson-04"
 estimated_hours: 1
 learning_outcomes:
-  - to establish understanding on the importance of facilitating maritime traffic
-  - to categorise FAL requirements to be complied by a ship
-  - to distinguish the different types of documents required by the FAL
-  - to differentiate a meaning of the terms used in FAL
-  - to comment a new amendment to the FAL Convention which aims to address the need to combat illicit activities in the national facilitation programmes of Governments
-  - to present a new Maritime Single Window digital system, its implementation procedure and application
-  - to analyse on a purpose and scope of the FAL
+  - to analyse on a purpose and scope of the FAL;
+  - to establish understanding on the importance of facilitating maritime traffic;
+  - to categorise FAL requirements to be complied by a ship;
+  - to distinguish the different types of documents required by the FAL;
+  - to differentiate a meaning of the terms used in FAL;
+  - to comment a new amendment to the FAL Convention which aims to address the need to combat illicit activities in the national facilitation programmes of Governments;
+  - to present a new Maritime Single Window digital system, its implementation procedure and application.
+
 
 links:
 - "General information on FAL on IMO website, available at: [https://www.imo.org/en/About/Conventions/Pages/Convention-on-Facilitation-of-International-Maritime-Traffic-(FAL).aspx](https://www.imo.org/en/About/Conventions/Pages/Convention-on-Facilitation-of-International-Maritime-Traffic-(FAL).aspx)"
@@ -85,8 +86,12 @@ quiz:
       - "General Declaration."
       - "Cargo Declaration."
       - "Ship's Stores Declaration."
+      - "Crew's Effects Declaration."
       - "Advance electronic cargo information for customs risk assessment purposes as set out in the WCO Safe Framework of Standards."
-    correct_answer: 3
+      - "Crew List"
+      - "Passenger List"
+      - "Dangerous Goods Manifest"
+    correct_answer: 4
 
   - question: "The correct explanation of GISIS is:"
     options:
