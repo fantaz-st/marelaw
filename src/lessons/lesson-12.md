@@ -1,323 +1,475 @@
 ---
-title: "1.8. Prevention of Pollution of the Marine Environment by ships under LDC, Intervention, and CLC"
-read_title: "Prevention of Pollution of the Marine Environment by ships under LDC, Intervention, and CLC"
+title: "1.7.2. Port State Control"
+read_title: "Port State Control"
 slug: "lesson-12"
 estimated_hours: 2
+learning_outcomes:
+  - To analyse the general concept of PSC.
+  - To establish the primary responsibility for maintaining ship’s standards.
+  - To comment on the Memorandum of Understanding.
+  - To categorise the PSC regime and their common principles.
+  - To list the certificates and documents which are checked during inspection.
+  - To differentiate the bases under which PSC is governed.
+  - To classify the types of inspections.
+  - To present clear grounds why a vessel inspection is carried out.
+  - To provide guidance on the type of inspection.
+  - To distinguish the concept of expanded inspection.
+  - To connect IMO Resolutions pertaining to State Controls.
+  - To check the Equasis database.
+  - To analyse the Thetis system.
 
 links:
-  - "Law Explorer. Intervention on the High Seas in Cases of Pollution Casualties (Agustin Blanco-Bazán). [https://lawexplores.com/intervention-on-the-high-seas-in-cases-of-pollution-casualties-agustin-blanco-bazan/](https://lawexplores.com/intervention-on-the-high-seas-in-cases-of-pollution-casualties-agustin-blanco-bazan/)"
-  - "Woods Hole Oceanographic Institution. The London Convention. [https://www.whoi.edu/cms/files/LC-brochure_30865.pdf](https://www.whoi.edu/cms/files/LC-brochure_30865.pdf)"
-  - "Law Explorer. International Convention on Civil Liability for Oil Pollution Damage, 1992. [https://lawexplores.com/international-convention-on-civil-liability-for-oil-pollution-damage-1992-clc-1992/](https://lawexplores.com/international-convention-on-civil-liability-for-oil-pollution-damage-1992-clc-1992/)"
+  - "(European Union, s.f.) THETIS, information System data base [https://data.europa.eu/data/datasets/thetis-port-state-control-information-system-thetis?locale=es](https://data.europa.eu/data/datasets/thetis-port-state-control-information-system-thetis?locale=es)"
+  - "(Equasis, Main Objectives) [https://www.equasis.org/EquasisWeb/public/About?fs=HomePage&P_ABOUT=MainConcern.html](https://www.equasis.org/EquasisWeb/public/About?fs=HomePage&P_ABOUT=MainConcern.html)"
+  - "(FasterCapital) Common Port State Control Inspection Procedures [https://fastercapital.com/es/tema/procedimientos-de-inspecci%C3%B3n-de-control-del-estado-del-puerto-com%C3%BAn.html](https://fastercapital.com/es/tema/procedimientos-de-inspecci%C3%B3n-de-control-del-estado-del-puerto-com%C3%BAn.html)"
+  - "(International Maritime Organization, Port State Control, s.f.)[https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx](https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx)"
+  - "(International Maritime Organization, Chapter 2 – Port State Inspections 2011) [https://www.imorules.com/IMORES_A1052.27_CH2.html](https://www.imorules.com/IMORES_A1052.27_CH2.html)"
+  - "(International Maritime Organization, Resolution A,. 1155 (32) 2021) [https://wwwcdn.imo.org/localresources/en/OurWork/IIIS/Documents/A%2032-Res.1155%20-%20PROCEDURES%20FOR%20PORT%20STATE%20CONTROL,%202021%20(Secretariat).pdf](https://wwwcdn.imo.org/localresources/en/OurWork/IIIS/Documents/A%2032-Res.1155%20-%20PROCEDURES%20FOR%20PORT%20STATE%20CONTROL,%202021%20(Secretariat).pdf)"
+  - "(M.P. Lechuga, s.f.) Port State Control - The Paris Memorandum [https://www.practicosdepuerto.es/es/colegio-federacion/publicaciones/el-control-por-el-estado-del-puerto-el-memorando-de-par%C3%ADs](https://www.practicosdepuerto.es/es/colegio-federacion/publicaciones/el-control-por-el-estado-del-puerto-el-memorando-de-par%C3%ADs)"
 
 literature:
-  - International Maritime Organization. International Convention on the Prevention of Marine Pollution by Dumping of Wastes and Other Matter, 1972 (LONDON CONVENTION)
-  - International Maritime Organization. 1996 Protocol to the Convention on the Prevention of Marine Pollution by Dumping of Wastes and Other Matter, 1972 (LONDON PROTOCOL, as amended in 2006).
-  - International Maritime Organization. International Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969 (INTERVENTION 1969).
-  - International Maritime Organization. Protocol relating to Intervention on the High Seas in Cases of Pollution by Substances other than Oil, 1973 (INTERVENTION PROTOCOL 1973).
-  - International Maritime Organization. International Convention on Civil Liability for Oil Pollution Damage, 1969 (CLC 1969, as amended by 1992 Protocol).
-  - International Maritime Organization. International Convention on the Establishment of an International Fund for Compensation for oil pollution damage, 1992.
+  - Council of the European Union, “COUNCIL DIRECTIVE 95/21/EC of 19 June 1995” [https://faolex.fao.org/docs/pdf/eur34997.pdf](https://faolex.fao.org/docs/pdf/eur34997.pdf)
+  - European Commission, “Directive of the European Parliament and of the Council amending Directive 2009/16/EC on Port State Control”, 26 June 2023 [https://transport.ec.europa.eu/system/files/2023-06/COM_2023_271_Port_State_Control.pdf](https://transport.ec.europa.eu/system/files/2023-06/COM_2023_271_Port_State_Control.pdf)
+  - (RODRIGO DE LARRUCEA, J., 2008) [https://upcommons.upc.edu/bitstream/handle/2117/2272/Eficacia%20de%20los%20instrumentos%20jur%C3%ADdicos%20de%20%20lucha%20contra%20la%E2%80%A6.pdf?sequence=1&isAllowed=y](https://upcommons.upc.edu/bitstream/handle/2117/2272/Eficacia%20de%20los%20instrumentos%20jur%C3%ADdicos%20de%20%20lucha%20contra%20la%E2%80%A6.pdf?sequence=1&isAllowed=y)
+  - O. Özçayır “Port State Control”, 2nd Edition, 2004 [https://www.taylorfrancis.com/books/mono/10.4324/9781315089614/port-state-control-oya-%C3%B6z%C3%A7ay%C4%B1r](https://www.taylorfrancis.com/books/mono/10.4324/9781315089614/port-state-control-oya-%C3%B6z%C3%A7ay%C4%B1r)
+  - Paris MoU, Guidance on type of inspections [https://parismou.org/sites/default/files/Guidance%20on%20type%20of%20inspection.pdf](https://parismou.org/sites/default/files/Guidance%20on%20type%20of%20inspection.pdf)
+  - Paris MoU, Types of inspections [https://parismou.org/PMoU-Procedures/Library/types-inspection](https://parismou.org/PMoU-Procedures/Library/types-inspection)
+  - "S.W. Ran Yan, Ship selection in port state control: status and perspectives, 2021 [https://www.tandfonline.com/doi/abs/10.1080/03088839.2021.1889067](https://www.tandfonline.com/doi/abs/10.1080/03088839.2021.1889067)"
+  - "T. McDorman “Regional Port State Control Agreements: Some Issues of International Law”, 2000 [https://heinonline.org/HOL/LandingPage?handle=hein.journals/occoa5&div=14&id=&page=](https://heinonline.org/HOL/LandingPage?handle=hein.journals/occoa5&div=14&id=&page=)"
 
 quiz:
-  - question: "What does the term 'dumping' include according to Article III.1.a of the Convention?"
+  - question: "What is the general structure of a regional PSC regime?"
     options:
-      - "The disposal at sea of wastes or other matter incidental to, or derived from the normal operations of vessels, aircraft, platforms or other man-made structures at sea"
-      - "Placement of matter for a purpose other than the mere disposal thereof, provided that such placement is not contrary to the aims of this Convention"
-      - "Deliberate disposal at sea of vessels, aircraft, platforms, or other man-made structures"
-      - "None of the above is correct"
+      - "Port State Control Committee only"
+      - "The Port State Control Committee and the Port Authorities Committee."
+      - "Port State Control Committee, Secretariat and Database or information system."
+      - "None of the above is correct."
     correct_answer: 2
 
-  - question: "According to the Convention provisions, which of the following statements about dumping is true?"
+  - question: "Which of the following is NOT verified during a PSC inspection?"
     options:
-      - "Dumping of all wastes listed in Annex I requires a prior special permit"
-      - "Dumping of any matter requires a prior general permit"
-      - "Dumping of wastes listed in Annex II is prohibited"
-      - "Dumping of wastes not mentioned in Annex I may be prohibited by Contracting Parties"
+      - "Verification of environmental compliance"
+      - "Verification of machinery"
+      - "Checking of crew living conditions"
+      - "Verification of the shipowner's available assets."
     correct_answer: 3
 
-  - question: "Under what circumstances would the provisions of Article IV (provisions regarding the dumping of wastes) of the Convention not apply?"
+  - question: "Which is the regional area of application of the PSC Viña del Mar Agreement?"
     options:
-      - "When dumping is necessary for commercial purposes"
-      - "When dumping is necessary to secure the safety of human life or sea vessels due to force majeure"
-      - "When dumping is necessary for waste disposal without regard to safety concerns"
-      - "When dumping is necessary to meet production quotas"
+      - "Latin America"
+      - "Latin America and North America"
+      - "Asia"
+      - "Asia and Pacific"
+    correct_answer: 0
+
+  - question: "Which is the regional area of application of the PSC Paris MoU?"
+    options:
+      - "Europe and North Africa"
+      - "Europe and North Atlantic"
+      - "Caribbean"
+      - "Caribbean and Latin America"
     correct_answer: 1
 
-  - question: "True or False: According to the Convention, each Contracting Party is required to designate an appropriate authority or authorities to keep records of the nature and quantities of all matter permitted to be dumped and the location, time, and method of dumping."
+  - question: "What is the primary purpose of Port State Control (PSC)?"
     options:
-      - "True"
-      - "False"
-    correct_answer: 0
-
-  - question: "What is the main difference between the London Protocol and the 1972 Convention on the Prevention of Marine Pollution by Dumping of Wastes?"
-    options:
-      - "The London Protocol was adopted in 1972, while the Convention was adopted in 1996"
-      - "The London Protocol permits all types of waste dumping, whereas the Convention prohibits it entirely"
-      - "The London Protocol prohibits all waste dumping except for specific types listed in an annex, while the Convention specifies which materials may not be dumped"
-      - "The London Protocol has more stringent enforcement mechanisms compared to the Convention"
-    correct_answer: 2
-
-  - question: "Which of the following statements is correct?"
-    options:
-      - "Special permit means permission granted in advance and in accordance with Annex III"
-      - "General permit means permission granted specifically on application in advance and in accordance with Annex II and Annex III"
-      - "Special permit means permission granted specifically on application in advance and in accordance with Annex II and Annex III"
-      - "None of the above is correct"
-    correct_answer: 2
-
-  - question: "Which of the following statements is correct?"
-    options:
-      - "The disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources is not covered by the provisions of the Convention"
-      - "The disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources is covered by the provisions of the Convention"
-      - "Parties can choose if the disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources is covered or not by the provisions of the Convention"
-      - "None of the above is correct"
-    correct_answer: 0
-
-  - question: "According to the Convention, which type of ships are exempt from measures taken by Parties to prevent pollution or threat of pollution of the sea by oil?"
-    options:
-      - "Commercial vessels engaged in international trade"
-      - "Fishing vessels operating in international waters"
-      - "Any ship owned or operated by a State and used for commercial purposes"
-      - "Warships or ships owned or operated by a State and used solely for government noncommercial services"
-    correct_answer: 3
-
-  - question: "What is a requirement before a coastal State can take measures under the provisions of Article III of the Convention?"
-    options:
-      - "The coastal State must obtain approval from the flag State"
-      - "The coastal State must immediately implement measures without consultation"
-      - "The coastal State must consult with independent experts chosen from a list maintained by the Organizations"
-      - "The coastal State must notify and consult with other affected States, the flag State, and relevant stakeholders, and consider views submitted, except in cases of extreme urgency"
-    correct_answer: 3
-
-  - question: "According to the Convention, what principle guides the measures taken by the coastal State in response to a maritime casualty?"
-    options:
-      - "Measures must be excessive to ensure the safety of the coastline"
-      - "Measures should prioritize the interests of the coastal State over other States"
-      - "Measures must be proportionate to the damage actual or threatened and cease once the end mentioned in Article I is achieved"
-      - "Measures should prioritize the interests of the flag State over other States"
-    correct_answer: 2
-
-  - question: "True or False: Under the Convention, if a Party implements measures that cause damage to others beyond what is reasonably necessary to achieve the objectives outlined in Article I, they are required to provide compensation for the extent of the damage caused."
-    options:
-      - "True"
-      - "False"
-    correct_answer: 0
-
-  - question: "What is the main difference between the Intervention Protocol and the Intervention Convention?"
-    options:
-      - "The Intervention Protocol is a standalone international treaty, while the Intervention Convention is a supplementary agreement"
-      - "The Intervention Protocol focuses on intervention in cases of pollution by substances other than oil, whereas the Intervention Convention specifically addresses oil pollution incidents"
-      - "The Intervention Protocol prioritizes intervention by coastal States, while the Intervention Convention emphasizes intervention by flag States"
-      - "The Intervention Protocol outlines the rights and obligations of States to intervene, while the Intervention Convention provides additional measures and procedures for responding to pollution incidents"
+      - "To facilitate faster port entry for foreign vessels"
+      - "To ensure compliance with international regulations upon vessel arrival"
+      - "To provide free port inspection services to all vessels"
+      - "To promote competition among shipping companies"
     correct_answer: 1
 
-  - question: "According to the Intervention Convention, how is the term 'ship' defined?"
+  - question: "What are the potential consequences for a vessel found to be in violation during a Port State Control inspection?"
     options:
-      - "Any sea-going vessel of any type whatsoever"
-      - "Any floating craft, with the exception of an installation or device engaged in the exploration and exploitation of the resources of the sea-bed and the ocean floor and the subsoil thereof"
-      - "A + B are correct"
-      - "None of the above are correct"
+      - "A congratulatory letter from the port authority"
+      - "Immediate clearance for departure"
+      - "Detention, fines, or prohibition from leaving port until deficiencies are rectified"
+      - "No consequences, as PSC inspections are merely for record-keeping purposes"
     correct_answer: 2
 
-  - question: "True or False: Regarding INTERVENTION Protocol, can State parties establish by their own that a certain substance, under the circumstances present at the time of the intervention, could reasonably pose a grave and imminent danger?"
+  - question: "How much of inspections are authorities committed by the Paris MoU expected to achieve?"
     options:
-      - "True"
-      - "False"
-    correct_answer: 0
-
-  - question: "According to the CLC convention, who is considered the owner of a ship?"
-    options:
-      - "The captain or commanding officer of the ship"
-      - "The individuals responsible for the ship's navigation"
-      - "The company registered as the ship's operator in the State of ownership"
-      - "The person or persons registered as the owner of the ship or, in the absence of registration, the person or persons owning the ship"
-    correct_answer: 3
-
-  - question: "Against whom may claims for compensation for pollution damage not be made under the Convention?"
-    options:
-      - "The servants or agents of the owner or the members of the crew"
-      - "Any person who performs services for the ship without being a member of the crew"
-      - "Any charterer, manager, or operator of the ship"
-      - "All of the above mentioned in options (A), (B), and (C)"
-    correct_answer: 3
-
-  - question: "Under the Convention, when is the owner not entitled to limit liability for pollution damage?"
-    options:
-      - "When the pollution damage results from a personal act or omission of the owner, committed with the intent to cause such damage"
-      - "When the pollution damage results from an act or omission of the crew members"
-      - "When the pollution damage occurs due to acts of war or terrorism"
-      - "When the pollution damage results from an accident that could not have been reasonably foreseen"
-    correct_answer: 0
-
-  - question: "What are the effects of the constitution of the fund by the owner after an incident, according to Article VI of the Convention?"
-    options:
-      - "The owner is relieved of any liability for pollution damage"
-      - "No person with a claim for pollution damage from the incident can exercise rights against any other assets of the owner related to the claim"
-      - "The owner is required to surrender all assets to the claimants for compensation"
-      - "The owner is exempt from any legal proceedings related to the incident"
+      - "10%"
+      - "25%"
+      - "50%"
+      - "75%"
     correct_answer: 1
 
-  - question: "True or False: The Convention requires the owner of a ship registered in a Contracting State and carrying more than 2,000 tons of oil in bulk as cargo to maintain insurance or financial security to cover liability for pollution damage."
+  - question: "What is one of the duties of authorities committed by the Paris MoU regarding information exchange?"
+    options:
+      - "Ignoring information received from other port authorities"
+      - "Establishing a procedure to receive information from pilots and port authorities"
+      - "Keeping all information confidential without sharing it with other authorities"
+      - "Exchanging information only with vessels flagged under the Paris MoU"
+    correct_answer: 1
+
+  - question: "Which certificates are inspected during PSC inspection?"
+    options:
+      - "International tonnage certificate"
+      - "International oil pollution prevention certificate"
+      - "International Load Line Certificate"
+      - "All of the above"
+    correct_answer: 3
+
+  - question: "How are Port State Control inspections typically initiated?"
+    options:
+      - "By the ship's captain requesting an inspection"
+      - "At the discretion of the ship's flag state"
+      - "Based on the initiative of the Port State Administration"
+      - "Through an international lottery system"
+    correct_answer: 2
+
+  - question: "Under what circumstance might Port State Control inspections be conducted at the request of another Administration?"
+    options:
+      - "When the ship's crew requests it"
+      - "If the ship's flag state requests it"
+      - "When the ship is found in violation by local authorities"
+      - "Based on information provided by another Administration"
+    correct_answer: 3
+
+  - question: "When might a more detailed inspection be conducted?"
+    options:
+      - "Randomly, regardless of any suspicion"
+      - "When the informatic system of the PSC Authorities says so"
+      - "When there are clear grounds for suspicion of non-compliance with certificates"
+      - "When the ship's crew requests it"
+    correct_answer: 2
+
+  - question: "What type of evidence might suggest 'clear grounds' for initiating further inspection under PSC?"
+    options:
+      - "Evidence of crew members' NON familiarity with shipboard procedures"
+      - "Evidence of Masters’ NON familiarity with shipboard procedures"
+      - "Evidence of NON compliance with relevant conventions"
+      - "All of the above"
+    correct_answer: 3
+
+  - question: "How often is an Assembly resolution containing an updated version of the Procedures for PSC adopted?"
+    options:
+      - "Annually"
+      - "Every two years"
+      - "Quarterly"
+      - "Whenever deemed necessary"
+    correct_answer: 1
+
+  - question: "What role does the maritime industry play in the Equasis system?"
+    options:
+      - "It has no involvement"
+      - "It actively cooperates with Equasis"
+      - "It opposes Equasis"
+      - "None of the above"
+    correct_answer: 1
+
+  - question: "Where does Equasis obtain the information it provides?"
+    options:
+      - "Only from public authorities"
+      - "Only from industry organizations"
+      - "Exclusively from the European Commission"
+      - "From both public authorities and industry organizations"
+    correct_answer: 3
+
+  - question: "What event led to the establishment of the Paris MoU?"
+    options:
+      - "Grounding of the tanker 'Amoco Cadiz'"
+      - "Pirate attack on a passenger liner"
+      - "Engine failure of a cruise ship 'Lauriana'"
+      - "None of the above"
+    correct_answer: 0
+
+  - question: "True or false. PSC creates a 'safety net' to identify substandard vessels"
     options:
       - "True"
       - "False"
     correct_answer: 0
 
-  - question: "Based on the Convention, how will the fund be allocated among claimants?"
+  - question: "True or false. The basis of PSC is only found in SOLAS Convention"
     options:
-      - "Equally distributed among all claimants"
-      - "Proportionately distributed based on the amounts of their established claims"
-      - "Allocated based on the chronological order of claims submission"
-      - "Distributed based on the geographic location of the incidents"
+      - "True"
+      - "False"
+    correct_answer: 1
+
+  - question: "True or false. The European Union's ERIKA legislative packages aim to increase commercial traffic in EU ports."
+    options:
+      - "True"
+      - "False"
     correct_answer: 1
 ---
 
-## Learning outcomes
+**Explains that "Port State Control" is the inspection of foreign ships present in a nation's port for the purpose of verifying that the condition of the ships and their equipment comply with the provisions of international conventions and codes, and that the ships are manned and operated in compliance with those provisions.**
 
-**Convention of the Prevention of Marine Pollution by Dumping of Wastes and Other Matter (London Dumping Convention -LDC-):**
+As established by the IMO, Port State Control (PSC) consists in the evaluation of foreign vessels upon mooring in national ports, in order to verify that the condition of the vessel, its equipment and crew comply with the requirements established in international regulations. It is one of the most effective instruments of preventive maritime safety.
 
-- To analyse the aim of the Convention, considering the main definitions for the purposes of the Convention.
-- To categorise the specific provisions regarding the dumping of waste listed in Annex I, Annex II, and other waste.
-- To comment on the exceptions to the general rules of Article IV.
-- To examine mentions of the incineration of waste at sea as per the Addendum to Annex I.
-- To establish the permits to be granted by the competent authority in respect of matter intended for dumping.
+There are numerous fundamental IMO technical conventions, which incorporate provisions requiring the inspection of ships when visiting foreign ports, thus ensuring their compliance with IMO standards. Resolution A.682(17) was adopted to promote regional cooperation in the control of ships and discharges by encouraging the conclusion of regional agreements. Since ships bound for a port in one country often visit other countries in the same region, closely coordinating inspections becomes more efficient, focusing on those ships that do not comply with standards and avoiding multiple inspections.
 
-**International Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969:**
+This ensures that as many ships as possible are inspected, as well as preventing unnecessary delays caused by redundant inspections. Although the primary responsibility for ship standards rests with the flag state, port state control creates a "safety net" to identify substandard vessels. Memoranda of Understanding (MoU) have been established for this purpose.
 
-- To present the rights and provisions applicable to the Parties to intervene on the high seas following a maritime casualty.
-- To define the concepts of maritime accident, ship, oil, and related interests for the purposes of the Convention.
-- To comment on the implications of the Protocol relating to Intervention on the High Seas in Cases of Pollution by Substances other than Oil, 1973.
+**Explains that the primary responsibility for maintaining ship's standards rests with their flag States, as well as their owners and Masters. However, many flag States control do not, for various reasons, fulfil their obligations under international maritime conventions, and port State control provides a useful "safety net" to catch substandard ships.**
 
-**International Convention on Civil Liability for Oil Pollution Damage, 1969 (CLC 1969):**
+The European Commission states in the Directive of the European Parliament and of the Council amending Directive 2009/16/EC on port State control" that the primary responsibility for monitoring compliance with IMO and ILO standards lies with the flag State of the ship. However, the flag State rules apply to the flag of the ship, so there are some States that have allowed substandard ships even incapable of complying with international regulations to operate under their flags. That is why many of the most important IMO technical conventions contain provisions for ships to be inspected when visiting foreign ports to ensure that they meet international requirements.
+In order to establish a more exhaustive control, the Erika legislative packages of the European Union are created, aimed at improving safety in the shipping industry and thus reducing environmental damage to the oceans. We refer to it as a legislative package because it is comprised of three blocks, Erika I, which comprises amendments to existing legislation; Erika II, on innovations in EU legislation; and Erika III, which integrates international standards with EU legislation.
 
-- To understand the liability regime under the CLC and the possibilities of limitation for the owner.
-- To analyse the implications of the constitution of the fund with respect to liability.
-- To classify the provisions regarding insurance or other financial security and the associated certificate.
-- To clarify the duties of the flag state under the Convention.
+Erika III addresses maritime safety, civil liability and flag states, establishes Directive 2009/16/EC on port state control of ships. This aims to reduce substandard shipping in EU waters. It aims to ensure that ships comply with both EU and international maritime safety and environmental standards. It also establishes common criteria for ship inspections. It establishes a risk profile, so that each ship, depending on its type, age, flag, company history and detention history, is inspected with the mandatory minimum frequency.
 
-Convention of the Prevention of Marine Pollution by Dumping of Wastes and Other Matter (London Dumping Convention -LDC-):
+One of the key points is the risk profile assigned through the **THETIS database (The Hybrid European Targeting and Inspection System)**. THETIS, is a port state control information system, which allows EU port state authorities and Paris Memorandum of Understanding countries to manage inspection data in a single interface. It does this by establishing risk profiles and thus establishes which ships should be inspected and allows the results to be recorded. The program automatically indicates inspection priorities to the maritime administration and port PSC inspectors. Through THETIS these reports are available to all PSC authorities in the EU and the Paris MoU region. To facilitate the planning of inspections, the system is linked to the SafeSeaNet20 (SSN) system, which provides information on ships in Member States' ports.
 
-## Aims of the Convention:
+**States that a "port state control regime", where set up under a "memorandum of understanding" ("MOU") or similar accord between neighbouring port States, is a system of harmonized inspection procedures designed to target substandard ships with the main objective being their eventual elimination form the region covered by the MOU's participating States.**
 
-- **Art. I:** Parties shall individually and collectively promote the effective control of all sources of pollution of the marine environment, and pledge themselves especially to take all practicable steps to prevent the pollution of the sea by the dumping of waste and other matter that is liable to create hazards to human health, to harm living resources and marine life, to damage amenities or to interfere with other legitimate uses of the sea.
-- **Art. II:** Parties shall take effective measures individually, according to their scientific, technical and economic capabilities, and collectively, to prevent marine pollution caused by dumping and shall harmonize their policies in this regard.
+In order to improve the effectiveness of PSC port state controls, regional coordination between different countries was initiated. The Paris Memorandum of Understanding (MoU) on Port State Control is the first of 9 such MoUs. The member countries of the European Economic Area with seaports, as well as Canada, the Russian Federation and the United Kingdom, are signatories to the MoU.
 
-## Definitions (Art. III):
+The Commission, together with the European Maritime Safety Agency, provides criteria to the Paris MoU and the European Economic Area in order to discern which ships to inspect and promote. In this way the procedures and instruments given by the MoU, are adopted by the PSC directive, based on concepts of cargo sharing and specific and harmonized inspections.
 
-- _Dumping _(Art. III.1.a)_:_ (i) any deliberate disposal at sea of wastes or other matter from vessels, aircraft, platforms or other man-made structures at sea; (ii) any deliberate disposal at sea of vessels, aircraft, platforms or other manmade structures at sea.
-  _"Dumping" does not include (Art. III.1.b_): (i) the disposal at sea of wastes or other matter incidental to, or derived from the normal operations of vessels, aircraft, platforms or other man-made structures at sea and their equipment, other than wastes or other matter transported by or to vessels, aircraft, platforms or other man-made structures at sea, operating for the purpose of disposal of such matter or derived from the treatment of such wastes or other matter on such vessels, aircraft, platforms or structures; (ii) placement of matter for a purpose other than the mere disposal thereof, provided that such placement is not contrary to the aims of this Convention.
-  _Exclusions of the Convention (Art. III.1.c):_ The disposal of wastes or other matter directly arising from, or related to the exploration, exploitation and associated off-shore processing of sea-bed mineral resources will not be covered by the provisions of this Convention.
-- **Wastes or other matter (Art. III.4)**: means material and substance of any kind, form or description.
-- **Special permit (Art. III.5)** :means permission granted specifically on application in advance and in accordance with Annex II and Annex III.
-- **General permit (Art. III.6):** means permission granted in advance and in accordance with Annex III.
+Paris Mou arose from a growing need to reinforce legislation on the safety of navigation, generated by the grounding of the tanker "Amoco Cadiz". This is the consequence of a failure of the steering gear, resulting in the sixth largest oil spill in history, with some 230,000 tons before its entry into force (March 1982), off the coast of Brittany in March 1978. Thus, through a harmonized system of port state control, the signatory countries are committed to the elimination of substandard ships.
 
-**Provisions regarding the dumping of wastes (Art. IV):** In accordance with the provisions of the Convention Contracting Parties shall prohibit the dumping of any wastes or other matter in whatever form or condition except as otherwise specified below: (a) the dumping of wastes or other matter listed in Annex I is prohibited; (b) the dumping of wastes or other matter listed in Annex II requires a prior special permit; (c) the dumping of all other wastes or matter requires a prior general permit.
+Around the same time that this disaster occurred, the maritime authorities of a number of Western European countries were developing the so-called "Hague Memorandum", which was essentially linked to living and working conditions on board ships, following the requirements established by the 1947 ILO Convention.
 
-Any permit shall be issued only after careful consideration of all the factors set forth in Annex III, including prior studies of the characteristics of the dumping site, as set forth in sections B and C of that Annex.
+However, in view of the consequences of the accident, it was necessary to establish a more comprehensive and effective memorandum than the existing one, covering aspects such as the safety of human life at sea and the prevention of marine pollution, as well as living and working conditions on board ships. Thus the "Paris Memorandum of Understanding" came into being.
 
-No provision of the Convention is to be interpreted as preventing a Contracting Party from prohibiting, insofar as that Party is concerned, the dumping of wastes or other matter not mentioned in Annex I.
+The duties to which they are committed by the Paris MoU (Section 1) are:
 
-**Exceptions to the rule set in art. IV (Art. V):** The provisions of article IV shall not apply when it is necessary to secure the safety of human life or of vessels, aircraft, platforms or other man-made structures at sea in cases of force majeure caused by stress of weather, or in any case which constitutes a danger to human life or a real threat to vessels, aircraft, platforms or other man-made structures at sea, if dumping appears to be the only way of averting the threat and if there is every probability that the damage consequent upon such dumping will be less than would otherwise occur. Such dumping shall be so conducted as to minimize the likelihood of damage to human or marine life and shall be reported forthwith to the Organization.
+- Implement the provisions of the MoU,
+- Maintain an effective PSC system,
+- Achieve 25% of inspections,
+- Consult, cooperate and exchange information with other Authorities, and
+- Establish a procedure to receive information from pilots and port authorities.
 
-A Contracting Party may issue a special permit as an exception to article IV(1)(a), in emergencies, posing unacceptable risk relating to human health and admitting no other feasible solution. Before doing so the Party shall consult any other country or countries that are likely to be affected and the Organization which, after consulting other Parties, and international organizations as appropriate, shall, in accordance with article XIV promptly recommend to the Party the most appropriate procedures to adopt.
+**States that there are eight international PSC agreement a particular port State might be party to and any areas of particular focus that may currently be in place.**
 
-**Regulation on the incineration of wastes at sea (Annex I -art. 10-):** The amendments to Annex I and II to the Convention, 1972, added that incineration at sea of industrial waste and sewage sludge is prohibited while the incineration at sea of any other wastes or other matter requires the issue of a special permit.
+The eight international PSC agreements to which a particular port state could be a party and areas of particular focus that may currently be in force.
 
-**The role of the appropriate authority of a Contracting Party (Art. VI):** Each Contracting Party shall designate an appropriate authority or authorities to: (a) issue special permits which shall be required prior to, and for, the dumping of matter listed in Annex II and in the circumstances provided for in article V(2); (b) issue general permits which shall be required prior to, and for, the dumping of all other matter; (c) keep records of the nature and quantities of all matter permitted to be dumped and the location, time and method of dumping (...).
+According to IMO, there are ten PSC regimes, comprising 9 regional Memoranda of Understanding (MOUs) and one Port State Control Agreement covering specific regions and the U.S. Coast Guard, which is the tenth PSC regime. Some countries belong to more than one of these regimes.
 
-The appropriate authority or authorities of a contracting Party shall issue prior special or general permits in respect of matter intended for dumping: (a) loaded in its territory; (b) loaded by a vessel or aircraft registered in its territory or flying its flag, when the loading occurs in the territory of a State not party to this Convention.
+The structure of a regional PSC regime is as follows:
 
-**London Protocol:** In 1996, Parties adopted a Protocol to the Convention on the Prevention of Marine Pollution by Dumping of Wastes and Other Matter, 1972 (known as the London Protocol) which entered into force in 2006.The Protocol, which is meant to eventually replace the 1972 Convention, represents a major change of approach to the question of how to regulate the use of the sea as a depository for waste materials. Rather than stating which materials may not be dumped, it prohibits all dumping, except for possibly acceptable wastes on the so-called "reverse list", contained in an annex to the Protocol. Currently there are 53 Parties to the Protocol.
+- Port State Control Committee
+- Secretariat
+- Database or information system.
 
-International Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969:
+Each holds an annual meeting with cooperating members and observer organizations (such as IMO, which is an observer in all regional PSC regimes).
 
-**Rights of Parties to the Convention (Art. I.1):** Parties may take such measures on the high seas as may be necessary to prevent, mitigate or eliminate grave and imminent danger to their coastline or related interests from pollution or threat of pollution of the sea by oil; following upon a maritime casualty or acts related to such a casualty, which may reasonably be expected to result in major harmful consequences.
+The PSC consists in delegating control and inspection powers to state authorities in relation to foreign vessels disembarked in their ports for commercial reasons.
 
-Exclusion (Art. I.2): no measures shall be taken against any warship or other ship owned or operated by a State and used, for the time being, only on government noncommercial services.
+The common principles of some PSC inspection procedures, are:
 
-## Definitions (Art. II):
+- Verification of documents: certificates, boat and crew licenses.
+- Verification of safety equipment: verification of lifeboats, firefighting equipment and navigation equipment. The condition of these will be checked and that the crew knows how to use them.
+- Verification of structural integrity: no cracks, leaks or other damage.
+- Verification of machinery: engines, generators and other mechanical equipment, check their condition and that the crew knows how to operate them.
+- Verification of the crew's living conditions: accommodation, food and hygiene, that they are rested and that their living conditions are safe and healthy.
+- Verification of environmental compliance: that the vessel complies with environmental regulations, including wastewater discharge and marine pollution.
 
-- _Maritime Casualty_: means a collision of ships, stranding or other incident of navigation, or other occurrence on board a ship or external to it resulting in material damage or imminent threat of material damage to a ship or cargo;
-- **Ship** means: (a) any sea-going vessel of any type whatsoever, and (b) any floating craft, with the exception of an installation or device engaged in the exploration and exploitation of the resources of the sea-bed and the ocean floor and the subsoil thereof.
-- **Oil:** means crude oil, fuel oil, diesel oil and lubricating oil;
-- _Related interests:_ means the interests of a coastal Sate directly affected or threatened by the maritime casualty, such as: (a) maritime coastal, port or estuarine activities, including fisheries activities, constituting an essential means of livelihood of the persons concerned; (b) tourist attractions of the area concerned; (c) the health of the coastal population and the well-being of the area concerned, including conservation of living marine resources and of wildlife.
+**Identifies how to ascertain which port State agreement a particular port State might be party to and any areas of particular focus that may currently be in place**
 
-**Provisions applicable when exercising the right to take measures:**
+Memorandum of understanding application areas:
 
-- **Provisions of Art. III:**
+- **Paris Mou:** Europe and North Atlantic.
 
-(a) Before taking any measures, a coastal State shall proceed to consultations with other States affected by the maritime casualty, particularly with the flag State or States;
-(b) The coastal State shall notify without delay the proposed measures to any persons physical or corporate known to the coastal State, or made known to it during the consultations, to have interests which can reasonably be expected to be affected by those measures. The coastal State shall take into account any views they may submit;
-(c) Before any measure is taken, the coastal State may proceed to a consultation with independent experts, whose names shall be chosen from a list maintained by the Organizations;
-(d) In cases of extreme urgency requiring measures to be taken immediately, the coastal State may take measures rendered necessary by the urgency of the situation, without prior notification or consultation or without continuing consultations already begun;
-(e) A coastal State shall, before taking such measures and during their course, use its best endeavors to avoid any risk to human life, and to afford persons in distress any assistance of which they may stand in need, and in appropriate cases to facilitate the repatriation of ships' crews, and to raise no obstacle thereto;
-(f) Measures which have been taken in application of Article I shall be notified without delay to the States and to the known physical or corporate persons concerned, as well as to the Secretary-General of the Organization.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 1997; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n.; Protocol of 1996 to the Merchant Shipping (Minimum Standards) Convention, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004
 
-- **Provisions of Art. V:**
+- **Tokio Mou: **Asia and the Pacific
 
-Measures taken by the coastal State shall be proportionate to the damage actual or threatened to it. Such measures shall not go beyond what is reasonably necessary to achieve the end mentioned in Article I and shall cease as soon as that end has been achieved; they shall not unnecessarily interfere with the rights and interests of the flag State, third States and of any persons, physical or corporate, concerned.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; nternational Convention for the Safety of Life at Sea, 1974; Protocol of 1987 and 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocol of 1978; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-- **Right to compensation (Art. VI):**
+- **Viña del Mar agreement:** Latin America
 
-Any Party which has taken measures according the provisions of the Convention causing damage to others, shall be obliged to pay compensation to the extent of the damage caused by measures which exceed those reasonably necessary to achieve the end mentioned in Article I.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 1997; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001.
 
-** Implications of the Protocol relating to Intervention on the High Seas in Cases of Pollution by Substances other than Oil, 1973:**
+- **Caribbean Mou:** Caribbean
 
-- **Rights of Parties to the Protocol (Art. I.1):** Parties may take such measures on the high seas as may be necessary to prevent, mitigate or eliminate grave and imminent danger to their coastline or related interests from pollution or threat of pollution by substances other than oil following upon a maritime casualty or acts related to such a casualty, which may reasonably be expected to result in major harmful consequences.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 19971; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147; Protocol of 1996 to the Merchant Shipping (Minimum Standards) Convention, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-## Definitions (Art. I.2):
+- **Abuja MoU:** West and central Africa
 
-- "_Substances other than oil"_: (a) those substances enumerated in a list which shall be established by an appropriate body designated by the Organization and which shall be annexed to the present Protocol, and (b) those other substances which are liable to create hazards to human health, to harm living resources and marine life, to damage amenities or to interfere with other legitimate uses of the sea (Party shall have the burden of establishing that the substance, under the circumstances present at the time of the intervention, could reasonably pose a grave and imminent danger).
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 1997; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-- **Provisions regarding the intervention (Art. II):**
+- **Black Sea Mou:** Black Sea
 
-- The provisions of paragraph 2 of Article I and of Articles II to VIII of the Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969, and the Annex thereto as they relate to oil, shall be applicable with regard to the substances referred to in Article I of the present Protocol.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1978 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocol of 1978; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-- For the purpose of the Protocol the list of experts referred to in Articles III (c) and IV of the Convention shall be extended to include experts qualified to give advice in relation to substances other than oil.
+- **Mediterranean MoU:** Mediterranean Sea
 
-International Convention on Civil Liability for Oil Pollution Damage, 1969 (CLC 1969), as amended by 1992 Protocol:
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1978 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 1997; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147; Protocol of 1996 to the Merchant Shipping (Minimum Standards) Convention, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-## Definitions (Art. I):
+- **Indian Ocean MoU:** Indian Ocean
 
-- **Ship:** any sea-going vessel and seaborne craft of any type whatsoever constructed or adapted for the carriage of oil in bulk as cargo, provided that a ship capable of carrying oil and other cargoes shall be regarded as a ship only when it is actually carrying oil in bulk as cargo and during any voyage following such carriage unless it is proved that it has no residues of such carriage of oil in bulk aboard.
-- \**Owner: *person or persons registered as the owner of the ship or, in the absence of registration, the person or persons owning the ship. However in the case of a ship owned by a State and operated by a company which in that State is registered as the ship's operator, "owner" shall mean such company.
-- _Oil_: any persistent hydrocarbon mineral oil such as crude oil, fuel oil, heavy diesel oil and lubricating oil, whether carried on board a ship as cargo or in the bunkers of such a ship.
-- _Pollution damage: _(a) loss or damage caused outside the ship by contamination resulting from the escape or discharge of oil from the ship, wherever such escape or discharge may occur, provided that compensation for impairment of the environment other than loss of profit from such impairment shall be limited to costs of reasonable measures of reinstatement actually undertaken or to be undertaken; (b) the costs of preventive measures and further loss or damage caused by preventive measures.
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1978 relating to International Convention for the Safety of Life at Sea; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocols of 1978 and 1997; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147; Protocol of 1996 to the Merchant Shipping (Minimum Standards) Convention, ILO Convention n. 147; Maritime Labour Convention, 2006; International Convention on Civil Liability for Oil Pollution Damage, 1969; Protocol of 1992 to amend the International Convention on Civil Liability for Oil Pollution Damage; International Convention on the Control of Harmful Anti-Fouling Systems on Ships, 2001; International Convention on Civil Liability for Bunker Oil Pollution Damage, 2001; International Convention for the Control and Management of Ship's Ballast Water and Sediments, 2004.
 
-**Exclusion clause (Art. I.4):** No claim for compensation for pollution damage may be made against the owner otherwise than in accordance with this Convention.
+- **Riyadh MoU:** Persian Gulf
 
-No claim for compensation for pollution damage under this Convention or otherwise may be made against: (a) the servants or agents of the owner or the members of the crew; (b) the pilot or any other person who, without being a member of the crew, performs services for the ship; (c) any charterer (how so ever described, including a bareboat charterer), manager or operator of the ship; (d) any person performing salvage operations with the consent of the owner or on the instructions of a competent public authority; (e) any person taking preventive measures; (f) all servants or agents of persons mentioned in subparagraphs (c), (d) and (e).
+* **Conventions:** International Convention on Load Lines, 1966; Protocol of 1988 relating to International Convention on Load Lines; International Convention for the Safety of Life at Sea, 1974; Protocol of 1988 relating to International Convention for the Safety of Life at Sea; International Convention for the Prevention of Pollution from Ships, 1973, as modified by the Protocol of 1978; International Convention on Standards of Training, Certification and Watchkeeping for Seafarers, 1978; Convention on the International Regulations for Preventing Collisions at Sea, 1972; International Convention on Tonnage Measurement of Ships, 1969; Merchant Shipping (Minimum Standards) Convention, 1976, ILO Convention n. 147.
 
-**Limitation of liability and constitution of a fund (Art. V):** The owner of a ship shall be entitled to limit his liability under the Convention in respect of any one incident to an aggregate amount calculated as follows: (a) 4,510,000 units of account for a ship not exceeding 5,000 units of tonnage; (b) for a ship with a tonnage in excess there of, for each additional unit of tonnage, 631 units of account in addition to the amount mentioned in sub-paragraph (a); provided, however, that this aggregate amount shall not in any event exceed 89,770,000 units of account .
+**Outlines that the list of certificates and documents which are checked during inspection are:**
 
-For the purpose of availing himself of the benefit of limitation the owner shall constitute a fund for the total sum representing the limit of his liability with the Court or other competent authority of any one of the Contracting States in which action is brought under Article IX or, if no action is brought, with any Court or other competent authority in any one of the Contracting States in which an action can be brought under Article IX.
+1. **International tonnage Certificate (1969);**
+2. **Passenger Ship Safety Certificate;**
+3. **Cargo Ship Safety Construction Certificate;**
+4. **Cargo Ship Safety Equipment Certificate;**
+5. **Cargo Ship Safety Radio Certificate;**
+6. **Exemption certificate;**
+7. **Cargo Ship Safety Certificate;**
+8. **Document of compliance (SOLAS 74, regulation II-2/54);**
+9. **Dangerous Goods Special List or Manifest, or Detailed Stowrage Plan;**
+10. **International Certificate of Fitness for the Carriage of Liquified Gasses in Bulk, or the Certificate of Fitness for the Carriage of Liquified Gasses in Bulk, whichever is appropriate;**
+11. **International Certificate of Fitness for the Carriage of Dangerous Chemicals in Bulk, or the Certificate of Fitness for the Carriage of Dangerous in Bulk, whichever is appropriate;**
+12. **International Oil Pollution Prevention Certificate;**
+13. **International Pollution Prevention Certificate for the Carriage of Noxious Liquid Substances in Bulk;**
+14. **International Load Certificate (1966);**
+15. **International Load Line Exemption Certificate;**
+16. **Oil Record Book, parts I and II;**
+17. **Shipboard Oil Pollution Emergency Plan;**
+18. **Cargo Record Book;**
+19. **Minimum Safe Manning Document;**
+20. **Certificate of Competency;**
+21. **Medical certificates (MLC and STCW)**
+22. **Stability information;**
+23. **Safety Management Certificate and copy of Document of Compliance (SOLAS chapter IX);**
+24. **Certificates as to the ship's hull strength and machinery installations issued by the classification society in question (only to be required if the ship maintains its class with a classification society);**
+25. **Survey Report Files (in case of bulk carriers or oil tankers in accordance with resolution A.744 (18));**
+26. **For ro-ro passenger ships, information on the A/Amax ratio;**
+27. **Document of authorization for the carriage of grain;**
+28. **Special Purpose Ship Safety Certificate;**
+29. **High-Speed Craft Safety Certificate and Permit to Operate High-Speed Craft;**
+30. **Mobile Offshore Drilling Unit Safety Certificate;**
+31. **For oil tankers, the record of oil discharge monitoring and control system for the last ballast voyage;**
+32. **The muster list, fire control plan and damage control plan;**
+33. **Ships logbook with respect to the records of tests and drills and the log for records of inspection and maintenance of life-saving appliances and arrangements**
+34. **Procedures and Arrangements Manual (chemical tankers);**
+35. **Cargo Securing Manual;**
+36. **Certificate of registry or other document of nationality;**
+37. **Garbage Management Plan;**
+38. **Garbage Record Book;**
+39. **Bulk carrier booklet (SOLAS chapter VI regulation 7); and**
+40. **Reports of previous port State Control inspections.**
 
-**Exception to the rule of liability (Art. V.2):** The owner shall not be entitled to limit his liability under the Convention if it is proved that the pollution damage resulted from his personal act or omission, committed with the intent to cause such damage, or recklessly and with knowledge that such damage would probably result.
+**Outlines that in addition to the general control above listed certificates and documents, examinations/inspections of the following are generally given priority by Port State Control Officer (PSCO).**
 
-**Distribution of the fund and claims (Art. VI.4/.8):** The fund shall be distributed among the claimants in proportion to the amounts of their established claims.Claims in respect of expenses reasonably incurred or sacrifices reasonably made by the owner voluntarily to prevent or minimize pollution damage shall rank equally with other claims against the fund.
+The following documents contain those that are of priority when performing an inspection.
 
-**Effects of the constitution of the fund (Art. VI):** Where the owner, after an incident, has constituted a fund, and is entitled to limit his liability,(a) no person having a claim for pollution damage arising out of that incident shall be entitled to exercise any right against any other assets of the owner in respect of such claim;(b) the Court or other competent authority of any Contracting State shall order the release of any ship or other property belonging to the owner which has been arrested in respect of a claim for pollution damage arising out of that incident, and shall similarly release any bail or other security furnished to avoid such arrest.
+- **Nautical publication (SOLAS 74 R V/20)**
+- **Navigational equipment (SOLAS 74 R V/20)**
+- **Emergency starting and running tests (SOLAS 74 R II-2-4.3)**
+- **Lifesaving equipment. Rafts FF (SOLAS 74 R III/20, 23, 26 and 29)**
+- **Emergency generator (start/stop only) (SOLAS 74 R II-1/42 & 28)**
+- **Hull corrosion and damages (Load Lines) (SOLAS 74 R I/11)**
+- **Main engine & aux. engines (SOLAS 74 R II/26, 27 & 28)**
+- **Oily water separator 15 ppm alarm (MARPOL Annex I/16(1))**
+- **Oil discharge monitor (ODM) (MARPOL Annex I/16)**
+- **Charts corrected and proper scale (SOLAS 74 R V/20)**
+- **Fire safety Control (SOLAS 74 II-2/20)**
+- **Ventilation inlets/outlets (SOLAS 74 R II-2/16.9 & 48)**
+- **Emergency training and drills (Log book rec. SOLAS 74 R III/18)**
+- **Emergency lighting/batteries (SOLAS 74 R II/42 & 43)**
+- **Deck and hatches corrosion and damages (LL 1966)**
+- **Steering gear -- incl. Auxiliary & emergency (Bridge inspection only) -- SOLAS 74 R V/19**
+- **Cleanliness in engine room (SOLAS 74 R II-1/26 and ILO 134)**
+- **Cleanliness in accommodation (ILO 92 & 133)**
 
-**Insurance or other financial security (Art. VII.1):** The owner of a ship registered in a Contracting State and carrying more than 2,000 tons of oil in bulk as cargo shall be required to maintain insurance or other financial security, such as the guarantee of a bank or a certificate delivered by an international compensation fund, in the sums fixed by applying the limits of liability prescribed in Article V, paragraph 1 to cover his liability for pollution damage under the Convention.
+**Explains that the port State control inspections may be conducted on the following basis:**
 
-**Issuance of the Certificate (Art. VII.2):** A certificate attesting that insurance or other financial security is in force in accordance with the provisions of the Convention shall be issued to each ship after the appropriate authority of a Contracting State has determined that the requirements of paragraph 1 have been complied with.
+1. **Initiative of the port State Administration:**
+2. **The request of, or on the basis of, information regarding a ship provided by another Administration;**
+3. **Information regarding a ship provided by a member of the crew, a professional body, an association, a trade union or any other individual with an interest in the safety of the ship, its crew and passengers, or the protection of the maritime environment.**
 
-With respect to a ship registered in a Contracting State such certificate shall be issued or certified by the appropriate authority of the State of the ship's registry; with respect to a ship not registered in a Contracting State it may be issued or certified by the appropriate authority of any Contracting State. This certificate shall be in the form of the annexed model and shall contain the following particulars:
+This is set out in Chapter 2 on Port State Inspections in IMO Resolution A.1155(32) - Port State Control Procedures, 2021 - (Adopted 15 December 2021).
 
-(a) name of ship and port of registration;
-(b) name and principal place of business of owner;
-(c) type of security;
-(d) name and principal place of business of insurer or other person giving security and, where appropriate, place of business where the insurance or security is established;
-(e) period of validity of certificate which shall not be longer than the period of validity of the insurance or other security.
+**States that the definition of more detailed inspection is: "An inspection conducted when there are clear grounds for believing that the condition of the ships, its equipment, or its crew does not correspond substantially with the particulars of the certificates"**
 
-**Obligations of flag and port states regarding the certificate (Art. VII.3/.4/.10/.11):** The certificate shall be in the official language or languages of the issuing State. If the language used is neither English nor French, the text shall include a translation into one of these languages.
+This statement is based on Regulation 6, Chapter I of the International Convention for the Safety of Life at Sea (SOLAS), which sets out the procedures to be followed when a designated surveyor or a recognised organisation finds that the condition of the ship or its equipment does not substantially conform with the particulars in the certificate, or is such that the ship cannot proceed to sea without danger to the ship or persons on board.
 
-The certificate shall be carried on board the ship and a copy shall be deposited with the authorities who keep the record of the ship's registry or, if the ship is not registered in a Contracting State, with the authorities of the State issuing or certifying the certificate.
+According to the same article, when such a substantial discrepancy is found either in the condition of the ship, the crew or the certificate, the surveyor is obliged to take certain measures immediately, as well as to carry out a more extensive inspection arising from the situation at hand. Failure to do so will result in the certificate being withdrawn and the Administration concerned being notified of the situation.
 
-A Contracting State shall not permit a ship under its flag to which this Article applies to trade unless a certificate has been issued under paragraph 2 or 12 of this Article.
+**States that the definition of Clear grounds is: "Evidence that the ship, it equipment, or its crew does not correspond substantially with the requirements of the relevant conventions or that the Master or crew members are not familiar with essential shipboard procedures relating to the safety of ships or the prevention of pollution".**
 
-Subject to the provisions of this Article, each Contracting State shall ensure, under its national legislation, that insurance or other security to the extent specified in paragraph 1 of this Article is in force in respect of any ship, wherever registered, entering or leaving a port in its territory, or arriving at or leaving an off-shore terminal in its territorial sea, if the ship actually carries more than 2,000 tons of oil in bulk as cargo.
+Regulation 4, Chapter XI-1, C. SOLAS. When a ship is in a port of another country that is also a party to the treaty, it may be inspected by authorities designated by that country. This supervision focuses on making sure that the master and crew are familiar with crucial shipboard procedures related to the safety of the ship. The inspection is carried out if there is clear evidence that the crew is not fully informed about these essential procedures.
 
-ANNEX I:
+**Outlines that "Clear grounds" to conduct a more detailed inspection include:**
 
-Certificates
-![certificate of insurance image](/images/lessons/lesson-12/Picture2.png)
+1. **The absence of principal equipment or arrangements required by the conventions;**
+2. **Evidence from a review of the ship's certificates that a certificate or certificates are clearly invalid;**
+3. **Evidence that document required by the conventions are not on board, incomplete, are not maintained or are falsely maintained;**
+4. **Evidence from the PSCO's general impressions and observations that serious hull or structural deterioration or deficiencies exist that may place at risk the structural, watertight or weathertight integrity of the ship;**
+5. **Evidence from the PSCO's general impressions and observations that serious hull or structural deterioration or deficiencies exist in the safety, pollution prevention or navigational equipment;**
+6. **Information or evidence that the Master or crew is not familiar with essential shipboard operations relating to the safety of ships or the prevention of pollution, or that such;**
+7. **Indications that key crew members may not be able to communicate with each other or with other persons on board;**
+8. **The emission of false distress alerts not followed by proper cancellation procedures;**
+9. **Receipt of a report or complaint complaining information that a ship appears to be substandard;**
+
+_"When a PSCO inspects a foreign ship which is required to hold a convention certificate, and which is in a port or an offshore terminal under the jurisdiction of the port State, any such inspection should be limited to verifying that there are on board valid certificates and other relevant documentation and the PSCO forming an impression of the overall condition of the ship, its equipment and its crew, unless there are "clear grounds" for believing that the condition of the ship or its equipment does not correspond substantially with the particulars of the certificates_."
+
+The above points are 9 clear reasons why an inspection should be performed.
+
+**Explains that the PSCO during a more detailed inspection generally takes the following into account;**
+
+The Paris MoU, "Guidance on type of inspections", point 2.3 sets out the following points as guidance on areas not covered by the specific PSCCInstruction.
+
+- **Structure:** a PSCO's (Port State Control Officer) decision on whether to carry out a thorough inspection of a ship's structure will be influenced by the maintenance impression of the hull and the general condition of the deck. The PSCO will also pay attention to structural integrity and seaworthiness. The assessment will be based on on-board reports, which should include structural inspection reports, condition assessments, thickness measurement reports and a survey planning document.
+- **Machinery spaces:** The PSCO will assess the condition of the machinery and electrical installations so that they can provide sufficient power for propulsion and auxiliary service. Although this cannot be properly assessed without running the machinery, general deficiencies will be assessed. If there are indications of negligence, the scope of the investigation will be expanded to include certain tests.
+- **Conditions of assignment of load lines:** although the PSCO may have decided that a hull inspection is not necessary, he will focus on detailing the deck inspection if there are concerns about such things as defective hatch closures, corroded air pipes and ventilation coamings. Particular attention will be paid to the condition of cargo line assignments, examining locking devices, deck water evacuation systems and provisions for crew protection.
+- **Life-saving appliances:** The effectiveness of **life-saving** appliances depends to a large extent on good maintenance by the crew and their use in regular drills, therefore it is necessary that inspections are carried out on a regular basis.
+- **Fire safety:** The PSCO will review the shipboard fire control plan in order to obtain an overview of the fire safety measures planned for the ship and consider its compliance with the requirements of the Convention for the year of construction.
+- **Regulations for preventing collisions at sea;** Based on observations on deck, the PSCO will consider the need for close inspection of lanterns and their screening and means of making sound and distress signals.
+- **Cargo Ship Safety Construction Certificate;** The general condition of the ship may lead the PSCO to consider issues other than those related to safety equipment and load line assignment, but nevertheless associated with the safety of the ship.
+- **Cargo Ship Radio Certificates;** The requirements for radio equipment maintenance are contained in SOLAS.
+- **Equipment in excess of convention or flag State requirements;** Equipment on board which is expected to be relied on in situations affecting safety or pollution prevention must be in operating condition.
+- **Guideline for discharge requirements under Annexes I and III of MARPOL 73/78 which includes:**
+  - **Inspection of crude oil washing (COW) operations;**
+  - **Inspection of unloading, striping and prewash operations;**
+  - **Guidelines for control of operational requirements -- which include:**
+    - **Muster list;**
+    - **Communication**
+    - **Fire drills**
+    - **Abandon ship drills;**
+    - **Damage control plan and Shipboard Oil Pollution Emergency Plan;**
+    - **Fire control plan**
+    - **Bridge operation**
+    - **Cargo operation**
+    - **Operation of the machinery**
+    - **Manuals, instructions etc.;**
+    - **Oil and oily mixtures machinery spaces;**
+    - **Loading, unloading and cleaning procedures for cargo spaces of tankers**
+    - **Dangerous goods and harmful substances in packaged form;**
+    - **Garbage**
+  - **Minimum manning standards and certification;**
+  - **STCW 78**
+  - **ISM; and**
+  - **ISPS Code**
+
+**States that the expanded inspection is an inspection conducted according to non-mandatory guidelines only once during 12-month period for certain types of ships and certain categories of age and size.**
+
+"High Risk Ships (HRS) and ships of a risk type (chemical tanker, gas carrier, oil tanker, NLS tanker, bulk carrier and passenger ship) and more than 12 years old are eligible for an expanded inspection.
+
+An expanded inspection shall include a check of the overall condition, including the human element where relevant. And, subject to their practical feasibility or any constraints relating to the safety of persons, the ship or the port, verification of the specific items in the risk areas for each ship type must be part of an expanded inspection."
+
+**Explains that oil tankers, bulk carriers, gas and chemical carriers and passenger ships are subject to expanded inspections once during a period of 12 months.**
+
+"High Risk Ships (HRS) and ships of a risk type (chemical tanker, gas carrier, oil tanker, NLS tanker, bulk carrier and passenger ship) and more than 12 years old are eligible for an expanded inspection."
+
+Article 7 of "COUNCIL DIRECTIVE 95/21/EC of 19 June 1995" establishes that "type chemical tanker, gas carrier, oil tanker, NLS tanker, bulk carrier and passenger ship" are subject to an expanded inspection by any port authority of the Member States once every 12 months.
+
+**Outlines the IMO RESOLUTIONS pertaining to State Controls are as follows:**
+
+- **A.9/Res.321 Procedures for the control of fhips 12/11/1975**
+- **A.15/Res.597 Amendments to the procedures for the control of ships 19/11/1987**
+- **A.19/Res.787 Procedures for port state control 23/11/1995**
+- **A.21/Res. 882 Amendments to the procedures for the port state control (resolution A.787 (19) 25/11/1999)**
+
+"Following the continuous updating of the Procedures for PSC carried out by the Correspondence and Working Groups on Measures to Harmonized Port State Control (PSC) Activities and Procedures Worldwide, an Assembly resolution containing an updated version of the Procedures for PSC is adopted every two years."
+
+These resolutions are important tools for maritime regulation and enforcement, ensuring that ships meet safety and quality standards when entering ports and waters under the jurisdiction of IMO member states.
+
+**States that the publication by IMO which gives General Procedural Guidelines for Port State Control Officers are also of particular relevance to shipmaster.**
+
+International Regulations for Preventing Collisions at Sea of October 20, 1972, and other complementary rules such as local customs, etc., being noteworthy in this regard the 2nd rule paragraph a) of the International Regulations which literally states "nothing in these Regulations shall exempt a ship, or its owner, the master or the crew thereof, from the consequences of any neglect in complying with these Regulations or of neglecting to observe any precaution that may be required by normal seafaring practice or the special circumstances of the case".
+
+Thus, the consequences of not complying with the established requirements on maritime safety and environment established by the Port State Control fall on the master.
+
+**Explains that a record of Port State Control inspections including safety-related details of many ships is available on the internet form Equasis databases and may be viewed by any member of the public. **
+
+The Quality Shipping Campaign, launched in 1997 by the European Commission and the UK Government, focused on improving quality and safety in shipping through the collaboration of all industry players. It highlighted the lack of transparency of information on the quality of ships and operators as a key obstacle. The Quality Shipping Conference in 1998 generated a unanimous call to make information more accessible.
+
+In response, the European Commission and the French Maritime Administration cooperated to develop Equasis, an online information system. Key principles included its focus on ship safety, its non-commercial nature, global coverage, active cooperation with the maritime industry and voluntary use without legal pressure. Thus, Equasis seeks to improve transparency and provide unbiased information for better decision making in shipping.
+
+**Explains that Equasis forms part of the Quality Shipping campaign launched by the EU in 1997 which is formally supported by signatories form marine Administrations, classification societies, P&I clubs and the ITF.**
+
+"The role of the industry in promoting quality and safety in marine transport was at the heart of the Quality Shipping Campaign, launched by the European Commission and the UK Government in November 1997. The Campaign's aim was to bring together all players involved in the various fields of marine business in an effort to improve maritime safety. It was based upon dialogue between all the marine industry and public authorities and its tools were, primarily, voluntary measures. As the Quality Shipping Campaign demonstrated, one of the greatest impediments to a genuine quality culture in shipping is the lack of transparency in the information relating to the quality of ships and their operators."
+
+**Explains that more than 40 organizations provide information to Equasis and is used heavily by charters and insurers as well as marine Administrations with port State control functions.**
+
+Equasis aims to collect and disseminate high quality information related to maritime safety. It provides information from both public authorities and industry organizations. The aim is to provide an unbiased and transparent exchange of information, which allows stakeholders in the maritime transport sector to be better informed about the performance of ships and to have information about the organizations they deal with.
