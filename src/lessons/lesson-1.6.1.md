@@ -1,7 +1,7 @@
 ---
 title: "1.6.1. Convention of Facilitation of International Maritime Traffic (FAL)"
 read_title: "Convention of Facilitation of International Maritime Traffic (FAL)"
-slug: "lesson-04"
+slug: "lesson-1.6.1"
 estimated_hours: 1
 learning_outcomes:
   - to analyse on a purpose and scope of the FAL;

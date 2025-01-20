@@ -1,7 +1,7 @@
 ---
 title: "1.8. Prevention of Pollution of the Marine Environment by ships under LDC, Intervention, and CLC"
 read_title: "Prevention of Pollution of the Marine Environment by ships under LDC, Intervention, and CLC"
-slug: "lesson-13"
+slug: "lesson-1.8"
 estimated_hours: 2
 
 links:
@@ -320,4 +320,4 @@ Subject to the provisions of this Article, each Contracting State shall ensure, 
 ANNEX I:
 
 Certificates
-![certificate of insurance image](/images/lessons/lesson-13/Picture2.png)
+![certificate of insurance image](/images/lessons/lesson-1.8/Picture2.png)

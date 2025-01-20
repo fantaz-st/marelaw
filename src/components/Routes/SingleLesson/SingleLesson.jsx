@@ -73,7 +73,7 @@ const SingleLesson = ({ content, metaData }) => {
     };
   }, []);
 
-  useLayoutEffect(() => {
+  /*  useLayoutEffect(() => {
     const title = titleRef.current;
 
     gsap.to(title, {
@@ -85,7 +85,7 @@ const SingleLesson = ({ content, metaData }) => {
       },
       y: 0,
     });
-  }, []);
+  }, []); */
 
   const { isSpeaking, isPaused, speak, pause } = useTextToSpeech();
 
@@ -375,9 +375,9 @@ const SingleLesson = ({ content, metaData }) => {
         </Grid>
         <Grid item xs={12} md={4} sx={{ display: { xs: "none", md: "block" } }}>
           <Box className={classes.sticky}>
-            <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
+            {/* <Typography variant='h1' className={classes.title} sx={{ display: { xs: "none", md: "block" } }}>
               <span ref={titleRef}>{metaData.title}</span>
-            </Typography>
+            </Typography> */}
 
             {!showQuiz && (
               <>

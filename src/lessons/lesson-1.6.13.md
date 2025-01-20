@@ -1,7 +1,7 @@
 ---
 title: "1.6.13. Ports of refuge procedures"
 read_title: "Ports of refuge procedures"
-slug: "lesson-11"
+slug: "lesson-1.6.13"
 estimated_hours: 2
 learning_outcomes:
   - to establish understanding on a legal concept of marine insurance;
@@ -312,4 +312,4 @@ The following Conventions and Protocols are in force and constitute among others
 ### APPENDIX II
 
 Sample of the additional factors to consider when conducting the analysis before a place of refuge request approval or rejection.
-![Appendix 2 image](/images/lessons/lesson-11/Picture1.png)
+![Appendix 2 image](/images/lessons/lesson-1.6.13/Picture1.png)

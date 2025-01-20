@@ -1,7 +1,7 @@
 ---
 title: "1.6.12. Ship's Agents and Agency"
 read_title: "Ship's Agents and Agency"
-slug: "lesson-10"
+slug: "lesson-1.6.12"
 estimated_hours: 2
 learning_outcomes:
   - to state the Convention requirements to be complied by a ship.

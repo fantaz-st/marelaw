@@ -1,7 +1,7 @@
 ---
 title: "1.6.10. Marine insurance and Liability"
 read_title: "Marine insurance and Liability"
-slug: "lesson-09"
+slug: "lesson-1.6.10"
 estimated_hours: 5
 learning_outcomes:
   - to establish understanding on a legal concept of marine insurance;

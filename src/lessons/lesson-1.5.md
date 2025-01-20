@@ -1,7 +1,7 @@
 ---
 title: "1.5. Maritime Declarations of Health and the requirements of the International Health Regulations"
 read_title: "Maritime Declarations of Health and the requirements of the International Health Regulations"
-slug: "lesson-03"
+slug: "lesson-1.5"
 estimated_hours: 3
 learning_outcomes:
   - to analyse the International Health Regulations (2005) (IHR)

@@ -1,7 +1,7 @@
 ---
 title: "1.6.5. Assistance and Salvage"
 read_title: "Assistance and Salvage"
-slug: "lesson-05"
+slug: "lesson-1.6.5"
 estimated_hours: 3
 learning_outcomes:
   - to categorise key terms from the 1989 Salvage Convention (salvage operation, vessel, ownership)

@@ -1,7 +1,7 @@
 ---
 title: "1.7.2. Port State Control"
 read_title: "Port State Control"
-slug: "lesson-12"
+slug: "lesson-1.7.2"
 estimated_hours: 2
 learning_outcomes:
   - To analyse the general concept of PSC.

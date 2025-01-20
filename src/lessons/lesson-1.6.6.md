@@ -1,7 +1,7 @@
 ---
 title: "1.6.6. Convention on Limitation of Liability for Maritime Claims"
 read_title: "Convention on Limitation of Liability for Maritime Claims"
-slug: "lesson-06"
+slug: "lesson-1.6.6"
 estimated_hours: 1
 learning_outcomes:
   - to establish understanding on the importance of facilitating maritime traffic

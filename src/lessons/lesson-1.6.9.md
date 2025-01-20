@@ -1,7 +1,7 @@
 ---
 title: "1.6.9. General average and Marine Insurance"
 read_title: "General average and Marine Insurance"
-slug: "lesson-08"
+slug: "lesson-1.6.9"
 estimated_hours: 3
 learning_outcomes:
   - to establish understanding on the concept of General average (GA);

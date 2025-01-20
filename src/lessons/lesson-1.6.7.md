@@ -1,7 +1,7 @@
 ---
 title: "1.6.7. Classification Societies"
 read_title: "Classification Societies"
-slug: "lesson-07"
+slug: "lesson-1.6.7"
 estimated_hours: 1
 learning_outcomes:
   - to establish understanding on the importance of facilitating maritime traffic
@@ -216,11 +216,11 @@ This is followed by the various class notations, which indicate particular chara
 
 In any case, this certificate must be kept aboard ship.
 <br/><br/>
-![Plimsoll Line on the side of the _Cutty Sark_](/images/lessons/lesson-7/Picture1.jpg)
+![Plimsoll Line on the side of the _Cutty Sark_](/images/lessons/lesson-1.6.7/Picture1.jpg)
 
 _Plimsoll Line_ on the side of the _Cutty Sark_ LR = Classified by _Lloyd's Register_
 
-![Plimsoll-Maximum load lines for fresh and sea water](/images/lessons/lesson-7/Picture2.png)
+![Plimsoll-Maximum load lines for fresh and sea water](/images/lessons/lesson-1.6.7/Picture2.png)
 <br/>
 _Plimsoll Line_
 <br/>
@@ -295,4 +295,4 @@ When convenient, the loading port survey may be combined with periodical survey 
 
 Annex I: Example of Certificate of Classification (Bureau Veritas):
 
-![Example of Certificate of Classification (Bureau Veritas)](/images/lessons/lesson-7/Picture3.jpg)
+![Example of Certificate of Classification (Bureau Veritas)](/images/lessons/lesson-1.6.7/Picture3.jpg)
