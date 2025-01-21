@@ -156,7 +156,7 @@ const SingleLesson = ({ content, metaData }) => {
         <Typography variant='h1' className={classes.title}>
           {metaData.title}
         </Typography>
-        <Typography variant='subtitle1' gutterBottom>
+        <Typography variant='subtitle1'>
           <strong>Estimated class hours according to IMO Model Course 7.01: {metaData.estimated_hours}</strong>
         </Typography>
 
