@@ -26,10 +26,10 @@ const Article = ({ allArticleData, allCategories }) => {
 
       const tl = gsap.timeline();
 
-      tl.from(`.${classes.breadCrumb}`, { opacity: 0, yPercent: 100, ease: "power2.out", duration: 0.3, delay: 0.5 })
-        .from(splitTitle.words, { yPercent: 100, ease: "power2.out", stagger: 0.03 })
-        .from(`.${classes.details}`, { opacity: 0, yPercent: -100, ease: "power2.out", duration: 0.3 })
-        .from(`.${classes.image}`, { clipPath: "inset(100% 0% 0% 0%)", ease: "power2.out", duration: 1 });
+      tl.from(`.${classes.breadCrumb}`, { opacity: 0, yPercent: 100, ease: "power2.in", duration: 0.3 })
+        .from(splitTitle.words, { yPercent: 100, ease: "power2.in", stagger: 0.03 }, "=")
+        .from(`.${classes.details}`, { opacity: 0, yPercent: -100, ease: "power2.in", duration: 0.5 }, "=")
+        .from(`.${classes.image}`, { clipPath: "inset(0% 0% 100% 0%)", ease: "power2.in", duration: 0.5 }, "=");
     },
     { scope: container }
   );
@@ -56,7 +56,7 @@ const Article = ({ allArticleData, allCategories }) => {
           <span>BY {author.node.name}</span>
           <span className={classes.date}>{formatDate(date)}</span>
           <span className={classes.categories}>
-            in {""}
+            in
             {categories.nodes.map((cat) => (
               <span key={cat.slug}>{cat.name}</span>
             ))}

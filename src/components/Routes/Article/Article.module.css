@@ -62,7 +62,10 @@
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 3rem 1rem;
+  }
 }
 
 /* .container p:first-of-type {
