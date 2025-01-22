@@ -23,29 +23,17 @@ export const allPagesUrisQuery = `query GET_PAGES {
 `;
 
 export const allNewsQuery = `query NewQuery {
-    posts(first: 4) {
+    posts(first: 6) {
       nodes {
         id
         date
         title
         uri
+        excerpt
         categories {
           nodes {
             name
             slug
-          }
-        }
-        author {
-          node {
-            name
-            slug
-          }
-        }
-        featuredImage {
-          node {
-            altText
-            caption
-            sourceUrl
           }
         }
       }

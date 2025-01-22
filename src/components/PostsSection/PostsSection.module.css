@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.grid {
+/* .grid {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -23,7 +23,7 @@
 .item {
   scroll-snap-align: center;
   min-width: 330px;
-}
+} */
 
 .header {
   display: flex;

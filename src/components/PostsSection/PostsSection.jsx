@@ -1,7 +1,6 @@
 "use client";
 import NextLink from "next/link";
 import classes from "./PostsSection.module.css";
-import SectionCaption from "../SectionCaption/SectionCaption";
 import PostCard from "../PostCard/PostCard";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
@@ -9,8 +8,6 @@ import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
 const PostsSection = ({ posts }) => {
   return (
     <Box className={classes.container}>
-      {/* <SectionCaption>Media exposure</SectionCaption> */}
-
       <PaddingGlobal>
         <Box className={classes.header}>
           <Typography variant='h3' component='h3'>
@@ -23,7 +20,7 @@ const PostsSection = ({ posts }) => {
         <Grid container spacing={{ xs: 1, md: 3 }} className={classes.grid}>
           {posts.map((post) => {
             return (
-              <Grid item xs={12} md={3} key={post.id} className={classes.item}>
+              <Grid item xs={12} md={4} key={post.id} className={classes.item}>
                 <PostCard article={post} />
               </Grid>
             );
