@@ -2,7 +2,7 @@
 title: "1.6.14. Master/pilot relationship"
 read_title: "Master/pilot relationship"
 slug: "lesson-1.6.14"
-estimated_hours: 3
+estimated_hours: 2
 learning_outcomes:
   - to define the concept of pilot
   - to analyse provisions of the IMO Resolution A.960(23)

@@ -2,7 +2,7 @@
 title: "1.2. International Convention on Load Lines (LLC)"
 read_title: "International Convention on Load Lines (LLC)"
 slug: "lesson-1.2"
-estimated_hours: 2
+estimated_hours: 1
 learning_outcomes:
   - to establish the Convention requirements to be complied by a ship.
   - to distinguish the conditions of assignment of a vessel load lines.
