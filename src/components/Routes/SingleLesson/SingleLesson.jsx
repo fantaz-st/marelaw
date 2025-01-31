@@ -111,6 +111,7 @@ const SingleLesson = ({ content, metaData }) => {
   };
 
   const handleSubmit = () => {
+    if (!metaData.quiz) return;
     let correct = 0;
     let incorrect = 0;
 
@@ -144,11 +145,11 @@ const SingleLesson = ({ content, metaData }) => {
     <Box className={classes.container} maxWidth='xl' ref={containerRef}>
       <Box className={classes.inner}>
         <Typography variant='body' component='p' className={classes.breadCrumb}>
-          <Link href='/' style={{ marginRight: "0.35rem" }}>
+          <Link href='/' style={{ marginRight: "0.35rem", color: "#5790e1" }}>
             HOME
           </Link>
           /
-          <Link href='/lessons' style={{ margin: "0 0.35rem" }}>
+          <Link href='/lessons' style={{ margin: "0 0.35rem", color: "#5790e1" }}>
             LESSONS
           </Link>
           /<span style={{ marginLeft: "0.35rem" }}>{metaData.title}</span>
@@ -172,9 +173,11 @@ const SingleLesson = ({ content, metaData }) => {
               </span>
             )}
           </Button>
-          <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} variant='contained' color='primary' onClick={handleStartQuiz}>
-            Take the Quiz
-          </Button>
+          {metaData.quiz && (
+            <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} variant='contained' color='primary' onClick={handleStartQuiz}>
+              Take the Quiz
+            </Button>
+          )}
         </Box>
       </Box>
       <Grid container spacing={6} position='relative'>
@@ -301,7 +304,7 @@ const SingleLesson = ({ content, metaData }) => {
               <Typography variant='h5' gutterBottom ref={quizRef}>
                 Reviewing questions
               </Typography>
-              {metaData.quiz.map((q, index) => (
+              {metaData.quiz?.map((q, index) => (
                 <Box key={index} sx={{ marginBottom: 3 }}>
                   <Typography variant='body1'>
                     {index + 1}. {q.question}
@@ -315,6 +318,7 @@ const SingleLesson = ({ content, metaData }) => {
                   </FormControl>
                 </Box>
               ))}
+
               {!isSubmitted && (
                 <Button variant='contained' color='primary' onClick={handleSubmit} sx={{ marginTop: 2 }}>
                   Submit
@@ -392,9 +396,11 @@ const SingleLesson = ({ content, metaData }) => {
                     </span>
                   )}
                 </Button>
-                <Button variant='contained' color='primary' onClick={handleStartQuiz}>
-                  Take the Quiz
-                </Button>
+                {metaData.quiz && (
+                  <Button variant='contained' color='primary' onClick={handleStartQuiz}>
+                    Take the Quiz
+                  </Button>
+                )}
               </>
             )}
           </Box>
