@@ -5,16 +5,16 @@ slug: "lesson-1.6.7"
 estimated_hours: 1
 learning_outcomes:
   - to establish understanding on the importance of facilitating maritime traffic
-  - To analyse the important role classification societies play in the maritime industry.
-  - "To categorise the scope of action and the specific functions carried out by classification societies: approval of plans, and examination of materials."
-  - To classify surveys and classification of existing ships.
-  - To present class certificates and their issuance.
-  - "To differentiate the different requirements for the maintenance of the class: special reference to the obligation to undergo periodical surveys (annual, intermediate, special, and others)."
-  - To establish that the survey system is based on 5-year cycles.
-  - To check the existence of non-periodic (additional) inspections to which the ship must also be subjected (e.g. in case of collision).
-  - To comment on the role of classification societies when major repairs or structural modifications are carried out.
-  - To connect the statutory role of classification societies as a delegated entities of flag states.
-  - To estimate the importance of surveys linked to cargoworthiness.
+  - to analyse the important role classification societies play in the maritime industry.
+  - "to categorise the scope of action and the specific functions carried out by classification societies: approval of plans, and examination of materials."
+  - to classify surveys and classification of existing ships.
+  - to present class certificates and their issuance.
+  - "to differentiate the different requirements for the maintenance of the class: special reference to the obligation to undergo periodical surveys (annual, intermediate, special, and others)."
+  - to establish that the survey system is based on 5-year cycles.
+  - to check the existence of non-periodic (additional) inspections to which the ship must also be subjected (e.g. in case of collision).
+  - to comment on the role of classification societies when major repairs or structural modifications are carried out.
+  - to connect the statutory role of classification societies as a delegated entities of flag states.
+  - to estimate the importance of surveys linked to cargoworthiness.
 
 links:
   - "European Maritime Safety Agency (EMSA). Classification Societies. [https://www.emsa.europa.eu/inspections/90-classification-societies](https://www.emsa.europa.eu/inspections/90-classification-societies.html#:~:text=Classification%20societies%20are%20organisations%20which,and%20inspections%20on%20board%20ships)"

@@ -175,24 +175,24 @@ quiz:
 
 **Convention of the Prevention of Marine Pollution by Dumping of Wastes and Other Matter (London Dumping Convention -LDC-):**
 
-- To analyse the aim of the Convention, considering the main definitions for the purposes of the Convention.
-- To categorise the specific provisions regarding the dumping of waste listed in Annex I, Annex II, and other waste.
-- To comment on the exceptions to the general rules of Article IV.
-- To examine mentions of the incineration of waste at sea as per the Addendum to Annex I.
-- To establish the permits to be granted by the competent authority in respect of matter intended for dumping.
+- to analyse the aim of the Convention, considering the main definitions for the purposes of the Convention.
+- to categorise the specific provisions regarding the dumping of waste listed in Annex I, Annex II, and other waste.
+- to comment on the exceptions to the general rules of Article IV.
+- to examine mentions of the incineration of waste at sea as per the Addendum to Annex I.
+- to establish the permits to be granted by the competent authority in respect of matter intended for dumping.
 
 **International Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969:**
 
-- To present the rights and provisions applicable to the Parties to intervene on the high seas following a maritime casualty.
-- To define the concepts of maritime accident, ship, oil, and related interests for the purposes of the Convention.
-- To comment on the implications of the Protocol relating to Intervention on the High Seas in Cases of Pollution by Substances other than Oil, 1973.
+- to present the rights and provisions applicable to the Parties to intervene on the high seas following a maritime casualty.
+- to define the concepts of maritime accident, ship, oil, and related interests for the purposes of the Convention.
+- to comment on the implications of the Protocol relating to Intervention on the High Seas in Cases of Pollution by Substances other than Oil, 1973.
 
 **International Convention on Civil Liability for Oil Pollution Damage, 1969 (CLC 1969):**
 
-- To understand the liability regime under the CLC and the possibilities of limitation for the owner.
-- To analyse the implications of the constitution of the fund with respect to liability.
-- To classify the provisions regarding insurance or other financial security and the associated certificate.
-- To clarify the duties of the flag state under the Convention.
+- to understand the liability regime under the CLC and the possibilities of limitation for the owner.
+- to analyse the implications of the constitution of the fund with respect to liability.
+- to classify the provisions regarding insurance or other financial security and the associated certificate.
+- to clarify the duties of the flag state under the Convention.
 
 Convention of the Prevention of Marine Pollution by Dumping of Wastes and Other Matter (London Dumping Convention -LDC-):
 
@@ -268,10 +268,9 @@ Any Party which has taken measures according the provisions of the Convention ca
 
 - "_Substances other than oil"_: (a) those substances enumerated in a list which shall be established by an appropriate body designated by the Organization and which shall be annexed to the present Protocol, and (b) those other substances which are liable to create hazards to human health, to harm living resources and marine life, to damage amenities or to interfere with other legitimate uses of the sea (Party shall have the burden of establishing that the substance, under the circumstances present at the time of the intervention, could reasonably pose a grave and imminent danger).
 
-- **Provisions regarding the intervention (Art. II):**
+**Provisions regarding the intervention (Art. II):**
 
 - The provisions of paragraph 2 of Article I and of Articles II to VIII of the Convention Relating to Intervention on the High Seas in Cases of Oil Pollution Casualties, 1969, and the Annex thereto as they relate to oil, shall be applicable with regard to the substances referred to in Article I of the present Protocol.
-
 - For the purpose of the Protocol the list of experts referred to in Articles III (c) and IV of the Convention shall be extended to include experts qualified to give advice in relation to substances other than oil.
 
 International Convention on Civil Liability for Oil Pollution Damage, 1969 (CLC 1969), as amended by 1992 Protocol:

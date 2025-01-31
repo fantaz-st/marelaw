@@ -4,13 +4,13 @@ read_title: "Responsibilities under the relevant requierments of the Internation
 slug: "lesson-1.3"
 estimated_hours: 2
 learning_outcomes:
-  - To analyse master’s obligations concerning danger messages and the information required in those messages.
-  - To comment on master’s general obligations prior proceeding to the sea and master’s powers of discretion.
-  - To establish obligations and procedures regarding distress situations.
-  - To categorise the general requirements and obligations regarding carriage of navigational equipment.
-  - To distinguish obligations and requirements regarding the manning. Special reference to minimum safe manning.
-  - To check the provisions concerning steering gear power units, including adequate operating instructions and procedures of testing and drills
-  - To compare charts, sailing directions, lists of lights, notices to mariners, and International Code of Signals
+  - to analyse master’s obligations concerning danger messages and the information required in those messages.
+  - to comment on master’s general obligations prior proceeding to the sea and master’s powers of discretion.
+  - to establish obligations and procedures regarding distress situations.
+  - to categorise the general requirements and obligations regarding carriage of navigational equipment.
+  - to distinguish obligations and requirements regarding the manning. Special reference to minimum safe manning.
+  - to check the provisions concerning steering gear power units, including adequate operating instructions and procedures of testing and drills
+  - to compare charts, sailing directions, lists of lights, notices to mariners, and International Code of Signals
 
 links:
   - "[IMO, International Maritime Organization. International Convention for the Safety of life at Sea, 1974, as amended (SOLAS CONVENTION)](https://www.imo.org/en/About/Conventions/Pages/International-Convention-for-the-Safety-of-Life-at-Sea-(SOLAS)%2c-1974.aspx)"
