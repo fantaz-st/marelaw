@@ -5,7 +5,7 @@ slug: "lesson-1.5"
 estimated_hours: 3
 learning_outcomes:
   - to analyse the International Health Regulations (2005) (IHR)
-  - to establish understanding on the general principles, and a purpose and scope of IHR
+  - to understand the general principles, purpose and scope of the IHR
   - to present port formalities in respect of health issues on a ship
   - to analyse the Maritime Declaration of Health (MDH), Ship Sanitation Control Exemption Certificates (SSCEC) and Ship Sanitation Control Certificates (SSCC)
 

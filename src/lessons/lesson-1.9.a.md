@@ -1,8 +1,8 @@
 ---
-title: "1.9. Legal Framework of Maritime Law in the Republic of Croatia"
+title: "1.9.a. Legal Framework of Maritime Law in the Republic of Croatia"
 read_title: "Legal Framework of Maritime Law in the Republic of Croatia"
-slug: "lesson-1.9"
-estimated_hours: 2
+slug: "lesson-1.9.a"
+estimated_hours: 1
 
 learning_outcomes:
   - to analyse legal framework of Croatian national maritime law legislation

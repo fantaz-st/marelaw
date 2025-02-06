@@ -4,7 +4,7 @@ read_title: "General average and Marine Insurance"
 slug: "lesson-1.6.9"
 estimated_hours: 3
 learning_outcomes:
-  - to establish understanding on the concept of General average (GA);
+  - to analyse the concept of General average (GA);
   - to differentiate the principles of Marine Insurance;
   - to distinguish the concepts of an average and GA;
   - to analyse York-Antwerp Rules;

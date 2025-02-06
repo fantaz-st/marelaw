@@ -9,7 +9,7 @@
 .content {
   height: 100%;
   position: absolute;
-  top: 40%;
+  top: 30%;
   z-index: 1;
 }
 
@@ -41,6 +41,30 @@
   /* Each .line is effectively a block-level container for a line of text */
   display: block;
   overflow: hidden;
+}
+
+.subtitle {
+  color: #fff;
+  margin-top: 3rem;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.subtitle .link span:before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  transform: translate3d(0, 0, 0);
+}
+.subtitle span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+  text-decoration: underline;
+}
+.subtitle:hover span,
+.subtitle:focus span {
+  transform: translateY(-105%);
 }
 .inner {
   display: inline-block;

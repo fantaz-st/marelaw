@@ -4,7 +4,7 @@ read_title: "Convention on Limitation of Liability for Maritime Claims"
 slug: "lesson-1.6.6"
 estimated_hours: 1
 learning_outcomes:
-  - to establish understanding on the importance of facilitating maritime traffic
+  - to explain the purpose of the LLMC Convention
   - to establish understanding on a purpose of the LLMC convention;
   - to analyse the concept of limitation of shipowner’s liability under the LLMC;
   - to comment the concept of maritime claim and its importance in limitation of shipowner’s liability;

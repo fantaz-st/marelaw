@@ -4,7 +4,7 @@ read_title: "Marine insurance and Liability"
 slug: "lesson-1.6.10"
 estimated_hours: 5
 learning_outcomes:
-  - to establish understanding on a legal concept of marine insurance;
+  - to understand the legal concept of marine insurance;
   - to analyse the contract of insurance and main obligations of the parties under it;
   - to differentiate the terms in marine insurance;
   - to distinguish actual total loss and constructive total loss;

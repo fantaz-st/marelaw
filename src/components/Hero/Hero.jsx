@@ -5,10 +5,13 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
+import { Box, Button, Typography } from "@mui/material";
+import Link from "next/link";
 
 const Hero = () => {
   const heroContainerRef = useRef(null);
   const titleRef = useRef(null);
+  const subTitleRef = useRef(null);
 
   useGSAP(
     () => {
@@ -25,28 +28,37 @@ const Hero = () => {
         line.appendChild(innerSpan);
       });
 
-      tl.to(titleRef.current, { opacity: 1, duration: 0 }).to(`.${classes.inner}`, {
-        y: "0%",
-        stagger: 0.1,
-        ease: "power2.out",
-      });
+      tl.to(titleRef.current, { opacity: 1, duration: 0 })
+        .to(`.${classes.inner}`, {
+          y: "0%",
+          stagger: 0.1,
+          ease: "power2.out",
+        })
+        .to(subTitleRef.current, { opacity: 1, duration: 0.5 });
     },
     { scope: heroContainerRef }
   );
 
   return (
-    <div className={classes.container} ref={heroContainerRef}>
+    <Box className={classes.container} ref={heroContainerRef}>
       <PaddingGlobal>
-        <div className={classes.content}>
-          <div className={classes.text}>
-            <div className={classes.title} ref={titleRef}>
+        <Box className={classes.content}>
+          <Box className={classes.text}>
+            <Box className={classes.title} ref={titleRef}>
               Marelaw - Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
-            </div>
-          </div>
-        </div>
+            </Box>
+
+            <Typography variant='h5' className={classes.subtitle} ref={subTitleRef}>
+              Master Maritime Law with 20+ in-depth lessons.
+              <Link href='/lessons' style={{ textDecoration: "underline", marginLeft: "10px" }} className={classes.link}>
+                <span data-hover='Start Learning'>Start Learning</span>
+              </Link>
+            </Typography>
+          </Box>
+        </Box>
       </PaddingGlobal>
-      <div className={classes.waves}>{/* <Image src='/waves-fntz.svg' alt='waves svg' width={3000} height={550} /> */}</div>
-    </div>
+      <Box className={classes.waves}>{/* <Image src='/waves-fntz.svg' alt='waves svg' width={3000} height={550} /> */}</Box>
+    </Box>
   );
 };
 

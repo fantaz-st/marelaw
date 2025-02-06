@@ -186,7 +186,7 @@ const SingleLesson = ({ content, metaData }) => {
             <Box className={classes.textContent}>
               {metaData.learning_outcomes && (
                 <>
-                  <Typography variant='h2'>Learning Outcomes</Typography>
+                  <Typography variant='h2'>{metaData.learning_outcomes.length > 1 ? "Learning Outcomes" : "Learning Outcome"}</Typography>
                   <List sx={{ listStyleType: "disc", paddingLeft: "1.2rem" }}>
                     {metaData.learning_outcomes.map((outcome, index) => (
                       <ListItem key={index}>
