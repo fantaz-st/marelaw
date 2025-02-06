@@ -25,10 +25,10 @@ const Lessons = ({ lessons }) => {
           <Typography variant='h1' className={classes.title}>
             Lessons
           </Typography>
-          {sortedLessons.map((lesson, i) => (
+          {sortedLessons.map((lesson) => (
             <Link href={`/lessons/${lesson.slug}`} key={lesson.slug} className={classes.lesson}>
               <Typography variant='h5' className={classes.title}>
-                {i + 1}. {lesson.title}
+                {lesson.title}
               </Typography>
               <Button className={classes.button} sx={{ display: { xs: "none", md: "block" } }}>
                 <ArrowOutwardIcon />
