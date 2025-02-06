@@ -9,6 +9,7 @@ import { CssBaseline } from "@mui/material";
 import { pagesMenuQuery } from "@/helpers/queryLists";
 import { fetchApi } from "@/functions/fetchApi";
 import createDataTree from "@/functions/createDataTree";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 export const metadata = {
   title: "MareLaw",
@@ -35,6 +36,7 @@ export default async function RootLayout({ children }) {
             <CssBaseline />
             <Header menuItems={menuItems} />
             {children}
+            <ScrollToTop />
             <Footer menuItems={menuItems} />
           </ThemeProvider>
         </AppRouterCacheProvider>
