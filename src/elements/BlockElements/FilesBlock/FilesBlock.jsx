@@ -1,6 +1,5 @@
-import DocumentLink from "../../DocumentLink/DocumentLink";
 import DownloadIcon from "@mui/icons-material/Download";
-import { Box, Typography, Tooltip } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import classes from "./FilesBlock.module.css";
 
 const PdfIcon = () => {
