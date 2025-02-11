@@ -46,7 +46,7 @@ export const singlePageContent = (id) => {
            title
            modified
            content
-           blocks
+           blocks(dynamicContent: true, attributes: true)
            featuredImage {
             node {
               sourceUrl

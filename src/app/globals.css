@@ -46,3 +46,16 @@ img {
   flex-wrap: wrap;
   gap: 16px;
 }
+
+.wp-block-file {
+}
+
+.wp-block-file a:not(.wp-block-file__button) {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.wp-block-file .wp-block-file__button {
+  display: none;
+}

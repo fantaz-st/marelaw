@@ -1,7 +1,6 @@
-import DocumentLink from "../../DocumentLink/DocumentLink";
 import DownloadIcon from "@mui/icons-material/Download";
+import classes from "./DocumentLink.module.css";
 import { Box, Typography, Tooltip } from "@mui/material";
-import classes from "./FilesBlock.module.css";
 
 const PdfIcon = () => {
   return (
@@ -25,22 +24,24 @@ const PdfIcon = () => {
     </svg>
   );
 };
-const FilesBlock = (props) => {
-  const cleanContent = props.dynamicContent ? props.dynamicContent.trim() : "<h1>some error</h1>";
-  console.log(props);
+
+const DocumentLink = ({ link, alt, variant = "body2", children, fileType = "pdf" }) => {
+  console.log(children);
   return (
     <Box className={classes.div} sx={{ borderBottom: "1px solid", borderBottomColor: { xs: "text.secondary", md: "transparent" }, padding: "0.5rem 0" }}>
-      <PdfIcon />
-      <div dangerouslySetInnerHTML={{ __html: cleanContent }} />
-      <Box className={classes.icons}>
-        <a download href={props.attributes.href} style={{ textDecoration: "none" }} target='_blank' rel='noopener noreferrer' alt='Download file'>
-          <Tooltip title='Download file' arrow>
-            <DownloadIcon className={classes.arrow} />
-          </Tooltip>
-        </a>
+      <Box className={classes.fileTypeIcon}>{fileType === "pdf" ? <PdfIcon /> : fileType === "word" ? <WordIcon /> : <PowerpointIcon />}</Box>
+      <Box className={classes.content}>
+        <Typography variant={variant}>{children}</Typography>
+        <Box className={classes.icons}>
+          <a download href={link} style={{ textDecoration: "none" }} target='_blank' rel='noopener noreferrer' alt={alt}>
+            <Tooltip title='Download file' arrow>
+              <DownloadIcon className={classes.arrow} />
+            </Tooltip>
+          </a>
+        </Box>
       </Box>
     </Box>
   );
 };
 
-export default FilesBlock;
+export default DocumentLink;

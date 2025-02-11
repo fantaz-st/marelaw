@@ -12,10 +12,10 @@ import ParagraphBlock from "@/elements/BlockElements/ParagraphBlock/ParagraphBlo
 import TableBlock from "@/elements/BlockElements/TableBlock/TableBlock";
 import AccordionBlock from "@/elements/BlockElements/AccordionBlock/AccordionBlock";
 import Spacer from "@/elements/BlockElements/Spacer/Spacer";
+import FilesBlock from "@/elements/BlockElements/FilesBlock/FilesBlock";
 
 const Block = ({ block, size }) => {
-  // console.log(block);
-  const { attributes, name, innerBlocks } = block;
+  const { attributes, name, innerBlocks, dynamicContent } = block;
   switch (name) {
     case "core/columns":
       return <ColumnsBlock innerBlocks={innerBlocks} />;
@@ -23,8 +23,9 @@ const Block = ({ block, size }) => {
       return <HeadingBlock {...attributes} />;
     case "core/paragraph":
       return <ParagraphBlock {...attributes} />;
-    /* case "core/file":
-      return <FilesBlock {...attributes} />; */
+    case "core/file":
+      return <FilesBlock attributes={attributes} dynamicContent={dynamicContent} />;
+
     case "core/list":
       return <ListBlock {...attributes} innerBlocks={innerBlocks} />;
     case "core/list-item":

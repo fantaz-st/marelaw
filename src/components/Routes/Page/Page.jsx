@@ -7,6 +7,10 @@ import classes from "./Page.module.css";
 const Page = async ({ params }) => {
   const { data } = await fetchApi(singlePageContent.call(this, params.slug.join("/")));
 
+  /*  if (data?.page?.blocks) {
+    console.log(data?.page?.blocks);
+  } */
+
   return (
     <Box className='content' maxWidth={"xxl"} sx={{ margin: "0 auto", padding: { xs: "4rem 1rem 0rem", md: "6rem 4rem" } }}>
       <Typography variant='h2'>{data?.page?.title || "Undefined"}</Typography>
