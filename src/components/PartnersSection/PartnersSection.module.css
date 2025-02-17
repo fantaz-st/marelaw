@@ -41,7 +41,7 @@
 
 .partner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
@@ -50,13 +50,20 @@
   white-space: nowrap;
 }
 .partnerImageWrapper {
-  height: 60px;
-  aspect-ratio: 1/1;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
 }
 
 .title {
-  font-size: 1.75rem;
+  font-size: 1rem;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .mobileButton {
@@ -68,10 +75,11 @@
     padding: 4rem;
   }
   .title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
   .partnerImageWrapper {
     height: 120px;
+    width: 120px;
   }
   .partner {
     gap: 2rem;

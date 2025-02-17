@@ -1,7 +1,6 @@
 import React from "react";
 import ButtonBlock from "@/elements/BlockElements/ButtonBlock/ButtonBlock";
 import ColumnsBlock from "@/elements/BlockElements/ColumnsBlock/ColumnsBlock";
-// import FilesBlock from "@/elements/BlockElements/FilesBlock/FilesBlock";
 // import GalleryBlock from "@/elements/BlockElements/GalleryBlock/GalleryBlock";
 import GroupBlock from "@/elements/BlockElements/GroupBlock/GroupBlock";
 import HeadingBlock from "@/elements/BlockElements/HeadingBlock/HeadingBlock";

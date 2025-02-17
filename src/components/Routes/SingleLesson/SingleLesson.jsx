@@ -175,7 +175,7 @@ const SingleLesson = ({ content, metaData }) => {
           </Button>
           {metaData.quiz && (
             <Button sx={{ padding: { xs: "0.5rem", md: "1rem" } }} variant='contained' color='primary' onClick={handleStartQuiz}>
-              Take the Quiz
+              Take the exam questions
             </Button>
           )}
         </Box>
@@ -398,7 +398,7 @@ const SingleLesson = ({ content, metaData }) => {
                 </Button>
                 {metaData.quiz && (
                   <Button variant='contained' color='primary' onClick={handleStartQuiz}>
-                    Take the Quiz
+                    Take the exam questions
                   </Button>
                 )}
               </>

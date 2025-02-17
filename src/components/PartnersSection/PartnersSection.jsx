@@ -1,8 +1,7 @@
 "use client";
 import { useRef } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import classes from "./PartnersSection.module.css";
-import SectionCaption from "../SectionCaption/SectionCaption";
 
 import unist from "../../assets/partners/unist.svg";
 import pfst from "../../assets/partners/pfst.svg";
@@ -57,7 +56,7 @@ const PartnersSection = () => {
   const containerRef = useRef(null);
   const marqueeWrapperRef = useRef(null);
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const loop = horizontalLoop(`.${classes.partner}`, {
         repeat: -1,
@@ -66,20 +65,7 @@ const PartnersSection = () => {
       });
 
       let tl;
-      /* const partnersLogos = gsap.utils.toArray(`.${classes.partner}`);
-      gsap.set(partnersLogos, { yPercent: 200, opacity: 0 });
-      gsap.to(partnersLogos, {
-        yPercent: 0,
-        autoAlpha: 1,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: marqueeWrapperRef.current,
-          start: "top+=50% bottom-=10%",
-          end: "bottom+=50% top+=20%",
-        },
-      }); */
+
       Observer.create({
         target: window,
         type: "wheel,touch",
@@ -94,7 +80,7 @@ const PartnersSection = () => {
       });
     },
     { scope: containerRef }
-  );
+  ); */
 
   return (
     <Box className={classes.container} ref={containerRef}>
@@ -109,7 +95,32 @@ const PartnersSection = () => {
           </NextLink>
         </Box>
         <Box className={classes.inner}>
-          <Box className={classes.marqueeWrapper} ref={marqueeWrapperRef}>
+          <Grid container spacing={6}>
+            {partners.map((partner) => {
+              return (
+                <Grid item xs={6} md={4} className={classes.partner} key={partner.name}>
+                  <Box className={classes.partnerImageWrapper} key={partner.name}>
+                    <Image
+                      src={partner.img.src}
+                      alt={`${partner.name} logo`}
+                      width={120}
+                      height={120}
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </Box>
+
+                  <Typography variant='h4' component='h4' className={classes.title}>
+                    {partner.title}
+                  </Typography>
+                </Grid>
+              );
+            })}
+          </Grid>
+          {/*    <Box className={classes.marqueeWrapper} ref={marqueeWrapperRef}>
             <Box className={classes.marqueeInner}>
               {partners.map((partner) => {
                 return (
@@ -124,7 +135,7 @@ const PartnersSection = () => {
                 );
               })}
             </Box>
-          </Box>
+          </Box> */}
         </Box>
         <NextLink href='/about-the-project/partner-institutions' className={classes.mobileButton}>
           <Button>Find out more</Button>
