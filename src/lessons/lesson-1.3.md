@@ -360,3 +360,49 @@ _Regulation 21: International Code of Signals and IAMSAR Manual_
 Allships which, in accordance with the SOLAS Convention, are required to carry aradio installation shall carry the International Code of Signals as may beamended by the Organization. The Code shall also be carried by any other shipwhich in the opinion of the Administration has a need to use it.
 
 Inaddition, all ships shall carry an up-to-date copy of Volume III of theInternational Aeronautical and Maritime Search and Rescue (IAMSAR) Manual.
+
+## ISM Code
+
+In the late 1980s, there were several large maritime accidents that had a significant impact on both the environment and loss of life. The National Transportation Safety Board conducted a study that revealed that human error was the primary cause of most of these incidents. The Herald of Free Enterprise disaster was a turning point that led the International Maritime Organization (IMO) to adopt the "Management Guidelines for the Safe Operation of Ships and the Prevention of Pollution" in 1989. These guidelines evolved into the "International Safety Management (ISM) Code", which came into force on July 1, 1998 with the implementation of Chapter IX of the SOLAS Convention.
+
+The purpose of the ISM Code is to provide an international standard for the safe management and operation of ships and for pollution prevention.
+
+Recognizing that no two shipping companies or shipowners are the same, and that ships operate under a wide range of different conditions, the Code is based on general principles and objectives, which include assessment of all identified risks to one Company's ships, personnel and the environment and establishment of appropriate safeguards.
+
+The Code is expressed in broad terms so that it can have a widespread application. Clearly, different levels of management, whether shore-based or at sea, will require varying levels of knowledge and awareness of the items outlined.
+
+The art. 1.2.2.: "Assess all identified risks to its ships, personnel and the environment and establish appropriate safeguards". (Article included in the amendments adopted on December 4, 2008 by Resolution MSC.273 (85))
+
+An FSA (Formal Safety Assessment) risk analysis methodology is used to assess all identified risks to ships, personnel and the environment and to establish appropriate safeguards. For specific ship: SCA: Safety Case Approach.
+
+_What does it incorporate?_
+
+a. **Regulation 2 -** It sets out the key principles that shipping companies should follow in terms of safety and environmental protection through the SMS.
+
+b. **Regulation 4 -** Introduces the Designated Person Ashore (DPA) as necessary support from ashore to ensure the operational safety of the ship. Its functions are:
+
+i. Link between Company and Those Onboard,
+
+ii. Direct Access to the Highest Level of Authority,
+
+iii. Ensuring adequate resources and shore-based support.
+
+c. **Regulation 5 -** The Master is responsible for supervising the SMS (Safety Management System) ensuring his authority to make decisions related to safety and pollution prevention.
+
+d. **Rule 6 -** The company's responsibility for personnel preparedness is in compliance with the SMS.
+
+e. **Regal 7 -** The company is required to establish procedures for planning key shipboard operations, including checklists, and assign specific tasks to competent personnel. Plans & Instructions:
+
+i. Procedures,
+
+ii. Process
+
+iii. Instructions, Checklists
+
+f. **Rule 8 -** requires companies to establish procedures for identifying and dealing with onboard emergencies, including conducting regular drills and exercises to prepare personnel to respond effectively to such situations.
+
+g. **Rule 9 -** stresses the relevance of communicating all cases of non-compliance, accidents and potentially dangerous situations to the company.
+
+h. **Rule 10 -** Explains the importance of maintenance of vessels and their equipment, establishing specific procedures and practices to be followed by the company.
+
+i. **Regulation 11 -** The ship must be operated by a company that has been issued with a **Document of Compliance (DOC).** A certificate called **Safety Management Certificate (SMC**) will be issued to ships by the Administration or by organizations recognized by the Administration.

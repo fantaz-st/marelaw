@@ -1,5 +1,4 @@
 "use client";
-import { useRef } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import classes from "./PartnersSection.module.css";
 
@@ -10,11 +9,7 @@ import ffst from "../../assets/partners/ffst.svg";
 import rtu from "../../assets/partners/rtu.svg";
 import upc from "../../assets/partners/upc.svg";
 import Image from "next/image";
-import horizontalLoop from "@/functions/horizontalLoop";
-import gsap from "gsap";
-import { Observer } from "gsap/Observer";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import NextLink from "next/link";
 import PaddingGlobal from "../PaddingGlobal/PaddingGlobal";
 
@@ -50,41 +45,10 @@ const partners = [
     title: "Universitat Politecnica de Catalunya",
   },
 ];
-gsap.registerPlugin(ScrollTrigger);
 
 const PartnersSection = () => {
-  const containerRef = useRef(null);
-  const marqueeWrapperRef = useRef(null);
-
-  /* useGSAP(
-    () => {
-      const loop = horizontalLoop(`.${classes.partner}`, {
-        repeat: -1,
-        speed: 1.7,
-        paddingRight: 32,
-      });
-
-      let tl;
-
-      Observer.create({
-        target: window,
-        type: "wheel,touch",
-        onChangeY: (self) => {
-          tl && tl.kill();
-          const factor = self.deltaY > 0 ? 1 : -1;
-          tl = gsap
-            .timeline()
-            .to(loop, { timeScale: factor, duration: 0.25 })
-            .to(loop, { timeScale: 1 * factor, duration: 1 });
-        },
-      });
-    },
-    { scope: containerRef }
-  ); */
-
   return (
-    <Box className={classes.container} ref={containerRef}>
-      {/* <SectionCaption>Our Partners</SectionCaption> */}
+    <Box className={classes.container}>
       <PaddingGlobal>
         <Box className={classes.header}>
           <Typography variant='h3' component='h3' className={classes.sectionSubtitle}>
@@ -120,22 +84,6 @@ const PartnersSection = () => {
               );
             })}
           </Grid>
-          {/*    <Box className={classes.marqueeWrapper} ref={marqueeWrapperRef}>
-            <Box className={classes.marqueeInner}>
-              {partners.map((partner) => {
-                return (
-                  <Box className={classes.partner} key={partner.name}>
-                    <Box className={classes.partnerImageWrapper} key={partner.name}>
-                      <Image src={partner.img.src} alt={`${partner.name} logo`} fill sizes='120px' style={{ objectFit: "cover" }} />
-                    </Box>
-                    <Typography variant='h1' component='h1' className={classes.title}>
-                      {partner.title}
-                    </Typography>
-                  </Box>
-                );
-              })}
-            </Box>
-          </Box> */}
         </Box>
         <NextLink href='/about-the-project/partner-institutions' className={classes.mobileButton}>
           <Button>Find out more</Button>
