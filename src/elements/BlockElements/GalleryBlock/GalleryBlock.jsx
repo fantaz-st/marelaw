@@ -1,49 +1,35 @@
-import { Navigation, Pagination, Autoplay, Parallax } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Block from "../../../Components/Block/Block";
-import { Box, Typography } from "@mui/material";
+"use client";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { Box, Grid, Typography } from "@mui/material";
+import classes from "./GalleryBlock.module.css";
+import Image from "next/image";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { useEffect } from "react";
 
 const GalleryBlock = (props) => {
+  useEffect(() => {
+    Fancybox.bind("[data-fancybox='gallery']", {});
+    return () => {
+      Fancybox.destroy();
+    };
+  }, []);
   return (
     <Box>
-      <Typography variant='h4'>Galerija</Typography>
-      <Swiper
-        spaceBetween={15}
-        centeredSlides={false}
-        loop={false}
-        parallax={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-          pauseOnMouseEnter: true,
-        }}
-        navigation={true}
-        modules={[Parallax, Autoplay, Navigation, Pagination]}
-        className='fntz-swiper-2'
-        breakpoints={{
-          // when window width is >= 640px
-          1024: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          640: {
-            slidesPerView: 1,
-          },
-        }}
-      >
+      <Typography variant='h4' mb={6}>
+        Image Gallery
+      </Typography>
+      <Grid container className={classes.gallery} spacing={1}>
         {props.slike.map((slika, i) => (
-          <SwiperSlide key={i}>
-            <Block block={slika} />
-          </SwiperSlide>
+          <Grid item xs={6} md={4} key={i}>
+            <Box className={classes.imageWrapper}>
+              <a data-fancybox='gallery' href={slika.attributes.url}>
+                <Image src={slika.attributes.url} alt={slika.attributes.caption || slika.attributes.alt || ""} data-lightboxjs='lightbox1' fill style={{ objectFit: "cover" }} sizes='(max-width: 360px) 100vw,(max-width: 1024px) 66vw,33vw' quality={100} />
+              </a>
+            </Box>
+          </Grid>
         ))}
-      </Swiper>
+      </Grid>
     </Box>
   );
 };

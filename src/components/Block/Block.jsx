@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonBlock from "@/elements/BlockElements/ButtonBlock/ButtonBlock";
 import ColumnsBlock from "@/elements/BlockElements/ColumnsBlock/ColumnsBlock";
-// import GalleryBlock from "@/elements/BlockElements/GalleryBlock/GalleryBlock";
+import GalleryBlock from "@/elements/BlockElements/GalleryBlock/GalleryBlock";
 import GroupBlock from "@/elements/BlockElements/GroupBlock/GroupBlock";
 import HeadingBlock from "@/elements/BlockElements/HeadingBlock/HeadingBlock";
 import ImageBlock from "@/elements/BlockElements/ImageBlock/ImageBlock";
@@ -31,8 +31,8 @@ const Block = ({ block, size }) => {
       return <ListItemBlock {...attributes} size={size} />;
     case "core/image":
       return <ImageBlock {...attributes} />;
-    /* case "core/gallery":
-      return <GalleryBlock {...attributes} slike={innerBlocks} />; */
+    case "core/gallery":
+      return <GalleryBlock {...attributes} slike={innerBlocks} />;
     case "core/table":
       return <TableBlock {...attributes} />;
     case "core/buttons":
