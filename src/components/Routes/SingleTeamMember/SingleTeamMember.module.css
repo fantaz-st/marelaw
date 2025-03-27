@@ -1,0 +1,46 @@
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.breadCrumb {
+  font-size: 12px;
+  font-weight: 400;
+  color: #959494;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.title span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.inner {
+  padding: 10rem 0px 40px 0px;
+}
+
+.imageContainer {
+  position: relative;
+
+  width: 100%;
+  height: 45vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* object-position: top; */
+}
+@media (max-width: 768px) {
+}
