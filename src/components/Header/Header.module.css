@@ -30,7 +30,7 @@
 
 .menu {
   height: 100%;
-  border-bottom: 2px solid rgba(29, 33, 45, 0.2);
+  /* border-bottom: 2px solid rgba(29, 33, 45, 0.2); */
   align-items: center;
   align-content: center;
   height: 100%;

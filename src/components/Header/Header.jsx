@@ -85,7 +85,7 @@ const Header = ({ menuItems }) => {
           <List className={classes.mobileMenu}>
             <ListItem>
               <Link href={"/"}>
-                <Typography variant='h3' sx={{ margin: 0, padding: 0 }}>
+                <Typography variant='h3' sx={{ margin: 0, padding: 0 }} onClick={() => setOpen(false)}>
                   HOME
                 </Typography>
               </Link>
@@ -93,7 +93,7 @@ const Header = ({ menuItems }) => {
             {menuItems.map((item) => (
               <ListItem key={item.databaseId} sx={{ color: "#84b4d3" }}>
                 <Link href={`${item.uri}`}>
-                  <Typography variant='h3' sx={{ margin: 0, padding: 0, textTransform: "uppercase" }}>
+                  <Typography variant='h3' sx={{ margin: 0, padding: 0, textTransform: "uppercase" }} onClick={() => setOpen(false)}>
                     {item.label}
                   </Typography>
                 </Link>
