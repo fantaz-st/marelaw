@@ -45,7 +45,7 @@ const Hero = () => {
         <Box className={classes.content}>
           <Box className={classes.text}>
             <Box className={classes.title} ref={titleRef}>
-              Marelaw - Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
+              MareLaw - Upgrading and harmonization of Maritime law STCW based curriculum for Maritime students
             </Box>
 
             <Typography variant='h5' className={classes.subtitle} ref={subTitleRef}>

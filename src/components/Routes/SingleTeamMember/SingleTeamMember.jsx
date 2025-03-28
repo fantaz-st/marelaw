@@ -5,7 +5,6 @@ import Image from "next/image";
 import MuiMarkdown from "mui-markdown";
 
 const SingleTeamMember = ({ content, metaData }) => {
-  console.log(metaData);
   return (
     <Box className={classes.container} maxWidth='xl'>
       <Box className={classes.inner}>

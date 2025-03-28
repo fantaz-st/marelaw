@@ -26,7 +26,6 @@ const PdfIcon = () => {
 };
 const FilesBlock = (props) => {
   const cleanContent = props.dynamicContent ? props.dynamicContent.trim() : "<h1>some error</h1>";
-  console.log(props);
   return (
     <Box className={classes.div} sx={{ borderBottom: "1px solid", borderBottomColor: { xs: "text.secondary", md: "transparent" }, padding: "0.5rem 0" }}>
       <PdfIcon />
