@@ -1,98 +1,130 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Box, Grid, List, ListItem, TextField, Typography } from "@mui/material";
-import classes from "./Articles.module.css";
-import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
-import useFetch from "@/hooks/useFetch";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { newsQuery } from "@/helpers/queryLists";
 import Link from "next/link";
+import classes from "./Articles.module.css";
+
+import useFetch from "@/hooks/useFetch";
+import { newsQuery } from "@/helpers/queryLists";
+import HorizontalArticleCard from "@/components/HorizontalArticleCard/HorizontalArticleCard";
 
 const Articles = ({ searchParams, initialArticles }) => {
-  const { nodes: categoryNodes } = initialArticles.data.categories;
-  const router = useRouter();
-  const observer = useRef();
+  // ----------------------
+  //  1) INITIAL (SSR) STATE
+  // ----------------------
+  const {
+    data: {
+      categories: { nodes: categoryNodes },
+      posts: { nodes: initialNodes, pageInfo: initialPageInfo },
+    },
+  } = initialArticles;
 
-  const searchParamsHook = useSearchParams();
+  // Keep an initial list of articles from SSR
+  const [articles, setArticles] = useState(initialNodes);
+  const [endCursor, setEndCursor] = useState(initialPageInfo.endCursor);
+  const [hasNextPage, setHasNextPage] = useState(initialPageInfo.hasNextPage);
 
-  const { sendRequest, fetchData, loading } = useFetch();
+  // ----------------------
+  //  2) FILTER & SEARCH
+  // ----------------------
+  const initialCategory = searchParams.category || "";
+  const initialSearch = searchParams.search || "";
 
-  const [articles, setArticles] = useState(initialArticles.data.posts.nodes);
-  const [endCursor, setEndCursor] = useState(initialArticles.data.posts.pageInfo.endCursor);
-  const [hasNextPage, setHasNextPage] = useState(initialArticles.data.posts.pageInfo.hasNextPage);
-  const [filter, setFilter] = useState({ category: searchParams.category, search: searchParams.search });
+  const [filter, setFilter] = useState({
+    category: initialCategory,
+    search: initialSearch,
+  });
+  const [searchTerm, setSearchTerm] = useState(initialSearch);
 
-  const [searchTerm, setSearchTerm] = useState(searchParams.search || "");
-  //map category slug to the category name
+  // A handy slug => name map for display
   const categoryMap = {};
   categoryNodes.forEach((cat) => {
     categoryMap[cat.slug] = cat.name;
   });
 
-  // fetch new articles when filter has changed
-  useEffect(() => {
-    const fetchInitialArticles = async () => {
-      const query = newsQuery.call(this, {
-        numberOfPosts: 10,
-        search: filter.search,
-        category: filter.category,
-      });
+  const router = useRouter();
+  const searchParamsHook = useSearchParams();
 
-      await sendRequest(query);
-    };
+  // ----------------------
+  //  3) FETCH HOOK
+  // ----------------------
+  const { sendRequest, fetchData, error, loading: fetchLoading } = useFetch();
 
-    fetchInitialArticles();
-  }, [filter, sendRequest]);
+  // We track if we’re loading “new filters” vs. “load more”
+  const [loadingInitial, setLoadingInitial] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
 
-  //set state whn sendRequest data is received
-  useEffect(() => {
-    if (fetchData && fetchData.posts) {
-      setArticles(fetchData.posts.nodes);
-      setEndCursor(fetchData.posts.pageInfo.endCursor);
-      setHasNextPage(fetchData.posts.pageInfo.hasNextPage);
-    }
-  }, [fetchData]);
-
-  //set filter when the url changes
+  // ----------------------
+  //  4) ALWAYS FETCH ON URL CHANGES
+  // ----------------------
   useEffect(() => {
     const urlParams = new URLSearchParams(searchParamsHook.toString());
-    const category = urlParams.get("category") || "";
-    const search = urlParams.get("search") || "";
+    const urlCategory = urlParams.get("category") || "";
+    const urlSearch = urlParams.get("search") || "";
 
-    setFilter({ category, search });
-  }, [searchParamsHook]);
+    // Update our local filter
+    setFilter({ category: urlCategory, search: urlSearch });
 
+    // Fire a brand-new query
+    async function fetchForNewFilter() {
+      setLoadingInitial(true);
+      const query = newsQuery({
+        numberOfPosts: 10,
+        category: urlCategory,
+        search: urlSearch,
+      });
+      await sendRequest(query);
+      setLoadingInitial(false);
+    }
+
+    fetchForNewFilter();
+  }, [searchParamsHook, sendRequest]);
+
+  // ----------------------
+  //  5) PROCESS INCOMING DATA
+  // ----------------------
+  useEffect(() => {
+    if (!fetchData || !fetchData.posts) return;
+
+    if (loadingMore) {
+      // Append unique items for "Load More"
+      setArticles((prev) => {
+        const prevIDs = new Set(prev.map((item) => item.id));
+        const uniqueNewNodes = fetchData.posts.nodes.filter((item) => !prevIDs.has(item.id));
+        return [...prev, ...uniqueNewNodes];
+      });
+      setLoadingMore(false);
+    } else {
+      // Replace for a brand-new filter
+      setArticles(fetchData.posts.nodes);
+    }
+
+    setEndCursor(fetchData.posts.pageInfo.endCursor);
+    setHasNextPage(fetchData.posts.pageInfo.hasNextPage);
+  }, [fetchData, loadingMore]);
+
+  // ----------------------
+  //  6) LOAD MORE HANDLER
+  // ----------------------
   const loadMorePosts = useCallback(async () => {
-    if (loading) return;
-    const query = newsQuery.call(this, {
-      numberOfPosts: 2,
-      endCursor: endCursor,
+    if (fetchLoading || !hasNextPage) return;
+
+    setLoadingMore(true);
+    const query = newsQuery({
+      numberOfPosts: 10,
+      endCursor,
       search: filter.search,
       category: filter.category,
     });
-
     await sendRequest(query);
-  }, [endCursor, filter.search, filter.category, sendRequest]);
+  }, [fetchLoading, hasNextPage, endCursor, filter.search, filter.category, sendRequest]);
 
-  const lastArticleElementRef = useCallback(
-    (node) => {
-      if (loading) return;
-      if (observer.current) observer.current.disconnect();
-      observer.current = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting && hasNextPage) {
-            loadMorePosts();
-          }
-        },
-        { threshold: 1.0, rootMargin: "0px" }
-      );
-      if (node) observer.current.observe(node);
-    },
-    [loading, hasNextPage, loadMorePosts]
-  );
-
+  // ----------------------
+  //  7) REMOVE FILTER
+  // ----------------------
   const handleRemoveFilter = (filterType) => {
     const newFilter = { ...filter };
     if (filterType === "search") {
@@ -102,88 +134,113 @@ const Articles = ({ searchParams, initialArticles }) => {
       newFilter.category = "";
     }
 
-    // Remove empty filter parameters
+    // Build new URL params
     const params = new URLSearchParams();
     if (newFilter.category) params.set("category", newFilter.category);
     if (newFilter.search) params.set("search", newFilter.search);
 
+    // Update local filter + push to router
     setFilter(newFilter);
     router.push(`/articles?${params.toString()}`);
   };
 
+  // ----------------------
+  //  8) SUBMIT SEARCH
+  // ----------------------
   const handleSearchSubmit = (event) => {
     event.preventDefault();
+
     const params = new URLSearchParams();
     if (filter.category) params.set("category", filter.category);
     if (searchTerm) params.set("search", searchTerm);
 
-    setFilter((prevFilter) => ({
-      ...prevFilter,
-      search: searchTerm,
-    }));
-
+    setFilter({ ...filter, search: searchTerm });
     router.push(`/articles?${params.toString()}`);
   };
 
+  // ----------------------
+  //  9) RENDER
+  // ----------------------
   return (
     <Box className={classes.container} maxWidth='xl'>
       <Box className={classes.header}>
         <Typography variant='h1'>All Articles</Typography>
       </Box>
-      {articles?.length === 0 && <Typography variant='body'>No articles matching your query</Typography>}
+
+      {/* Show an error message if there's an error */}
+      {error && (
+        <Typography variant='body' color='error'>
+          {error.message}
+        </Typography>
+      )}
+
+      {/* Show "Loading…" if a brand-new filter fetch is in progress */}
+      {loadingInitial && <Typography variant='body'>Loading initial articles…</Typography>}
+
+      {/* If no initial loading and no articles, show a fallback */}
+      {!loadingInitial && articles.length === 0 && <Typography variant='body'>No articles matching your query</Typography>}
+
       <Grid container spacing={3}>
         <Grid item xs={12} md={8} sx={{ paddingTop: "0rem !important" }}>
           <Box className={classes.content}>
-            {articles.map((article, index) => (
-              <HorizontalArticleCard
-                article={article}
-                id={article.id}
-                key={article.id}
-                ref={articles.length === index + 1 ? lastArticleElementRef : null} // Assign ref conditionally
-              />
+            {articles.map((article) => (
+              <HorizontalArticleCard article={article} id={article.id} key={article.id} />
             ))}
           </Box>
-          {!hasNextPage && <Typography variant='body'>No more articles matching current filters</Typography>}
+
+          {/* "Load More" button if there's a next page */}
+          {hasNextPage && (
+            <Button onClick={loadMorePosts} disabled={fetchLoading}>
+              {fetchLoading ? "Loading…" : "Load More Articles"}
+            </Button>
+          )}
+
+          {/* If no more pages (and not initially loading), show a message */}
+          {!hasNextPage && !loadingInitial && <Typography variant='body'>No more articles matching current filters</Typography>}
         </Grid>
+
         <Grid item xs={12} md={4} sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+          {/* Active filters */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {(filter.category || filter.search) && <Typography variant='h5'>Active filters</Typography>}
+
             {filter.category && (
               <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <Typography variant='body'>{categoryMap[filter.category]}</Typography>
-                <CloseRoundedIcon onClick={() => handleRemoveFilter("category", filter.category)} style={{ cursor: "pointer" }} />
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("category")} style={{ cursor: "pointer" }} />
               </Box>
             )}
+
             {filter.search && (
               <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <Typography variant='body'>{filter.search}</Typography>
-                <CloseRoundedIcon onClick={() => handleRemoveFilter("search", filter.search)} style={{ cursor: "pointer" }} />
+                <CloseRoundedIcon onClick={() => handleRemoveFilter("search")} style={{ cursor: "pointer" }} />
               </Box>
             )}
           </Box>
+
+          {/* Categories List */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             <Typography variant='h5' mb={1}>
               All categories
             </Typography>
-
             {categoryNodes.map((cat) => (
               <Link href={`/articles?category=${cat.slug}`} key={cat.slug} className={classes.category}>
                 <Typography variant='body'>{cat.name}</Typography>
               </Link>
             ))}
           </Box>
+
+          {/* Search Form */}
           <Box>
             <form onSubmit={handleSearchSubmit}>
               <TextField
-                id='outlined-controlled'
                 label='Search'
                 inputProps={{
-                  style: {
-                    padding: "1.75rem 0.5rem",
-                  },
+                  style: { padding: "1.75rem 0.5rem" },
                 }}
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </form>
           </Box>
